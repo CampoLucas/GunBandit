@@ -39,7 +39,6 @@ float _damage;<br />
 float _durability;<br />
 float _range;<br />
 
-sprite2d _sprite;<br />
 void Attack();<br />
 void Throw;<br />
 
