@@ -1,7 +1,7 @@
 # BoarGame
 
 Ideas
-<span style="color: green">Gun:</span>
+-Gun:
 
 float _damage;
 float _fireRate;
