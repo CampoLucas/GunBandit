@@ -26,7 +26,6 @@ float _damage;<br />
 float _range;<br />
 int _ammo;<br />
 
-sprite2d _sprite<br />
 void Throw();<br />
 void Fire();<br />
 void Explode();<br />
