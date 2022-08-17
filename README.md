@@ -1,6 +1,7 @@
 # BoarGame
 
 Ideas
+'''diff
 -Gun:
 
 float _damage;
