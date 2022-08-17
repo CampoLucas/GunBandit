@@ -4,44 +4,57 @@ Ideas
 
 - **Gun**
 
-float _damage
-float _fireRate
-float _reloadSpeed
-float _accuracy
-float _range
-int _ammo = 300
-enum _fireMode{ Automatic, ...}
-enum _ammoType{ Shootgun, Pistol, Riffle, Granades}
+sprite2d _sprite;<br />
+float _damage;<br />
+float _fireRate;<br />
+float _reloadSpeed;<br />
+float _accuracy;<br />
+float _range;<br />
+int _ammo = 300;<br />
+enum _fireMode{ Automatic, ...}<br />
+enum _ammoType{ Shootgun, Pistol, Riffle, Granades, Electric}<br />
 
-_ _When the player is out of ammo, automaticaly throws the weapon / if he presses the throw key_ _
-void Throw()
-void Fire()
-void Reload()
+_ _When the player is out of ammo, automaticaly throws the weapon / if he presses the throw key_ _<br />
+void Throw();<br />
+void Fire();<br />
+void Reload();<br />
 
 - **Granade**
 
-float _damage;
-float _range;
-int _ammo;
+sprite2d _sprite<br />
+float _damage;<br />
+float _range;<br />
+int _ammo;<br />
 
-void Throw();
-void Fire();
-void Explode();
+sprite2d _sprite<br />
+void Throw();<br />
+void Fire();<br />
+void Explode();<br />
 
 - **Melee Attacks**
 
-float _damage;
-float _range;
+sprite2d _sprite;<br />
+float _damage;<br />
+float _range;<br />
 
-void Attack();
-void Throw;
+sprite2d _sprite;<br />
+void Attack();<br />
+void Throw;<br />
 
 - **Shields**
 
-float _life;
-float _durability;
+sprite2d _sprite;<br />
+float _life;<br />
+float _durability;<br />
 
-void Throw():
+void Throw();<br />
+
+- **Ammo**
+
+sprite2d _sprite;<br />
+int _ammo;<br />
+enum _ammoType{ Shootgun, Pistol, Riffle, Granades, Electric}<br />
+
 
 
 
