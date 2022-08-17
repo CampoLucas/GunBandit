@@ -48,6 +48,7 @@ float _life;<br />
 float _durability;<br />
 
 void Throw();<br />
+void Attack();<br />
 
 - **Ammo**
 
