@@ -15,7 +15,7 @@ float _durability;<br />
 enum _fireMode{ Automatic, ...}<br />
 enum _ammoType{ Shootgun, Pistol, Riffle, Granades, Electric?}<br />
 
-_ _When the player is out of ammo, automaticaly throws the weapon / if he presses the throw key_ _<br />
+_//When the player is out of ammo, automaticaly throws the weapon / if he presses the throw key_<br />
 void Throw();<br />
 void Fire();<br />
 void Reload();<br />
