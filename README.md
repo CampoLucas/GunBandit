@@ -4,20 +4,13 @@ Ideas
 
 #Gun:
 
-float _damage;
-
-float _fireRate;
-
-float _reloadSpeed;
-
-float _accuracy;
-
-float _range;
-
-int _ammo = 300;
-
+float _damage
+float _fireRate
+float _reloadSpeed
+float _accuracy
+float _range
+int _ammo = 300
 enum _fireMode{ Automatic, ...}
-
 enum _ammoType{ Shootgun, Pistol, Riffle, Granades}
 
 //When the player is out of ammo, automaticaly throws the weapon / if he presses the throw key
