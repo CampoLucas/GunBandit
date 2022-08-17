@@ -1,6 +1,7 @@
 # BoarGame
 
 Ideas
+
 Gun:
 
 float _damage;
