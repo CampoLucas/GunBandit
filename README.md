@@ -58,5 +58,15 @@ sprite2d _sprite;<br />
 int _ammo;<br />
 enum _ammoType{ Shootgun, Pistol, Riffle, Granades, Electric?}<br />
 
-
+#More ideas
+All weapons are weapons, a weapon can shoot weapons.
+f to grab weapon/if all weapon slots are filled you drop current weapon and exchenge it for the new one.
+hold f to Throw weapon.
+q to drop weapon.
+when you dont have more ammo you atomaticlly throw the weapon.
+Every weapon has duravility if it drops to 0 the weapon breaks.
+If you throw the weapon at an enemy it breaks and deals more damage.
+Right click to shoot.
+V to melee.
+You can melee with any weapon, grenades explote and you die
 
