@@ -3,7 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Movement : MonoBehaviour
+/// <summary>
+/// Only the movement
+/// </summary>
+public class Movement : MonoBehaviour, IMovement
 {
     [SerializeField] private float speed = 5f;
 

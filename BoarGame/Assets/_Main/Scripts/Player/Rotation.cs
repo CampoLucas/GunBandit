@@ -3,20 +3,29 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Rotation : MonoBehaviour
+/// <summary>
+/// It handles the rotation
+/// </summary>
+public class Rotation : MonoBehaviour, IRotation
 {
-    private void Update()
+    private Camera _camera;
+
+    private void Awake()
     {
-        
+        _camera = Camera.main;
     }
 
-    public void Rotate(Vector2 mousePos)
+    /// <summary>
+    /// Rotates to a position
+    /// </summary>
+    /// <param name="pos"></param>
+    public void Rotate(Vector2 pos)
     {
-        var mousePosition = mousePos;
-        if (Camera.main != null) mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
-
-        var position = transform.position;
+        var mousePosition = pos;
+        mousePosition = _camera.ScreenToWorldPoint(mousePosition);
+        var transform1 = transform;
+        var position = transform1.position;
         var direction = new Vector2(mousePosition.x - position.x, mousePosition.y - position.y);
-        transform.up = direction;
+        transform1.up = direction;
     }
 }
