@@ -7,27 +7,6 @@ using UnityEngine;
 /// </summary>
 public class Gun : Weapon
 {
-    [SerializeField] private float fireRate;
-    [SerializeField] private float reloadSpeed;
-    [SerializeField] private float accuracy;
-    [SerializeField] private int ammo;
-
-    [SerializeField] private enum FireMode
-    {
-        OneTap,
-        Automatic,
-        Burst
-    }
-    
-    [SerializeField] private enum AmmoType
-    {
-        Shotgun,
-        Pistol,
-        Riffle,
-        Grenade,
-        Electric
-    }
-
     /// <summary>
     /// Fire the gun
     /// </summary>

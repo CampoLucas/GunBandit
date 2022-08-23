@@ -7,9 +7,8 @@ using UnityEngine;
 /// </summary>
 public class Weapon : MonoBehaviour
 {
-    [SerializeField] protected Sprite sprite;
-    [SerializeField] protected float damage;
-    [SerializeField] protected float range;
+    [SerializeField] private WeaponSO stats;
+    public WeaponSO Data => stats;
     public virtual void Attack()
     {
         

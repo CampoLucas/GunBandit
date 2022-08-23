@@ -7,8 +7,6 @@ using UnityEngine;
 /// </summary>
 public class Melee : Weapon
 {
-    [SerializeField] private float durability;
-    
     /// <summary>
     /// Attack with the weapon
     /// </summary>
