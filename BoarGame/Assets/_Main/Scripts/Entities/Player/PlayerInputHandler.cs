@@ -10,6 +10,7 @@ public class PlayerInputHandler : MonoBehaviour
     private Vector2 _movementInput;
     private Vector2 _mousePos;
     private Action _onFireInput;
+    private Action _onThrowInput;
     
     /// <summary>
     /// Gets horizontal and vertical input
@@ -21,6 +22,11 @@ public class PlayerInputHandler : MonoBehaviour
         get => _onFireInput;
         set => _onFireInput = value;
     }
+    public Action OnThrowInput
+    {
+        get => _onThrowInput;
+        set => _onThrowInput = value;
+    }
 
     private void OnEnable()
     {
@@ -30,6 +36,7 @@ public class PlayerInputHandler : MonoBehaviour
             _inputActions.Player.Movement.performed += inputActions => _movementInput = inputActions.ReadValue<Vector2>();
             _inputActions.Player.Point.performed += i => _mousePos = i.ReadValue<Vector2>();
             _inputActions.Player.Fire.performed += i => _onFireInput?.Invoke();
+            _inputActions.Player.Throw.performed += i => _onThrowInput?.Invoke();
         }
         _inputActions.Enable();
     }

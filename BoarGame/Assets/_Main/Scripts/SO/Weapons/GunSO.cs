@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Gun", menuName = "Weapons/Gun", order = 0)]
+[CreateAssetMenu(fileName = "Gun", menuName = "Entities/Weapons/Gun", order = 0)]
 public class GunSO : WeaponSO
 {
     [SerializeField] private float fireRate = 0.1f;

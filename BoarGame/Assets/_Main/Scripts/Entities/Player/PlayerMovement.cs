@@ -6,9 +6,14 @@ using UnityEngine;
 /// <summary>
 /// Only the movement
 /// </summary>
-public class Movement : MonoBehaviour, IMovement
+public class PlayerMovement : MonoBehaviour, IMovement
 {
-    [SerializeField] private float speed = 5f;
+    private StatsSO _stats;
+
+    private void Awake()
+    {
+        _stats = GetComponent<Entity>().Data;
+    }
 
     /// <summary>
     /// Move towards a direction
@@ -17,7 +22,7 @@ public class Movement : MonoBehaviour, IMovement
     public void Move(Vector2 dir)
     {
         var pos = transform.position;
-        var moveAmount = speed * Time.deltaTime;
+        var moveAmount = _stats.Speed * Time.deltaTime;
         var move = Vector2.zero;
         if (dir.x > 0) move.x += dir.x + moveAmount;
         if (dir.x < 0) move.x += dir.x + moveAmount;

@@ -8,17 +8,16 @@ using UnityEngine.InputSystem;
 /// It handles all the player actions
 /// Common ground for all player scripts
 /// </summary>
-public class Player : MonoBehaviour
+public class Player : Entity
 {
     private PlayerInputHandler _input;
-    private IMovement _movement;
     private IRotation _rotation;
     private Weapon _weapon;
 
-    private void Awake()
+    protected override void Awake()
     {
+        base.Awake();
         _input = GetComponent<PlayerInputHandler>();
-        _movement = GetComponent<IMovement>();
         _rotation = GetComponent<IRotation>();
         _weapon = GetComponentInChildren<Weapon>();
     }
@@ -26,6 +25,7 @@ public class Player : MonoBehaviour
     private void Start()
     {
         _input.OnFireInput += Fire;
+        _input.OnThrowInput += Throw;
     }
 
     private void Update()
@@ -37,14 +37,21 @@ public class Player : MonoBehaviour
     private void OnDisable()
     {
         _input.OnFireInput -= Fire;
+        _input.OnThrowInput -= Throw;
     }
-
-    private void Move(Vector2 direction) => _movement.Move(direction);
+    
     private void Rotate(Vector2 mousePos) => _rotation.Rotate(mousePos);
 
     private void Fire()
     {
         var gun = _weapon as Gun;
         if (gun != null) gun.Fire();
+    }
+
+    private void Throw()
+    {
+        _weapon.Throw();
+        _weapon.gameObject.transform.DetachChildren();
+        _weapon = null;
     }
 }

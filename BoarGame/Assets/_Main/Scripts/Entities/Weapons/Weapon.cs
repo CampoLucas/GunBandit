@@ -5,10 +5,8 @@ using UnityEngine;
 /// <summary>
 /// All type weapon inherits this class
 /// </summary>
-public class Weapon : MonoBehaviour
+public class Weapon : Entity
 {
-    [SerializeField] private WeaponSO stats;
-    public WeaponSO Data => stats;
     public virtual void Attack()
     {
         
@@ -16,6 +14,7 @@ public class Weapon : MonoBehaviour
     
     public virtual void Throw()
     {
-        
+        // Stops being child
+        Move(transform.up);
     }
 }
