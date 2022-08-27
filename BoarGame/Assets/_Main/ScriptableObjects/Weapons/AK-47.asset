@@ -20,7 +20,8 @@ MonoBehaviour:
   throwStrength: 15
   fireRate: 0.2
   accuracy: 8
-  ammo: 10
+  ammo: 46
+  magAmmo: 16
   reloadSpeed: 0.5
   mode: 1
   type: 2

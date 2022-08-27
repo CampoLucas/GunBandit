@@ -13,6 +13,7 @@ public class Player : Entity
     private PlayerInputHandler _input;
     private IRotation _rotation;
     private Weapon _weapon;
+    public Weapon Weapon => _weapon;
 
     protected override void Awake()
     {
@@ -27,6 +28,7 @@ public class Player : Entity
     {
         _input.OnFireInput += Fire;
         _input.OnThrowInput += Throw;
+        _input.OnReloadInput += Reload;
     }
 
     private void Update()
@@ -39,6 +41,7 @@ public class Player : Entity
     {
         _input.OnFireInput -= Fire;
         _input.OnThrowInput -= Throw;
+        _input.OnReloadInput -= Reload;
     }
     
     private void Rotate(Vector2 mousePos) => _rotation.Rotate(mousePos);
@@ -48,6 +51,12 @@ public class Player : Entity
         var gun = _weapon != null ? _weapon as Gun : null;
         if (gun == null) return;
         gun.Fire();
+    }
+    private void Reload()
+    {
+        var gun = _weapon != null ? _weapon as Gun : null;
+        if (gun == null) return;
+        gun.Reload();
     }
 
     private void Throw()

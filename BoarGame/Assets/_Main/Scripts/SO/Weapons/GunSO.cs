@@ -8,6 +8,7 @@ public class GunSO : WeaponSO
     [SerializeField] private float fireRate = 0.1f;
     [SerializeField] private float accuracy = 0.5f;
     [SerializeField] private int ammo = 60;
+    [SerializeField] private int magAmmo = 6;
     [SerializeField] private float reloadSpeed = 1f;
     [SerializeField] private FireMode mode = FireMode.OneTap;
     [SerializeField] private AmmoType type = AmmoType.Pistol;
@@ -15,6 +16,7 @@ public class GunSO : WeaponSO
     public float ReloadSpeed => reloadSpeed;
     public float Accuracy => accuracy;
     public int Ammo => ammo;
+    public int MagAmmo => magAmmo;
     public FireMode Mode => mode;
     public AmmoType Type => type;
 }
