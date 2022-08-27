@@ -17,9 +17,10 @@ MonoBehaviour:
   speed: 200
   damage: 8
   range: 20
-  fireRate: 0.1
-  reloadSpeed: 0.5
+  throwStrength: 15
+  fireRate: 0.2
   accuracy: 8
-  ammo: 210
+  ammo: 10
+  reloadSpeed: 0.5
   mode: 1
   type: 2

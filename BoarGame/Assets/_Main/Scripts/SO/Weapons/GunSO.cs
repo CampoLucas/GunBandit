@@ -6,9 +6,9 @@ using UnityEngine;
 public class GunSO : WeaponSO
 {
     [SerializeField] private float fireRate = 0.1f;
-    [SerializeField] private float reloadSpeed = 0.5f;
     [SerializeField] private float accuracy = 0.5f;
     [SerializeField] private int ammo = 60;
+    [SerializeField] private float reloadSpeed = 1f;
     [SerializeField] private FireMode mode = FireMode.OneTap;
     [SerializeField] private AmmoType type = AmmoType.Pistol;
     public float FireRate => fireRate;

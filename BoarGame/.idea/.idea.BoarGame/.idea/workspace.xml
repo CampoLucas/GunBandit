@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c2c7b180-e0b1-40f5-9a97-ec9df96896c5" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.BoarGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BoarGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Main/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Entity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Entity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Weapons/Gun.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Weapons/Gun.cs" afterDir="false" />
-    </list>
+    <list default="true" id="c2c7b180-e0b1-40f5-9a97-ec9df96896c5" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -103,6 +98,7 @@
       <workItem from="1661254975429" duration="7747000" />
       <workItem from="1661264146169" duration="966000" />
       <workItem from="1661265136306" duration="2706000" />
+      <workItem from="1661272987045" duration="5000" />
     </task>
     <servers />
   </component>

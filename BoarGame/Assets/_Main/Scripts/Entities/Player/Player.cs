@@ -20,6 +20,7 @@ public class Player : Entity
         _input = GetComponent<PlayerInputHandler>();
         _rotation = GetComponent<IRotation>();
         _weapon = GetComponentInChildren<Weapon>();
+        Debug.Log(_weapon.Data.Id);
     }
 
     private void Start()
@@ -44,14 +45,15 @@ public class Player : Entity
 
     private void Fire()
     {
-        var gun = _weapon as Gun;
-        if (gun != null) gun.Fire();
+        var gun = _weapon != null ? _weapon as Gun : null;
+        if (gun == null) return;
+        gun.Fire();
     }
 
     private void Throw()
     {
+        if (_weapon == null) return;
         _weapon.Throw();
-        _weapon.gameObject.transform.DetachChildren();
         _weapon = null;
     }
 }
