@@ -19,6 +19,7 @@ public class Weapon : Entity
     protected virtual void Start()
     {
         _collider.enabled = false;
+        _rigidbody.bodyType = RigidbodyType2D.Kinematic;
     }
 
     public virtual void Attack()
@@ -30,6 +31,8 @@ public class Weapon : Entity
     {
         var stats = Data as WeaponSO;
         transform.parent = null;
+        _rigidbody.bodyType = RigidbodyType2D.Dynamic;
+        _rigidbody.drag = stats.LinearDrag;
         _rigidbody.AddForce(transform.up * stats.ThrowStrength, ForceMode2D.Impulse);
         _collider.enabled = true;
     }

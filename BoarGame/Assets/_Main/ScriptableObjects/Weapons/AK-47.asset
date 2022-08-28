@@ -18,6 +18,7 @@ MonoBehaviour:
   damage: 8
   range: 20
   throwStrength: 15
+  linearDrag: 2
   fireRate: 0.2
   accuracy: 8
   ammo: 46
