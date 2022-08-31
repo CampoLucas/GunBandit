@@ -8,12 +8,12 @@ using UnityEngine;
 public class Weapon : Entity
 {
     private Rigidbody2D _rigidbody;
-    private BoxCollider2D _collider;
+    private CapsuleCollider2D _collider;
 
     protected override void Awake()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
-        _collider = GetComponent<BoxCollider2D>();
+        _collider = GetComponent<CapsuleCollider2D>();
     }
 
     protected virtual void Start()
@@ -34,6 +34,8 @@ public class Weapon : Entity
         _rigidbody.bodyType = RigidbodyType2D.Dynamic;
         _rigidbody.drag = stats.LinearDrag;
         _rigidbody.AddForce(transform.up * stats.ThrowStrength, ForceMode2D.Impulse);
+        _rigidbody.constraints = RigidbodyConstraints2D.None;
         _collider.enabled = true;
+
     }
 }

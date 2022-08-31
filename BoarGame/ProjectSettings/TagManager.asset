@@ -8,11 +8,11 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
-  - 
-  - 
+  - Door
+  - Weapon
   - 
   - 
   - 
@@ -40,4 +40,19 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Floor
+    uniqueID: 2283447701
+    locked: 0
+  - name: Walls
+    uniqueID: 3820549817
+    locked: 0
+  - name: Player
+    uniqueID: 3219778683
+    locked: 0
+  - name: Weapons
+    uniqueID: 693011711
+    locked: 0
+  - name: Bullets
+    uniqueID: 3787803065
     locked: 0

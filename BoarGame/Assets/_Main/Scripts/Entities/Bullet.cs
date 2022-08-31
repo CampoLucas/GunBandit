@@ -9,4 +9,10 @@ public class Bullet : Entity
     {
         Move(transform.up);
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Destroy(gameObject);
+        Debug.Log("a");
+    }
 }

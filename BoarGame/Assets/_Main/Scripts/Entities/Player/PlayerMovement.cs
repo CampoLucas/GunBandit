@@ -23,21 +23,21 @@ public class PlayerMovement : MonoBehaviour, IMovement
     /// <param name="dir">Direction it moves towards</param>
     public void Move(Vector2 dir)
     {
-        //var pos = transform.position;
-        //var moveamount = _stats.Speed * Time.deltaTime;
-        //var move = Vector2.zero;
-        //if (dir.x > 0) move.x += dir.x + moveamount;
-        //if (dir.x < 0) move.x += dir.x + moveamount;
-        //if (dir.y > 0) move.y += dir.y + moveamount;
-        //if (dir.y < 0) move.y += dir.y + moveamount;
-        //float movemagnitude = Mathf.Sqrt(move.x * move.x + move.y * move.y);
-        //if (movemagnitude > moveamount)
-        //{
-        //    float ratio = moveamount / movemagnitude;
-        //    move *= ratio;
-        //}
-        //pos += (Vector3)move;
-        //transform.position = pos;
+        var pos = transform.position;
+        var moveamount = _stats.Speed * Time.deltaTime;
+        var move = Vector2.zero;
+        if (dir.x > 0) move.x += dir.x + moveamount;
+        if (dir.x < 0) move.x += dir.x + moveamount;
+        if (dir.y > 0) move.y += dir.y + moveamount;
+        if (dir.y < 0) move.y += dir.y + moveamount;
+        float movemagnitude = Mathf.Sqrt(move.x * move.x + move.y * move.y);
+        if (movemagnitude > moveamount)
+        {
+            float ratio = moveamount / movemagnitude;
+            move *= ratio;
+        }
+        pos += (Vector3)move;
+        transform.position = pos;
 
         //var velocity = _rigidbody.velocity;
         //var moveAmount = _stats.Speed * Time.deltaTime;
@@ -55,7 +55,7 @@ public class PlayerMovement : MonoBehaviour, IMovement
         //velocity += move;
         //_rigidbody.velocity = velocity;
 
-        _rigidbody.velocity = dir * _stats.Speed;
+        //_rigidbody.velocity = dir * _stats.Speed;
 
     }
 
