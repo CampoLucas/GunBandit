@@ -9,7 +9,7 @@ public class Movement : MonoBehaviour, IMovement
 
     private void Awake()
     {
-        _stats = GetComponent<Entity>().Data;
+        _stats = GetComponent<Entity>().GetData();
     }
 
     public void Move(Vector2 dir)

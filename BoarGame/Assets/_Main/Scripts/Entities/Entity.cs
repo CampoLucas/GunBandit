@@ -8,7 +8,7 @@ public class Entity : MonoBehaviour, IProduct<StatsSO>
     [SerializeField] private StatsSO stats;
     private IMovement _movement;
     
-    public StatsSO Data => stats;
+    public StatsSO GetData() => stats;
     public IMovement Movement => _movement;
 
     protected virtual void Awake()

@@ -29,7 +29,7 @@ public class Weapon : Entity
     
     public virtual void Throw()
     {
-        var stats = Data as WeaponSO;
+        var stats = GetData() as WeaponSO;
         transform.parent = null;
         _rigidbody.bodyType = RigidbodyType2D.Dynamic;
         _rigidbody.drag = stats.LinearDrag;

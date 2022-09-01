@@ -21,7 +21,6 @@ public class Player : Entity
         _input = GetComponent<PlayerInputHandler>();
         _rotation = GetComponent<IRotation>();
         _weapon = GetComponentInChildren<Weapon>();
-        Debug.Log(_weapon.Data.Id);
     }
 
     private void Start()
