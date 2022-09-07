@@ -18,14 +18,8 @@ public class Pickable : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D col)
     {
         if(!col.gameObject.CompareTag("Player")) return;
-
         
-
-        Debug.Log("Picks item 1");
-
         Inventory.Instance.GetItem(this);
-
-        Debug.Log("picks item 2");
     }
 
 }

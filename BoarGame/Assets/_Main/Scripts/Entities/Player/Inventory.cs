@@ -19,7 +19,7 @@ public class Inventory : MonoBehaviour
     /// El string se guarda en un scriptable object que me dice que item es
     /// y el item del inventario 
     /// </summary>
-    private Dictionary<string, InventoryItem> _itemDictionary;
+    private List<InventoryItem> _itemDictionary;
     private int _maxItemCapacity = 2;
 
     private void Awake()
@@ -32,7 +32,7 @@ public class Inventory : MonoBehaviour
 
         Instance = this;
 
-        _itemDictionary = new Dictionary<string, InventoryItem>();
+        _itemDictionary = new List<InventoryItem>();
     }
 
     public void GetItem(Pickable itemToPickup)
@@ -41,7 +41,7 @@ public class Inventory : MonoBehaviour
         
         if(HasFullInventory()) return;
         
-        _itemDictionary.Add(data.Id, new InventoryItem()
+        _itemDictionary.Add(new InventoryItem()
         {
             Item = data
         });
