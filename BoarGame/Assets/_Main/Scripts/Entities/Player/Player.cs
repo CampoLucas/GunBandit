@@ -12,15 +12,14 @@ public class Player : Entity
 {
     private PlayerInputHandler _input;
     private IRotation _rotation;
-    private Weapon _weapon;
-    public Weapon Weapon => _weapon;
+    public Weapon CurrentWeapon { get; private set; }
 
     protected override void Awake()
     {
         base.Awake();
         _input = GetComponent<PlayerInputHandler>();
         _rotation = GetComponent<IRotation>();
-        _weapon = GetComponentInChildren<Weapon>();
+        CurrentWeapon = GetComponentInChildren<Weapon>();
     }
 
     private void Start()
@@ -28,6 +27,9 @@ public class Player : Entity
         _input.OnFireInput += Fire;
         _input.OnThrowInput += Throw;
         _input.OnReloadInput += Reload;
+        
+        if(CurrentWeapon != null)
+            CurrentWeapon.ChangeState(WeaponState.Equipped);
     }
 
     private void Update()
@@ -47,21 +49,21 @@ public class Player : Entity
 
     private void Fire()
     {
-        var gun = _weapon != null ? _weapon as Gun : null;
+        var gun = CurrentWeapon != null ? CurrentWeapon as Gun : null;
         if (gun == null) return;
         gun.Fire();
     }
     private void Reload()
     {
-        var gun = _weapon != null ? _weapon as Gun : null;
+        var gun = CurrentWeapon != null ? CurrentWeapon as Gun : null;
         if (gun == null) return;
         gun.Reload();
     }
 
     private void Throw()
     {
-        if (_weapon == null) return;
-        _weapon.Throw();
-        _weapon = null;
+        if (CurrentWeapon == null) return;
+        CurrentWeapon.Throw();
+        CurrentWeapon = null;
     }
 }

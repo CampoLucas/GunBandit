@@ -13,6 +13,5 @@ public class Bullet : Entity
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Destroy(gameObject);
-        Debug.Log("a");
     }
 }

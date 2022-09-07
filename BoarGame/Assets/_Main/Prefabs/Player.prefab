@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3242269579498017133}
   - component: {fileID: 3242269579498017130}
   - component: {fileID: 3242269579498017129}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
@@ -135,7 +135,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3242269580943453768}
   - component: {fileID: 3242269580943453769}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -195,8 +195,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1075188613
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: ae3abc4d8f91dee4f8a9672074a765b8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -264,39 +264,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6809415856255002274, guid: 38511fe4311ca67469c96ce20e810c19, type: 3}
-      propertyPath: bulletPrefab
-      value: 
-      objectReference: {fileID: 2486643567698640556, guid: 554e3b63cea90844a9af8c77553decff, type: 3}
-    - target: {fileID: 6809415856255002274, guid: 38511fe4311ca67469c96ce20e810c19, type: 3}
-      propertyPath: bulletSpawnPos
-      value: 
-      objectReference: {fileID: 3242269580578824393}
-    - target: {fileID: 6809415857370554310, guid: 38511fe4311ca67469c96ce20e810c19, type: 3}
-      propertyPath: m_Name
-      value: SpawnPos
-      objectReference: {fileID: 0}
-    - target: {fileID: 6809415857370554311, guid: 38511fe4311ca67469c96ce20e810c19, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.319
-      objectReference: {fileID: 0}
-    - target: {fileID: 6809415857372391342, guid: 38511fe4311ca67469c96ce20e810c19, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.1666667
-      objectReference: {fileID: 0}
-    - target: {fileID: 6809415857372391342, guid: 38511fe4311ca67469c96ce20e810c19, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.60599995
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 38511fe4311ca67469c96ce20e810c19, type: 3}
 --- !u!4 &3242269579463006638 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6809415856255002272, guid: 38511fe4311ca67469c96ce20e810c19, type: 3}
-  m_PrefabInstance: {fileID: 8250942674405654286}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &3242269580578824393 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6809415857370554311, guid: 38511fe4311ca67469c96ce20e810c19, type: 3}
   m_PrefabInstance: {fileID: 8250942674405654286}
   m_PrefabAsset: {fileID: 0}

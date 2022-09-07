@@ -19,6 +19,7 @@ MonoBehaviour:
   range: 20
   throwStrength: 15
   linearDrag: 2
+  handPos: {x: 0.119, y: 0.233}
   fireRate: 0.2
   accuracy: 8
   ammo: 46
