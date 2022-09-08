@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d4365ea88abe07f4ca6683e0b1d0d63a, type: 3}
-  m_Name: AK-47
+  m_Name: Pistol
   m_EditorClassIdentifier: 
-  id: AK47
-  displayName: AK-47
+  id: Gun1
+  displayName: Pistol
   sprite: {fileID: 0}
-  icon: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  icon: {fileID: 21300000, guid: 9c369bcfa84d8ea4e9d6e851b6fbc846, type: 3}
   speed: 200
   damage: 8
   range: 20
@@ -25,10 +25,10 @@ MonoBehaviour:
   offset: {x: 0, y: 0.6}
   size: {x: 0.1, y: 1.2}
   handPos: {x: 0.119, y: 0.233}
-  fireRate: 0.2
+  fireRate: 0.8
   accuracy: 8
-  ammo: 46
-  magAmmo: 16
-  reloadSpeed: 0.5
+  ammo: 20
+  magAmmo: 5
+  reloadSpeed: 0.4
   mode: 1
   type: 2

@@ -6,15 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="c2c7b180-e0b1-40f5-9a97-ec9df96896c5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BoarGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BoarGame/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Electronic Highway Sign SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Electronic Highway Sign SDF.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Main/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Main/ScriptableObjects/Weapons/AK-47.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/ScriptableObjects/Weapons/AK-47.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Player/Inventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Player/Inventory.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Player/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Player/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Weapons/Pickable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Weapons/Pickable.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Main/Scripts/SO/StatsSO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Scripts/SO/StatsSO.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Main/Scripts/SO/Weapons/GunSO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Scripts/SO/Weapons/GunSO.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Main/Scripts/SO/Weapons/WeaponSO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Scripts/SO/Weapons/WeaponSO.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Main/Scripts/UI/AmmoDisplay.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Scripts/UI/AmmoDisplay.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Main/Scripts/UI/AmmoDisplay.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Scripts/UI/WeaponDisplay.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Main/Scripts/UI/AmmoDisplay.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Scripts/UI/WeaponDisplay.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +113,7 @@
       <workItem from="1662479900505" duration="2201000" />
       <workItem from="1662559994289" duration="5231000" />
       <workItem from="1662580224406" duration="2040000" />
-      <workItem from="1662643150639" duration="5649000" />
+      <workItem from="1662643150639" duration="8959000" />
     </task>
     <servers />
   </component>

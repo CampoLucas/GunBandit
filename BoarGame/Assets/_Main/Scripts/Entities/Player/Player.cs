@@ -12,14 +12,12 @@ public class Player : Entity
 {
     private PlayerInputHandler _input;
     private IRotation _rotation;
-    public Inventory WeaponInventory { get; private set; }
 
     protected override void Awake()
     {
         base.Awake();
         _input = GetComponent<PlayerInputHandler>();
         _rotation = GetComponent<IRotation>();
-        WeaponInventory = GetComponent<Inventory>();
     }
 
     private void Start()
@@ -46,21 +44,22 @@ public class Player : Entity
 
     private void Fire()
     {
-        var gun = WeaponInventory.CurrentWeapon != null ? WeaponInventory.CurrentWeapon as Gun : null;
+        var gun = Inventory.Instance.CurrentWeapon != null ? Inventory.Instance.CurrentWeapon as Gun : null;
         if (gun == null) return;
         gun.Fire();
     }
     private void Reload()
     {
-        var gun = WeaponInventory.CurrentWeapon != null ? WeaponInventory.CurrentWeapon as Gun : null;
+        var gun = Inventory.Instance.CurrentWeapon != null ? Inventory.Instance.CurrentWeapon as Gun : null;
         if (gun == null) return;
         gun.Reload();
     }
 
     private void Throw()
     {
-        if (WeaponInventory.CurrentWeapon == null) return;
-        WeaponInventory.CurrentWeapon.Throw();
+        if (Inventory.Instance.CurrentWeapon == null) return;
+        Inventory.Instance.CurrentWeapon.Throw();
+        Inventory.Instance.DropItem();
         //WeaponInventory.CurrentWeapon = null;
         //Remove the weapon from inventory
     }
