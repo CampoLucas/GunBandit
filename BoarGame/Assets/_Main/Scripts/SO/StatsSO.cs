@@ -6,9 +6,17 @@ using UnityEngine;
 public class StatsSO : ScriptableObject
 {
     [SerializeField] private string id = "default";
+    [SerializeField] private string displayName;
+    
+    [Header("Render")]
     [SerializeField] private Sprite sprite;
-    [SerializeField] private float speed;
+    [SerializeField] private Sprite icon;
+    
+    [Header("Stats")]
+    [Range(0.0001f, 200)][SerializeField] private float speed;
     public string Id => id;
+    public string DisplayName => displayName;
     public Sprite Sprite => sprite;
+    public Sprite Icon => icon;
     public float Speed => speed;
 }

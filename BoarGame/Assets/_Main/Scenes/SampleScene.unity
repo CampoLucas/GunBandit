@@ -1640,6 +1640,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1731262919, guid: 38511fe4311ca67469c96ce20e810c19, type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1731262926, guid: 38511fe4311ca67469c96ce20e810c19, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -3093,6 +3097,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38342c62676944c4fa7eb65e8e121a8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weaponList: []
+  _itemIndex: 0
+  maxWeaponCapacity: 2
 --- !u!1 &1820912194
 GameObject:
   m_ObjectHideFlags: 0
@@ -4686,7 +4693,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3242269579463006609, guid: dfb9e3cf000a71848a6d5993540a2780, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3242269579498017134, guid: dfb9e3cf000a71848a6d5993540a2780, type: 3}
       propertyPath: m_Name

@@ -14,11 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: AK-47
   sprite: {fileID: 0}
+  icon: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   speed: 200
   damage: 8
   range: 20
   throwStrength: 15
+  mass: 1
   linearDrag: 2
+  offset: {x: 0, y: 0.6}
+  size: {x: 0.1, y: 1.2}
   handPos: {x: 0.119, y: 0.233}
   fireRate: 0.2
   accuracy: 8

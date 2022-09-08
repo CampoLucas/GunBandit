@@ -19,7 +19,7 @@ public class Pickable : MonoBehaviour
     {
         if(!col.gameObject.CompareTag("Player")) return;
         
-        Inventory.Instance.GetItem(this);
+        Inventory.Instance.AddItem(this);
     }
 
 }

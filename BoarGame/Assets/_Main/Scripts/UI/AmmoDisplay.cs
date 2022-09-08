@@ -10,7 +10,7 @@ public class AmmoDisplay : MonoBehaviour
 
     private void Update()
     {
-        var gun = player.CurrentWeapon as Gun;
-        ammo.text = gun != null ? gun.Reloadable.CurrentMagAmmo.ToString() + "/" + gun.Reloadable.CurrentAmmo.ToString() : "";
+        var gun = player.WeaponInventory.CurrentWeapon as Gun;
+        ammo.text = gun ? gun.Reloadable.CurrentMagAmmo.ToString() + "/" + gun.Reloadable.CurrentAmmo.ToString() : "";
     }
 }

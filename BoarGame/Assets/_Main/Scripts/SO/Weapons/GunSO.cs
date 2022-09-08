@@ -5,11 +5,16 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Gun", menuName = "Entities/Weapons/Gun", order = 0)]
 public class GunSO : WeaponSO
 {
-    [SerializeField] private float fireRate = 0.1f;
-    [SerializeField] private float accuracy = 0.5f;
-    [SerializeField] private int ammo = 60;
-    [SerializeField] private int magAmmo = 6;
-    [SerializeField] private float reloadSpeed = 1f;
+    [Header("Shooting stats")]
+    [Range(0.0001f, 20)][SerializeField] private float fireRate = 0.1f;
+    [Range(0.0001f, 20)][SerializeField] private float accuracy = 0.5f;
+    
+    [Header("Reloading stats")]
+    [Range(0, 500)][SerializeField] private int ammo = 60;
+    [Range(0, 20)][SerializeField] private int magAmmo = 6;
+    [Range(0.0001f, 20)][SerializeField] private float reloadSpeed = 1f;
+    
+    [Header("Gun specs")]
     [SerializeField] private FireMode mode = FireMode.OneTap;
     [SerializeField] private AmmoType type = AmmoType.Pistol;
     public float FireRate => fireRate;
