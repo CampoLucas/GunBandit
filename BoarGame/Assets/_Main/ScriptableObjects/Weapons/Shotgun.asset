@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d4365ea88abe07f4ca6683e0b1d0d63a, type: 3}
-  m_Name: Pistol
+  m_Name: Shotgun
   m_EditorClassIdentifier: 
-  id: Gun1
-  displayName: Pistol
-  sprite: {fileID: 21300000, guid: 13d4af9aaf7e8c44198e958c65b7f5ac, type: 3}
-  icon: {fileID: 21300000, guid: 9c369bcfa84d8ea4e9d6e851b6fbc846, type: 3}
+  id: Shotgun
+  displayName: Shotgun
+  sprite: {fileID: 21300000, guid: 5300a6ef2c5d3864e9bd09aaf3056db4, type: 3}
+  icon: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   speed: 200
   damage: 8
   range: 20
@@ -24,8 +24,9 @@ MonoBehaviour:
   linearDrag: 2
   offset: {x: 0, y: 0.6}
   size: {x: 0.1, y: 1.2}
-  type: 1
-  fireRate: 0.8
-  ammo: 20
-  magAmmo: 5
-  reloadSpeed: 0.4
+  handPos: {x: 0.119, y: 0.233}
+  fireRate: 0.2
+  ammo: 46
+  magAmmo: 16
+  reloadSpeed: 0.5
+  type: 2

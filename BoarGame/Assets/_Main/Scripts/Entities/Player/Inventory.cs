@@ -13,10 +13,11 @@ public struct InventoryWeapon
 
 public class Inventory : MonoBehaviour
 {
-    [SerializeField] private List<InventoryWeapon> weaponList;
+    private List<InventoryWeapon> _weaponList;
     [SerializeField] private int _itemIndex;
     [SerializeField] private int maxWeaponCapacity = 2;
     [SerializeField] private Transform handPos;
+    private Animator _animator;
     
     public static Inventory Instance;
 
@@ -24,8 +25,8 @@ public class Inventory : MonoBehaviour
     {
         get
         {
-            if (weaponList.Count > 0)
-                return weaponList[_itemIndex].Weapon;
+            if (_weaponList.Count > 0)
+                return _weaponList[_itemIndex].Weapon;
             else
                 return null;
         }
@@ -42,13 +43,15 @@ public class Inventory : MonoBehaviour
 
         Instance = this;
 
-        weaponList = new List<InventoryWeapon>();
+        _weaponList = new List<InventoryWeapon>();
         
 
-        for (int i = 0; i < weaponList.Count; i++)
+        for (int i = 0; i < _weaponList.Count; i++)
         {
             AddItem(GetComponentsInChildren<Pickable>()[i]);
         }
+
+        _animator = GetComponent<Animator>();
     }
 
     private void Start()
@@ -62,7 +65,7 @@ public class Inventory : MonoBehaviour
         if(HasFullInventory()) return;
         var data = itemToPickup.GetData() as WeaponSO;
         var weapon = itemToPickup.GetComponent<Weapon>();
-        weaponList.Add(new InventoryWeapon()
+        _weaponList.Add(new InventoryWeapon()
         {
             Data = data,
             Weapon = weapon
@@ -70,44 +73,54 @@ public class Inventory : MonoBehaviour
         
         weapon.ChangeState(WeaponState.Equipped);
         
-        var item = itemToPickup.gameObject;
-        var transform1 = handPos.transform;
         
-        item.transform.parent = transform;
-        item.transform.rotation = transform1.rotation;
-        item.transform.position = transform1.position;
+        
+        //Changes weapon position
+        var item = itemToPickup.gameObject;
+
+        if (_weaponList.Count > 1)
+        {
+            item.SetActive(false);
+        }
+        else
+        {
+            _animator.SetFloat("WeaponType", (int)data.Type);
+            // item.transform.parent = transform;
+            // item.transform.rotation = handPos.transform.rotation;
+            // item.transform.position = handPos.transform.position;
+        }
     }
 
     public void DropItem()
     {
-        weaponList.Remove(weaponList[_itemIndex]);
-    }
-    public void GetItem(Pickable itemToPickup)
-    {
-        //if(HasFullInventory()) return;
-        
-
-        // var data = itemToPickup.GetData();
-        //
-        // if(HasFullInventory()) return;
-        //
-        // _itemDictionary.Add(new InventoryItem()
-        // {
-        //     Item = data
-        // });
-        //
-        // itemToPickup.GetComponent<Weapon>().ChangeState(WeaponState.Equipped);
-        // var item = itemToPickup.gameObject;
-        // item.transform.parent = transform;
-        // item.transform.rotation = transform.rotation;
-        // item.transform.position = data.Position(transform.position);
-
-        // If players has a weapon it should set active false.
+        _weaponList.Remove(_weaponList[_itemIndex]);
+        if (_weaponList.Count > 0)
+        {
+            var item = CurrentWeapon.gameObject;
+            item.SetActive(true);
+           
+           _animator.SetFloat("WeaponType", (int)_weaponList[_itemIndex].Data.Type);
+           // item.transform.parent = transform;
+           // item.transform.rotation = handPos.transform.rotation;
+           // item.transform.position = handPos.transform.position;
+        }
+        else
+        {
+            _animator.SetFloat("WeaponType", 0);
+        }
     }
 
     public bool HasFullInventory()
     {
-         return weaponList.Count >= maxWeaponCapacity;
+         return _weaponList.Count >= maxWeaponCapacity;
+    }
+
+    public void ChangeWeaponPosition()
+    {
+        var item = CurrentWeapon.gameObject;
+        item.transform.parent = transform;
+        item.transform.rotation = handPos.transform.rotation;
+        item.transform.position = handPos.transform.position;
     }
 
     

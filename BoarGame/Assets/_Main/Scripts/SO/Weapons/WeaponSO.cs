@@ -17,8 +17,8 @@ public class WeaponSO : StatsSO
     [SerializeField] private Vector2 offset;
     [SerializeField] private Vector2 size;
     
-    [Header("Hand Position")]
-    [SerializeField] private Vector2 handPos;
+    [Header("Weapon specs")]
+    [SerializeField] private WeaponType type = WeaponType.Empty;
     public float Damage => damage;
     public float Range => range;
     public float ThrowStrength => throwStrength;
@@ -26,8 +26,8 @@ public class WeaponSO : StatsSO
     public float LinearDrag => linearDrag;
     public Vector2 Offset => offset;
     public Vector2 Size => size;
-
-    public Vector3 Position(Vector3 position) =>
-        new Vector3(position.x + handPos.x, position.y + handPos.y);
+    public WeaponType Type => type;
 
 }
+
+public enum WeaponType { Empty, Pistol, Shotgun}

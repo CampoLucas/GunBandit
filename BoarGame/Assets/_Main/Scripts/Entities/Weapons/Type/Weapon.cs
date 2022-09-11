@@ -17,7 +17,8 @@ public class Weapon : Entity
 {
     private Rigidbody2D _rigidbody;
     private CapsuleCollider2D _collider;
-    private WeaponState _currentState = WeaponState.Pickable;
+    [SerializeField] private WeaponState _currentState = WeaponState.Pickable;
+    [SerializeField] private Vector2 rbVelocity;
 
     /// <summary>
     /// Event that happens when the weapon is changed
@@ -34,6 +35,13 @@ public class Weapon : Entity
     {
         OnWeaponChange += WeaponChange;
         if(_currentState != WeaponState.Equipped)
+            ChangeState(WeaponState.Pickable);
+    }
+
+    private void FixedUpdate()
+    {
+        rbVelocity = new Vector2(Mathf.Abs(_rigidbody.velocity.x), Mathf.Abs(_rigidbody.velocity.y));
+        if(_currentState == WeaponState.Thrown && Vector2.Distance(rbVelocity ,Vector2.zero) < 0.4f)
             ChangeState(WeaponState.Pickable);
     }
 
@@ -93,4 +101,5 @@ public class Weapon : Entity
                 return;
         }
     }
+    
 }
