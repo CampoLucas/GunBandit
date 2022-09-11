@@ -17,7 +17,7 @@ public class Weapon : Entity
 {
     private Rigidbody2D _rigidbody;
     private CapsuleCollider2D _collider;
-    private WeaponState _currentState;
+    private WeaponState _currentState = WeaponState.Pickable;
 
     /// <summary>
     /// Event that happens when the weapon is changed
@@ -27,7 +27,7 @@ public class Weapon : Entity
     protected override void Awake()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
-        _collider = GetComponent<CapsuleCollider2D>();
+        _collider = GetComponentInChildren<CapsuleCollider2D>();
     }
 
     protected virtual void Start()

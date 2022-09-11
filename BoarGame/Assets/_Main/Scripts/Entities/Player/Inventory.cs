@@ -16,6 +16,7 @@ public class Inventory : MonoBehaviour
     [SerializeField] private List<InventoryWeapon> weaponList;
     [SerializeField] private int _itemIndex;
     [SerializeField] private int maxWeaponCapacity = 2;
+    [SerializeField] private Transform handPos;
     
     public static Inventory Instance;
 
@@ -70,9 +71,11 @@ public class Inventory : MonoBehaviour
         weapon.ChangeState(WeaponState.Equipped);
         
         var item = itemToPickup.gameObject;
+        var transform1 = handPos.transform;
+        
         item.transform.parent = transform;
-        item.transform.rotation = transform.rotation;
-        if (data != null) item.transform.position = data.Position(transform.position);
+        item.transform.rotation = transform1.rotation;
+        item.transform.position = transform1.position;
     }
 
     public void DropItem()
