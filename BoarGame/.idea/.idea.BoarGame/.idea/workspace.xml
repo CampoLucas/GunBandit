@@ -6,18 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="c2c7b180-e0b1-40f5-9a97-ec9df96896c5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BoarGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BoarGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Main/Art/Sprites/Wepons/Shotgunl.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Main/Art/Sprites/Wepons/Shotgunl.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Main/Art/Sprites/pistol.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Main/Art/Sprites/pistol.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Main/Prefabs/Pistol Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Prefabs/Pistol Variant.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Main/Prefabs/Shotgun.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Prefabs/Shotgun.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Main/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Main/ScriptableObjects/Weapons/Pistol.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/ScriptableObjects/Weapons/Pistol.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Player/Inventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Player/Inventory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Weapons/Type/Weapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Weapons/Type/Weapon.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Main/Scripts/SO/Weapons/GunSO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Scripts/SO/Weapons/GunSO.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Main/Scripts/SO/Weapons/WeaponSO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Scripts/SO/Weapons/WeaponSO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,6 +109,7 @@
       <workItem from="1662580224406" duration="2040000" />
       <workItem from="1662643150639" duration="9399000" />
       <workItem from="1662903631366" duration="4455000" />
+      <workItem from="1663509989866" duration="1484000" />
     </task>
     <servers />
   </component>
