@@ -8,9 +8,10 @@ using UnityEngine;
 public class Gun : Weapon, IFactory<Entity, StatsSO>
 {
     private Reloadable _reloadable;
+    private float _lastFiredTime;
+    
     [SerializeField] private Entity bulletPrefab;
     [SerializeField] private Transform bulletSpawnPos;
-    private float _lastFiredTime;
     public Entity Product => bulletPrefab;
     public Reloadable Reloadable => _reloadable;
 
@@ -23,7 +24,7 @@ public class Gun : Weapon, IFactory<Entity, StatsSO>
     /// <summary>
     /// Fire the gun
     /// </summary>
-    public void Fire()
+    public override void Attack()
     {
         var stats = GetData() as GunSO;
         if (_reloadable.OutOfAmmo() || _reloadable.IsReloading()) return;
@@ -40,22 +41,6 @@ public class Gun : Weapon, IFactory<Entity, StatsSO>
     public void Reload()
     {
         _reloadable.Reload();
-    }
-
-    /// <summary>
-    /// Use the gun as a melee weapon
-    /// </summary>
-    public override void Attack()
-    {
-        base.Attack();
-    }
-
-    /// <summary>
-    /// Throw the gun
-    /// </summary>
-    public override void Throw()
-    {
-        base.Throw();
     }
 
     /// <summary>

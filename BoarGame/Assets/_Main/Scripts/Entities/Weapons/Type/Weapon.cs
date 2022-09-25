@@ -3,9 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-/// <summary>
-/// All type weapon inherits this class
-/// </summary>
+
 public enum WeaponState
 {
     Equipped,
@@ -13,12 +11,14 @@ public enum WeaponState
     Thrown
 }
 
-public class Weapon : Entity
+/// <summary>
+/// All type weapon inherits this class
+/// </summary>
+public class Weapon : Entity, IWeapon
 {
     private Rigidbody2D _rigidbody;
     private CapsuleCollider2D _collider;
     [SerializeField] private WeaponState _currentState = WeaponState.Pickable;
-    [SerializeField] private Vector2 rbVelocity;
 
     /// <summary>
     /// Event that happens when the weapon is changed
@@ -40,7 +40,7 @@ public class Weapon : Entity
 
     private void FixedUpdate()
     {
-        rbVelocity = new Vector2(Mathf.Abs(_rigidbody.velocity.x), Mathf.Abs(_rigidbody.velocity.y));
+        var rbVelocity = new Vector2(Mathf.Abs(_rigidbody.velocity.x), Mathf.Abs(_rigidbody.velocity.y));
         if(_currentState == WeaponState.Thrown && Vector2.Distance(rbVelocity ,Vector2.zero) < 0.4f)
             ChangeState(WeaponState.Pickable);
     }
@@ -50,6 +50,9 @@ public class Weapon : Entity
         
     }
     
+    /// <summary>
+    /// Throws the weapon
+    /// </summary>
     public virtual void Throw()
     {
         var stats = GetData() as WeaponSO;

@@ -7,7 +7,7 @@ using UnityEngine;
 public struct InventoryWeapon
 {
     public WeaponSO Data;
-    public Weapon Weapon;
+    public Weapon2 Weapon;
 
 }
 
@@ -19,44 +19,28 @@ public class Inventory : MonoBehaviour
     [SerializeField] private Transform handPos;
     private Animator _animator;
     
-    public static Inventory Instance;
-
-    public Weapon CurrentWeapon
+    public Weapon2 CurrentWeapon()
     {
-        get
-        {
-            if (_weaponList.Count > 0)
-                return _weaponList[_itemIndex].Weapon;
-            else
-                return null;
-        }
+        if (_weaponList.Count > 0)
+            return _weaponList[_itemIndex].Weapon;
+        else
+            return null;
     }
     
 
     private void Awake()
     {
-        //if(Instance == null)
-        //{
-        //    Destroy(gameObject);
-        //    return;
-        //}
-
-        Instance = this;
-
-        _weaponList = new List<InventoryWeapon>();
-        
-
+         _weaponList = new List<InventoryWeapon>();
         for (int i = 0; i < _weaponList.Count; i++)
         {
             AddItem(GetComponentsInChildren<Pickable>()[i]);
         }
-
         _animator = GetComponent<Animator>();
     }
 
     private void Start()
     {
-        if (CurrentWeapon != null) CurrentWeapon.ChangeState(WeaponState.Equipped);
+        //if (CurrentWeapon != null) CurrentWeapon.ChangeState(WeaponState.Equipped);
         _itemIndex = 0;
     }
 
@@ -64,14 +48,14 @@ public class Inventory : MonoBehaviour
     {
         if(HasFullInventory()) return;
         var data = itemToPickup.GetData() as WeaponSO;
-        var weapon = itemToPickup.GetComponent<Weapon>();
+        var weapon = itemToPickup.GetComponent<Weapon2>();
         _weaponList.Add(new InventoryWeapon()
         {
             Data = data,
             Weapon = weapon
         });
         
-        weapon.ChangeState(WeaponState.Equipped);
+        //weapon.ChangeState(WeaponState.Equipped);
         
         
         
@@ -96,7 +80,7 @@ public class Inventory : MonoBehaviour
         _weaponList.Remove(_weaponList[_itemIndex]);
         if (_weaponList.Count > 0)
         {
-            var item = CurrentWeapon.gameObject;
+            var item = CurrentWeapon().gameObject;
             item.SetActive(true);
            
            _animator.SetFloat("WeaponType", (int)_weaponList[_itemIndex].Data.Type);
@@ -117,7 +101,7 @@ public class Inventory : MonoBehaviour
 
     public void ChangeWeaponPosition()
     {
-        var item = CurrentWeapon.gameObject;
+        var item = CurrentWeapon().gameObject;
         item.transform.parent = transform;
         item.transform.rotation = handPos.transform.rotation;
         item.transform.position = handPos.transform.position;

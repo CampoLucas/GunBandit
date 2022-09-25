@@ -12,12 +12,18 @@ public class Player : Entity
 {
     private PlayerInputHandler _input;
     private IRotation _rotation;
+    private IMovement _movement;
+
+    public Inventory Inventory;
+
 
     protected override void Awake()
     {
         base.Awake();
         _input = GetComponent<PlayerInputHandler>();
         _rotation = GetComponent<IRotation>();
+        _movement = GetComponent<IMovement>();
+        Inventory = GetComponent<Inventory>();
     }
 
     private void Start()
@@ -39,27 +45,26 @@ public class Player : Entity
         _input.OnThrowInput -= Throw;
         _input.OnReloadInput -= Reload;
     }
-    
+    private void Move(Vector2 direction) => _movement.Move(direction);
     private void Rotate(Vector2 mousePos) => _rotation.Rotate(mousePos);
 
     private void Fire()
     {
-        var gun = Inventory.Instance.CurrentWeapon != null ? Inventory.Instance.CurrentWeapon as Gun : null;
-        if (gun == null) return;
-        gun.Fire();
+        if(Inventory.CurrentWeapon() == null) return;
+        Inventory.CurrentWeapon().Attack();
     }
     private void Reload()
     {
-        var gun = Inventory.Instance.CurrentWeapon != null ? Inventory.Instance.CurrentWeapon as Gun : null;
+        var gun = Inventory.CurrentWeapon() as Ranged;
         if (gun == null) return;
         gun.Reload();
     }
 
     private void Throw()
     {
-        if (Inventory.Instance.CurrentWeapon == null) return;
-        Inventory.Instance.CurrentWeapon.Throw();
-        Inventory.Instance.DropItem();
+        if(Inventory.CurrentWeapon() == null) return;
+        Inventory.CurrentWeapon().Throw();
+        Inventory.DropItem();
         //WeaponInventory.CurrentWeapon = null;
         //Remove the weapon from inventory
     }
