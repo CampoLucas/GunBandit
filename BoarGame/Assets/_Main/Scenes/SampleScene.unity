@@ -692,7 +692,7 @@ MonoBehaviour:
   m_ShowCameraFrustum: 1
   m_IgnoreTimeScale: 0
   m_WorldUpOverride: {fileID: 0}
-  m_UpdateMethod: 1
+  m_UpdateMethod: 0
   m_BlendUpdateMethod: 1
   m_DefaultBlend:
     m_Style: 1
@@ -1490,6 +1490,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 868c9bac3fe01e848a6de5fa3c2dac3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
   defaultIcon: {fileID: 21300000, guid: 7b0d39e3e2c96114199f5745be1b5430, type: 3}
   icon: {fileID: 1474973274}
   weaponName: {fileID: 1613418102}
