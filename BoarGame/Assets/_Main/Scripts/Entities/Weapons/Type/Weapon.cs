@@ -4,12 +4,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public enum WeaponState
-{
-    Equipped,
-    Pickable,
-    Thrown
-}
 
 /// <summary>
 /// All type weapon inherits this class
@@ -18,6 +12,7 @@ public class Weapon : Entity, IWeapon
 {
     private Rigidbody2D _rigidbody;
     private CapsuleCollider2D _collider;
+    
     [SerializeField] private WeaponState _currentState = WeaponState.Pickable;
 
     /// <summary>
@@ -25,7 +20,7 @@ public class Weapon : Entity, IWeapon
     /// </summary>
     public Action OnWeaponChange { get; private set; }
 
-    protected override void Awake()
+    protected virtual void Awake()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
         _collider = GetComponentInChildren<CapsuleCollider2D>();
@@ -102,6 +97,10 @@ public class Weapon : Entity, IWeapon
                 if (stats != null) _rigidbody.drag = stats.LinearDrag;
                 
                 return;
+            case WeaponState.Stored:
+                break;
+            default:
+                throw new ArgumentOutOfRangeException();
         }
     }
     

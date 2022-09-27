@@ -18,7 +18,7 @@ public class Pickable : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D col)
     {
         if(!col.gameObject.CompareTag("Player")) return;
-        var inventory = GetComponent<Player>().Inventory;
+        var inventory = col.GetComponent<Player>().Inventory;
         inventory.AddItem(this);
     }
 

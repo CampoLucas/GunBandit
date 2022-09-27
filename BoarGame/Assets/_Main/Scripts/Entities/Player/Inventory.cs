@@ -14,10 +14,11 @@ public struct InventoryWeapon
 public class Inventory : MonoBehaviour
 {
     private List<InventoryWeapon> _weaponList;
+    private Animator _animator;
+    
     [SerializeField] private int _itemIndex;
     [SerializeField] private int maxWeaponCapacity = 2;
     [SerializeField] private Transform handPos;
-    private Animator _animator;
     
     public Weapon2 CurrentWeapon()
     {
@@ -40,7 +41,7 @@ public class Inventory : MonoBehaviour
 
     private void Start()
     {
-        //if (CurrentWeapon != null) CurrentWeapon.ChangeState(WeaponState.Equipped);
+        if (CurrentWeapon() != null) CurrentWeapon().ChangeState(WeaponState.Equipped);
         _itemIndex = 0;
     }
 
@@ -55,7 +56,7 @@ public class Inventory : MonoBehaviour
             Weapon = weapon
         });
         
-        //weapon.ChangeState(WeaponState.Equipped);
+        weapon.ChangeState(WeaponState.Equipped);
         
         
         
@@ -68,6 +69,7 @@ public class Inventory : MonoBehaviour
         }
         else
         {
+            //Todo: IAnimator
             _animator.SetFloat("WeaponType", (int)data.Type);
             // item.transform.parent = transform;
             // item.transform.rotation = handPos.transform.rotation;
@@ -83,13 +85,12 @@ public class Inventory : MonoBehaviour
             var item = CurrentWeapon().gameObject;
             item.SetActive(true);
            
-           _animator.SetFloat("WeaponType", (int)_weaponList[_itemIndex].Data.Type);
-           // item.transform.parent = transform;
-           // item.transform.rotation = handPos.transform.rotation;
-           // item.transform.position = handPos.transform.position;
+            //Todo: IAnimator
+            _animator.SetFloat("WeaponType", (int)_weaponList[_itemIndex].Data.Type);
         }
         else
         {
+            //Todo: IAnimator
             _animator.SetFloat("WeaponType", 0);
         }
     }
@@ -99,6 +100,7 @@ public class Inventory : MonoBehaviour
          return _weaponList.Count >= maxWeaponCapacity;
     }
 
+    //Todo: IChangePosition
     public void ChangeWeaponPosition()
     {
         var item = CurrentWeapon().gameObject;

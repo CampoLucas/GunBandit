@@ -17,9 +17,8 @@ public class Player : Entity
     public Inventory Inventory;
 
 
-    protected override void Awake()
+    private void Awake()
     {
-        base.Awake();
         _input = GetComponent<PlayerInputHandler>();
         _rotation = GetComponent<IRotation>();
         _movement = GetComponent<IMovement>();

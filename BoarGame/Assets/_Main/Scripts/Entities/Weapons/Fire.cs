@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class Fire : MonoBehaviour, IAttack, IFactory<Entity, StatsSO>
@@ -8,6 +9,11 @@ public class Fire : MonoBehaviour, IAttack, IFactory<Entity, StatsSO>
     [SerializeField] private Transform bulletSpawnPos;
     
     public Entity Product => bulletPrefab;
+
+    private void Awake()
+    {
+        _stats = GetComponent<Ranged>().GetData() as GunSO;
+    }
 
     public void Attack()
     {
