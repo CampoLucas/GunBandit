@@ -4,7 +4,9 @@ using UnityEngine;
 public class Fire : MonoBehaviour, IAttack, IFactory<Entity, StatsSO>
 {
     private GunSO _stats;
+    private IReloadable _reloadable;
     private float _lastFiredTime;
+    
     [SerializeField] private Entity bulletPrefab;
     [SerializeField] private Transform bulletSpawnPos;
     
@@ -13,13 +15,17 @@ public class Fire : MonoBehaviour, IAttack, IFactory<Entity, StatsSO>
     private void Awake()
     {
         _stats = GetComponent<Ranged>().GetData() as GunSO;
+        _reloadable = GetComponent<Reloadable>();
     }
 
     public void Attack()
     {
+        if (_reloadable.OutOfAmmo() || _reloadable.IsReloading()) return;
+        
         if (!(_lastFiredTime + _stats.FireRate < Time.time)) return;
         _lastFiredTime = Time.time;
         Create();
+        _reloadable.DecreaseAmmo();
     }
 
     

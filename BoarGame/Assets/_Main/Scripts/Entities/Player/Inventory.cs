@@ -20,6 +20,8 @@ public class Inventory : MonoBehaviour
     [SerializeField] private int maxWeaponCapacity = 2;
     [SerializeField] private Transform handPos;
     
+    public Action<Weapon2> OnWeaponChange;
+    
     public Weapon2 CurrentWeapon()
     {
         if (_weaponList.Count > 0)
@@ -69,12 +71,14 @@ public class Inventory : MonoBehaviour
         }
         else
         {
+            OnWeaponChange?.Invoke(weapon);
             //Todo: IAnimator
             _animator.SetFloat("WeaponType", (int)data.Type);
             // item.transform.parent = transform;
             // item.transform.rotation = handPos.transform.rotation;
             // item.transform.position = handPos.transform.position;
         }
+        
     }
 
     public void DropItem()
@@ -87,6 +91,7 @@ public class Inventory : MonoBehaviour
            
             //Todo: IAnimator
             _animator.SetFloat("WeaponType", (int)_weaponList[_itemIndex].Data.Type);
+            OnWeaponChange?.Invoke(_weaponList[_itemIndex].Weapon);
         }
         else
         {

@@ -12,12 +12,12 @@ public class Ranged : Weapon2
         Reloadable = GetComponent<IReloadable>();
     }
 
-    public override void Attack()
-    {
-        if (Reloadable.OutOfAmmo() || Reloadable.IsReloading()) return;
-        base.Attack();
-        Reloadable.DecreaseAmmo();
-    }
+    // public override void Attack()
+    // {
+    //     if (Reloadable.OutOfAmmo() || Reloadable.IsReloading()) return;
+    //     base.Attack();
+    //     Reloadable.DecreaseAmmo();
+    // }
 
     public void Reload()
     {

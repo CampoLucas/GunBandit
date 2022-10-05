@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
@@ -7,7 +8,10 @@ using TMPro;
 public class WeaponDisplay : MonoBehaviour
 {
 
+    [Header("Player components")]
     [SerializeField] private Player player;
+    
+    [Header("UI components")]
     [SerializeField] private Sprite defaultIcon;
     [SerializeField] private Image icon;
     [SerializeField] private TMP_Text weaponName;
@@ -16,11 +20,29 @@ public class WeaponDisplay : MonoBehaviour
 
     private void Update()
     {
-        //if(player.Inventory.CurrentWeapon() == null) return;
-        //var weapon = player.Inventory.CurrentWeapon();
-        //ChangeIcon(weapon);
-        //UpdateBullets(weapon);
+        if(player.Inventory.CurrentWeapon() == null) return;
+        var weapon = player.Inventory.CurrentWeapon();
+        ChangeIcon(weapon);
+        UpdateBullets(weapon);
     }
+
+    // private void Start()
+    // {
+    //     player.OnWeaponChange += ChangeIcon;
+    //     player.Inventory.OnWeaponChange += ChangeIcon;
+    //     player.Inventory.OnWeaponChange += UpdateBullets;
+    //     player.OnGunFire += UpdateBullets;
+    //     player.OnGunReload += UpdateBullets;
+    // }
+    //
+    // private void OnDisable()
+    // {
+    //     player.OnWeaponChange -= ChangeIcon;
+    //     player.Inventory.OnWeaponChange -= ChangeIcon;
+    //     player.Inventory.OnWeaponChange -= UpdateBullets;
+    //     player.OnGunFire -= UpdateBullets;
+    //     player.OnGunReload -= UpdateBullets;
+    // }
 
     private void ChangeIcon(Weapon2 currentWeapon)
     {

@@ -15,6 +15,9 @@ public class Player : Entity
     private IMovement _movement;
 
     public Inventory Inventory;
+    public Action<Weapon2> OnWeaponChange;
+    public Action<Weapon2> OnGunFire;
+    public Action<Weapon2> OnGunReload;
 
 
     private void Awake()
@@ -49,14 +52,18 @@ public class Player : Entity
 
     private void Fire()
     {
-        if(Inventory.CurrentWeapon() == null) return;
+        if(!Inventory.CurrentWeapon()) return;
         Inventory.CurrentWeapon().Attack();
+        var gun = Inventory.CurrentWeapon() as Ranged;
+        if (!gun) return;
+        OnGunFire?.Invoke(Inventory.CurrentWeapon());
     }
     private void Reload()
     {
         var gun = Inventory.CurrentWeapon() as Ranged;
         if (gun == null) return;
         gun.Reload();
+        OnGunReload?.Invoke(Inventory.CurrentWeapon());
     }
 
     private void Throw()
@@ -64,6 +71,7 @@ public class Player : Entity
         if(Inventory.CurrentWeapon() == null) return;
         Inventory.CurrentWeapon().Throw();
         Inventory.DropItem();
+        OnWeaponChange?.Invoke(Inventory.CurrentWeapon());
         //WeaponInventory.CurrentWeapon = null;
         //Remove the weapon from inventory
     }

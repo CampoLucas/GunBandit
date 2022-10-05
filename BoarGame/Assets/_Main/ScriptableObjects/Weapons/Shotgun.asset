@@ -24,9 +24,8 @@ MonoBehaviour:
   linearDrag: 2
   offset: {x: 0, y: 0.6}
   size: {x: 0.1, y: 1.2}
-  handPos: {x: 0.119, y: 0.233}
+  type: 2
   fireRate: 0.2
   ammo: 46
   magAmmo: 16
   reloadSpeed: 0.5
-  type: 2
