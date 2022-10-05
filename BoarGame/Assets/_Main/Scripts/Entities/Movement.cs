@@ -5,11 +5,11 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour, IMovement
 {
-    private StatsSO _stats;
+    private CharacterSO _stats;
 
     private void Awake()
     {
-        _stats = GetComponent<Entity>().GetData();
+        _stats = GetComponent<Entity>().GetData() as CharacterSO;
     }
 
     public void Move(Vector2 dir)

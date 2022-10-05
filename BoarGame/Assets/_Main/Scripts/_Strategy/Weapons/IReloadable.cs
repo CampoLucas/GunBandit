@@ -1,6 +1,12 @@
 public interface IReloadable
 {
+    /// <summary>
+    /// The ammo a gun has available to reload
+    /// </summary>
     int CurrentAmmo { get; }
+    /// <summary>
+    /// The amount of ammo a gun has in the magazine
+    /// </summary>
     int CurrentMagAmmo { get; }
     
     /// <summary>

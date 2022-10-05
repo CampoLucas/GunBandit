@@ -4,30 +4,45 @@ using UnityEngine;
 
 public class WeaponSO : StatsSO
 {
-    [Header("Stats")]
-    [Range(0.0001f, 400)][SerializeField] private float damage = 100f;
-    [Range(0.0001f, 50)][SerializeField] private float range = 5f;
-    [Range(0.0001f, 50)][SerializeField] private float throwStrength = 5f;
-    
-    [Header("Rigidbody")]
-    [Range(0.0001f, 20)][SerializeField] private float mass = 1;
-    [SerializeField] private float linearDrag = 0;
-    
-    [Header("Collider")]
-    [SerializeField] private Vector2 offset;
-    [SerializeField] private Vector2 size;
+    [Header("Physics")] 
+    [SerializeField] private RigidbodyData rigidbody;
+    [SerializeField] private ColliderData collider;
     
     [Header("Weapon specs")]
     [SerializeField] private WeaponType type = WeaponType.Empty;
-    public float Damage => damage;
-    public float Range => range;
+    
+    [Header("Stats")]
+    [Range(0.0001f, 50)][SerializeField] private float throwStrength = 5f;
+    
+    
     public float ThrowStrength => throwStrength;
-    public float Mass => mass;
-    public float LinearDrag => linearDrag;
-    public Vector2 Offset => offset;
-    public Vector2 Size => size;
+    
+    public float Mass => rigidbody.Mass;
+    public float LinearDrag => rigidbody.LinearDrag;
+    public Vector2 Offset => collider.Offset;
+    public Vector2 Size => collider.Size;
     public WeaponType Type => type;
 
 }
 
 public enum WeaponType { Empty, Pistol, Shotgun}
+
+[System.Serializable]
+public struct RigidbodyData
+{
+    [Range(0.0001f, 20)][SerializeField] private float mass;
+    [SerializeField] private float linearDrag;
+
+    public float Mass => mass;
+    public float LinearDrag => linearDrag;
+}
+
+[System.Serializable]
+public struct ColliderData
+{
+    [SerializeField] private Vector2 offset;
+    [SerializeField] private Vector2 size;
+
+    public Vector2 Offset => offset;
+    public Vector2 Size => size;
+}

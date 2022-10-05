@@ -14,6 +14,11 @@ public class Weapon2 : Entity, IWeapon
         _attack = GetComponent<IAttack>();
         _swap = GetComponent<ISwapState>();
     }
+
+    private void InitStats(WeaponSO data)
+    {
+        
+    }
     
     public virtual void Attack()
     {

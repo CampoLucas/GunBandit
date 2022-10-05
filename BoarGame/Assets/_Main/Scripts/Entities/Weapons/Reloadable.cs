@@ -43,7 +43,6 @@ public class Reloadable : MonoBehaviour, IReloadable
     // if(_currentAmmo > _stats.Ammo)
     //     _currentAmmo = _stats.Ammo;
     public void GetAmmo(in int amount) => CurrentAmmo = CurrentAmmo >= _stats.Ammo ? CurrentAmmo = _stats.Ammo : CurrentAmmo += amount;
-    
     public void DecreaseAmmo() => CurrentMagAmmo--;
     public void DecreaseAmmo(in int amount) => CurrentMagAmmo -= amount;
     

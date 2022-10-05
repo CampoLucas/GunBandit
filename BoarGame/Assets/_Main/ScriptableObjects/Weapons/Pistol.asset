@@ -14,18 +14,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: Gun1
   displayName: Pistol
-  sprite: {fileID: 21300000, guid: 13d4af9aaf7e8c44198e958c65b7f5ac, type: 3}
-  icon: {fileID: 21300000, guid: 9c369bcfa84d8ea4e9d6e851b6fbc846, type: 3}
-  speed: 200
-  damage: 8
-  range: 20
-  throwStrength: 15
-  mass: 1
-  linearDrag: 2
-  offset: {x: 0, y: 0.6}
-  size: {x: 0.1, y: 1.2}
+  render:
+    sprite: {fileID: 21300000, guid: 13d4af9aaf7e8c44198e958c65b7f5ac, type: 3}
+    icon: {fileID: 21300000, guid: 9c369bcfa84d8ea4e9d6e851b6fbc846, type: 3}
+  rigidbody:
+    mass: 1
+    linearDrag: 2
+  collider:
+    offset: {x: 0, y: 0.6}
+    size: {x: 0.1, y: 1.2}
   type: 1
+  throwStrength: 15
+  bulletData: {fileID: 11400000, guid: 71f72a228a29ad14fa47ebd4bdc4bb29, type: 2}
   fireRate: 0.8
+  recoil: 0.5
   ammo: 20
   magAmmo: 5
   reloadSpeed: 0.4

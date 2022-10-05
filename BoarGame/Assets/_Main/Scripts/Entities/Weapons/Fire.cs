@@ -1,16 +1,16 @@
 using System;
 using UnityEngine;
 
-public class Fire : MonoBehaviour, IAttack, IFactory<Entity, StatsSO>
+public class Fire : MonoBehaviour, IAttack, IFactory<Bullet, StatsSO>
 {
     private GunSO _stats;
     private IReloadable _reloadable;
     private float _lastFiredTime;
     
-    [SerializeField] private Entity bulletPrefab;
+    [SerializeField] private Bullet bulletPrefab;
     [SerializeField] private Transform bulletSpawnPos;
     
-    public Entity Product => bulletPrefab;
+    public Bullet Product => bulletPrefab;
 
     private void Awake()
     {
@@ -24,27 +24,28 @@ public class Fire : MonoBehaviour, IAttack, IFactory<Entity, StatsSO>
         
         if (!(_lastFiredTime + _stats.FireRate < Time.time)) return;
         _lastFiredTime = Time.time;
-        Create();
+        var bullet = Create();
+        bullet.InitStats(_stats.BulletData);
         _reloadable.DecreaseAmmo();
     }
 
     
-    public Entity Create()
+    public Bullet Create()
     {
-        Entity e = Instantiate(Product, bulletSpawnPos.position, Quaternion.identity);
+        Bullet e = Instantiate(Product, bulletSpawnPos.position, Quaternion.identity);
         e.transform.rotation = transform.rotation;
         
         return e;
     }
 
-    public Entity[] Create(in int quantity)
+    public Bullet[] Create(in int quantity)
     {
-        var entities = new Entity[quantity];
+        var bullets = new Bullet[quantity];
         for (var i = 0; i < quantity; i++)
         {
-            entities[i] = Create();
+            bullets[i] = Create();
         }
         
-        return entities;
+        return bullets;
     }
 }
