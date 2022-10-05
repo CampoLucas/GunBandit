@@ -307,7 +307,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.1436672, y: 1}
+    m_SensorSize: {x: 1.7777778, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -324,7 +324,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 81391968}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.00000035762787, y: -2.2130003, z: -10}
+  m_LocalPosition: {x: 0.0000002682209, y: -2.2130003, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -669,7 +669,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.00000035762787, y: -2.2130003, z: -10}
+  m_LocalPosition: {x: 0.0000002682209, y: -2.2130003, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1404,6 +1404,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &928717791 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7782943707593185564, guid: 20b45d4309846f446841c5f1ac78b912, type: 3}
+  m_PrefabInstance: {fileID: 5790934507506366956}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &928717800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 928717791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f3ca67b21c8adb46bbe0fb79e944bb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maximumOffsetDistance: 10
+  recoilAcceleration: 500
+  weaponRecoilStartSpeed: -50
 --- !u!1 &935435364
 GameObject:
   m_ObjectHideFlags: 0
