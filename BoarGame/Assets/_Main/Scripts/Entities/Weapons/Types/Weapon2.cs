@@ -8,6 +8,8 @@ public class Weapon2 : Entity, IWeapon
     private IAttack _attack;
     private ISwapState _swap;
 
+    public WeaponState CurrentState => _swap.CurrentState;
+
     protected virtual void Awake()
     {
         _throwable = GetComponent<IThrowable>();

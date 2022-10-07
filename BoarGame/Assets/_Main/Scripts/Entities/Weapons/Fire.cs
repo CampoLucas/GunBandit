@@ -26,7 +26,7 @@ public class Fire : MonoBehaviour, IAttack, IFactory<Bullet, StatsSO>
         if (!(_lastFiredTime + _stats.FireRate < Time.time)) return;
         _lastFiredTime = Time.time;
         var bullet = Create();
-        bullet.InitStats(_stats.BulletData);
+        bullet.InitStats(_stats.BulletData, bulletSpawnPos.transform.up);
         _reloadable.DecreaseAmmo();
     }
 

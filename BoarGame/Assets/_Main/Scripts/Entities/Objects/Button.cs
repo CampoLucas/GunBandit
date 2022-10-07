@@ -2,37 +2,39 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
-public class Button : MonoBehaviour, ISubject
+public class Button : MonoBehaviour
 {
-    [SerializeField] private List<IObserver> _observers = new();
+    private bool _isPressed;
+    private bool _prevPressedState;
     
-    public bool Pressed { get; private set; }
-
-    public void Attach(IObserver observer)
+    public UnityEvent onPressed;
+    public UnityEvent onReleased;
+    
+    private void Press()
     {
-        _observers.Add(observer);
+        _isPressed = true;
+        if (!_isPressed && _prevPressedState == _isPressed) return;
+        _prevPressedState = _isPressed;
+        onPressed?.Invoke();
+    }
+    
+    private void Release()
+    {
+        _isPressed = false;
+        if (_isPressed && _prevPressedState == _isPressed) return;
+        _prevPressedState = _isPressed;
+        onReleased?.Invoke();
+    }
+    
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        Press();
     }
 
-    public void Detach(IObserver observer)
+    private void OnTriggerExit2D(Collider2D col)
     {
-        _observers.Remove(observer);
-    }
-
-    public void Notify()
-    {
-        foreach (var observer in _observers)
-        {
-            observer.OnNotify(this);
-        }
-    }
-
-    private void OnCollisionEnter2D(Collision2D col)
-    {
-        if (!Pressed)
-        {
-            Pressed = true;
-            Notify();
-        }
+        Release();
     }
 }
