@@ -17,4 +17,4 @@ MonoBehaviour:
   render:
     sprite: {fileID: 0}
     icon: {fileID: 0}
-  speed: 5
+  speed: 6.85

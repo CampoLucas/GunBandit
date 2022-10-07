@@ -13,7 +13,7 @@ TagManager:
   - UI
   - Door
   - Weapon
-  - 
+  - button
   - 
   - 
   - 
@@ -55,4 +55,7 @@ TagManager:
     locked: 0
   - name: Bullets
     uniqueID: 3787803065
+    locked: 0
+  - name: Objects
+    uniqueID: 2327068053
     locked: 0

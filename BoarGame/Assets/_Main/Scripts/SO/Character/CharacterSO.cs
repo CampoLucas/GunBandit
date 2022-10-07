@@ -6,7 +6,7 @@ using UnityEngine;
 public class CharacterSO : StatsSO
 {
     [Header("Stats")]
-    [Range(0.0001f, 200)][SerializeField] private float speed;
+    [Range(2f, 10f)][SerializeField] private float speed;
     
     public float Speed => speed;
 }
