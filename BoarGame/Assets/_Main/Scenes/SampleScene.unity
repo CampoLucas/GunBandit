@@ -864,11 +864,6 @@ Canvas:
   m_SortingLayerID: -1967899243
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!4 &359937280 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7782943706561257540, guid: 20b45d4309846f446841c5f1ac78b912, type: 3}
-  m_PrefabInstance: {fileID: 5790934507506366956}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &396218914
 GameObject:
   m_ObjectHideFlags: 0
@@ -4609,27 +4604,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1753176527 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7782943707593185564, guid: 20b45d4309846f446841c5f1ac78b912, type: 3}
-  m_PrefabInstance: {fileID: 5790934507506366956}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1753176536
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1753176527}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f3ca67b21c8adb46bbe0fb79e944bb4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bulletPos: {fileID: 359937280}
-  recoil: 2
-  snappiness: 2
-  returnSpeed: 5
 --- !u!1 &1776062840
 GameObject:
   m_ObjectHideFlags: 0
