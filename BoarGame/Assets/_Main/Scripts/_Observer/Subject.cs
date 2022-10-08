@@ -1,22 +1,24 @@
 using System.Collections.Generic;
-public interface ISubject
+using UnityEngine;
+
+public abstract class Subject : MonoBehaviour
 {
     /// <summary>
     /// List of Observers
     /// </summary>
-    List<IObserver> Subscribers { get; }
+    public abstract List<Observer> Subscribers { get; }
     /// <summary>
     /// Attach an observer to the subject.
     /// </summary>
     /// <param name="observer"></param>
-    void Subscribe(IObserver observer);
+    public abstract void Subscribe(Observer observer);
     /// <summary>
     /// Detach an observer from the subject.
     /// </summary>
     /// <param name="observer"></param>
-    void Unsubscribe(IObserver observer);
+    public abstract void Unsubscribe(Observer observer);
     /// <summary>
     /// Notify all observers about an event.
     /// </summary>
-    void NotifyAll(string message, params object[] args);
+    public abstract void NotifyAll(string message, params object[] args);
 }

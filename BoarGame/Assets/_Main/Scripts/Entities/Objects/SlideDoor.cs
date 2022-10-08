@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using UnityEngine;
 
-public class SlideDoor : MonoBehaviour
+public class SlideDoor : Observer
 {
     private IEnumerator _moveDoor;
     private int _dir = 1;
@@ -53,5 +53,13 @@ public class SlideDoor : MonoBehaviour
         _dir = 1;
         _moveDoor = MoveDoor();
         StartCoroutine(_moveDoor);
+    }
+
+    public override void OnNotify(string message, params object[] args)
+    {
+        ToggleDoor();
+#if UNITY_EDITOR
+        Debug.Log(message + ": " + this.gameObject.name);
+#endif
     }
 }
