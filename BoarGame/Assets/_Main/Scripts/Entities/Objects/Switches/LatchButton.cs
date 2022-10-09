@@ -4,21 +4,20 @@ using UnityEngine;
 
 public class LatchButton : Button
 {
+    private bool _toggle;
     protected override void Press()
     {
         base.Press();
-        NotifyAll("TOGGLED");
-    }
-    
-    protected override void OnTriggerEnter2D(Collider2D other)
-    {
-        base.OnTriggerEnter2D(other);
-        _inputs.OnInteractPerformed += Press;
-    }
 
-    protected override void OnTriggerExit2D(Collider2D other)
-    {
-        base.OnTriggerExit2D(other);
-        _inputs.OnInteractPerformed -= Press;
+        if (!_toggle)
+        {
+            NotifyAll("ON");
+            _toggle = true;
+        }
+        else
+        {
+            NotifyAll("OFF");
+            _toggle = false;
+        }
     }
 }

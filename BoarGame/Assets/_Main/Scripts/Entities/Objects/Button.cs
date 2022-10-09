@@ -8,7 +8,7 @@ public class Button : Subject
 {
     private bool _isPressed;
     private bool _prevPressedState;
-    protected PlayerInputHandler _inputs;
+    //protected PlayerInputHandler Inputs;
 
     [SerializeField] private List<Observer> subscribers;
     
@@ -32,16 +32,24 @@ public class Button : Subject
         //onReleased?.Invoke();
     }
     
-    protected virtual void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         if(!other.CompareTag("Player")) return;
-        if(_inputs == null)
-            _inputs = other.GetComponent<PlayerInputHandler>();
+        
+        var inputs = other.GetComponent<PlayerInputHandler>();
+        if (!inputs) return;
+        inputs.OnInteractStarted += Press;
+        inputs.OnInteractCancelled += Release;
     }
 
-    protected virtual void OnTriggerExit2D(Collider2D other)
+    private void OnTriggerExit2D(Collider2D other)
     {
         if(!other.CompareTag("Player")) return;
+        
+        var inputs = other.GetComponent<PlayerInputHandler>();
+        if (!inputs) return;
+        inputs.OnInteractStarted -= Press;
+        inputs.OnInteractCancelled -= Release;
     }
 
 

@@ -16,6 +16,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Item.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Movement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Objects/Button.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Objects/Stairs/Stair.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Objects/Switches/LatchButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Objects/Switches/MomentaryButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Weapons/Pickable.cs" root0="FORCE_HIGHLIGHTING" />
@@ -123,6 +124,7 @@
       <workItem from="1665149134075" duration="4808000" />
       <workItem from="1665160952097" duration="5926000" />
       <workItem from="1665264716604" duration="13928000" />
+      <workItem from="1665346931252" duration="5250000" />
     </task>
     <servers />
   </component>

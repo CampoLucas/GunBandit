@@ -7,6 +7,7 @@ public class SlideDoor : Observer
     private IEnumerator _moveDoor;
     private bool _opening;
     private CmdSlideDoor _slideDoor;
+    private Invoker _invoker = new();
     
     [SerializeField] private Transform startPivot;
     [SerializeField] private Transform endPivot;
@@ -15,21 +16,23 @@ public class SlideDoor : Observer
 
     private void Awake()
     {
-        _slideDoor = new CmdSlideDoor(doorPivot, startPivot.position, endPivot.position, speed);
+        
     }
 
     private void Start()
     {
         doorPivot.position = startPivot.position;
+        _slideDoor = new CmdSlideDoor(doorPivot, startPivot.position, endPivot.position, speed);
     }
 
     private void Update()
     {
-        if (_slideDoor == null) return;
-        if(!_opening)
-            _slideDoor.Do();
+        if (_invoker == null) return;
+        if (_opening)
+            _invoker.AddCommand(_slideDoor);
         else
-            _slideDoor.Undo();
+            _invoker.UndoCommand();
+            
     }
 
     public void ToggleDoor()
@@ -55,13 +58,10 @@ public class SlideDoor : Observer
     {
         switch (message)
         {
-            case "TOGGLED":
-                ToggleDoor();
-                break;
-            case "PRESSED":
+            case "ON":
                 OpenDoor();
                 break;
-            case "RELEASED": 
+            case "OFF": 
                 CloseDoor();
                 break;
         }
