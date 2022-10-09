@@ -5,59 +5,66 @@ using UnityEngine;
 public class SlideDoor : Observer
 {
     private IEnumerator _moveDoor;
-    private int _dir = 1;
+    private bool _opening;
+    private CmdSlideDoor _slideDoor;
     
     [SerializeField] private Transform startPivot;
     [SerializeField] private Transform endPivot;
     [SerializeField] private Transform doorPivot;
     [SerializeField] private float speed = 1f;
 
+    private void Awake()
+    {
+        _slideDoor = new CmdSlideDoor(doorPivot, startPivot.position, endPivot.position, speed);
+    }
+
     private void Start()
     {
         doorPivot.position = startPivot.position;
-        _moveDoor = MoveDoor();
     }
-    private IEnumerator MoveDoor()
+
+    private void Update()
     {
-        while (Vector3.Distance(doorPivot.position, endPivot.position) >= .1f && _dir < 0 || Vector3.Distance(doorPivot.position, startPivot.position) >= .1f && _dir > 0)
-        {
-            Debug.Log("Opening");
-            //doorPivot.position = Vector3.Lerp(doorPivot.position, pos, speed * Time.deltaTime);
-            doorPivot.position += (transform.right * _dir) * (speed * Time.deltaTime);
-            if (Vector3.Distance(doorPivot.position, endPivot.position) >= .1f && _dir < 0 || Vector3.Distance(doorPivot.position, startPivot.position) >= .1f && _dir > 0)
-                yield return null;
-        }
+        if (_slideDoor == null) return;
+        if(!_opening)
+            _slideDoor.Do();
+        else
+            _slideDoor.Undo();
     }
 
     public void ToggleDoor()
     {
-        if (_moveDoor != null)
-            StopCoroutine(_moveDoor);
-        _dir *= -1;
-        _moveDoor = MoveDoor();
-        StartCoroutine(_moveDoor);
+        if(!_opening)
+            OpenDoor();
+        else
+            CloseDoor();
     }
     public void OpenDoor()
     {
-        if (_moveDoor != null)
-            StopCoroutine(_moveDoor);
-        _dir = -1;
-        _moveDoor = MoveDoor();
-        StartCoroutine(_moveDoor);
+        if(_opening) return;
+        _opening = true;
        
     }
     public void CloseDoor() 
     {
-        if (_moveDoor != null)
-            StopCoroutine(_moveDoor);
-        _dir = 1;
-        _moveDoor = MoveDoor();
-        StartCoroutine(_moveDoor);
+        if(!_opening) return;
+        _opening = false;
     }
 
     public override void OnNotify(string message, params object[] args)
     {
-        ToggleDoor();
+        switch (message)
+        {
+            case "TOGGLED":
+                ToggleDoor();
+                break;
+            case "PRESSED":
+                OpenDoor();
+                break;
+            case "RELEASED": 
+                CloseDoor();
+                break;
+        }
 #if UNITY_EDITOR
         Debug.Log(message + ": " + this.gameObject.name);
 #endif

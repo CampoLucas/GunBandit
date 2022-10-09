@@ -20,13 +20,10 @@ MonoBehaviour:
   rigidbody:
     mass: 1
     linearDrag: 2
-  collider:
-    offset: {x: 0, y: 0.6}
-    size: {x: 0.1, y: 1.2}
   type: 1
   throwStrength: 15
   bulletData: {fileID: 11400000, guid: 71f72a228a29ad14fa47ebd4bdc4bb29, type: 2}
-  fireRate: 0.8
+  fireRate: 0.54
   recoil: 0.5
   ammo: 20
   magAmmo: 5

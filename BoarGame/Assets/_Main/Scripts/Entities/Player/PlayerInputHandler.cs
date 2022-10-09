@@ -1,6 +1,4 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerInputHandler : MonoBehaviour
@@ -9,9 +7,6 @@ public class PlayerInputHandler : MonoBehaviour
 
     private Vector2 _movementInput;
     private Vector2 _mousePos;
-    private Action _onFireInput;
-    private Action _onThrowInput;
-    private Action _onReloadInput;
     private bool _fireInput;
     
     /// <summary>
@@ -19,21 +14,12 @@ public class PlayerInputHandler : MonoBehaviour
     /// </summary>
     public Vector2 MovementInput => _movementInput;
     public Vector2 MousePosition => _mousePos;
-    public Action OnFireInput
-    {
-        get => _onFireInput;
-        set => _onFireInput = value;
-    }
-    public Action OnThrowInput
-    {
-        get => _onThrowInput;
-        set => _onThrowInput = value;
-    }
-    public Action OnReloadInput
-    {
-        get => _onReloadInput;
-        set => _onReloadInput = value;
-    }
+    public Action OnFire;
+    public Action OnThrow;
+    public Action OnReload;
+    public Action OnInteractPerformed;
+    public Action OnInteractStarted;
+    public Action OnInteractCancelled;
 
     private void OnEnable()
     {
@@ -44,19 +30,36 @@ public class PlayerInputHandler : MonoBehaviour
             _inputActions.Player.Point.performed += i => _mousePos = i.ReadValue<Vector2>();
             _inputActions.Player.Fire.started += i => _fireInput = true;
             _inputActions.Player.Fire.canceled += i => _fireInput = false;
-            _inputActions.Player.Throw.performed += i => _onThrowInput?.Invoke();
-            _inputActions.Player.Reload.performed += i => _onReloadInput?.Invoke();
+            _inputActions.Player.Throw.performed += i => OnThrow?.Invoke();
+            _inputActions.Player.Reload.performed += i => OnReload?.Invoke();
+            _inputActions.Player.Interact.performed += i => OnInteractPerformed?.Invoke();
+            _inputActions.Player.Interact.started += i => OnInteractStarted?.Invoke();
+            _inputActions.Player.Interact.canceled += i => OnInteractCancelled?.Invoke();
         }
         _inputActions.Enable();
     }
 
     private void Update()
     {
-        if(_fireInput)
-            _onFireInput?.Invoke();
+        HandleAllInputs();
     }
 
     private void OnDisable() => _inputActions.Disable();
 
-    
+    private void HandleAllInputs()
+    {
+        HandleFireInput();
+        HandleInteractInput();
+    }
+
+    private void HandleFireInput()
+    {
+        if(_fireInput)
+            OnFire?.Invoke();
+    }
+    private void HandleInteractInput()
+    {
+        
+    }
+
 }

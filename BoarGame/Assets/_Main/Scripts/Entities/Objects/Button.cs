@@ -8,6 +8,7 @@ public class Button : Subject
 {
     private bool _isPressed;
     private bool _prevPressedState;
+    protected PlayerInputHandler _inputs;
 
     [SerializeField] private List<Observer> subscribers;
     
@@ -15,7 +16,7 @@ public class Button : Subject
     //public UnityEvent onPressed;
     //public UnityEvent onReleased;
     
-    public virtual void Press()
+    protected virtual void Press()
     {
         _isPressed = true;
         if (!_isPressed && _prevPressedState == _isPressed) return;
@@ -23,7 +24,7 @@ public class Button : Subject
         //onPressed?.Invoke();
     }
     
-    public virtual void Release()
+    protected virtual void Release()
     {
         _isPressed = false;
         if (_isPressed && _prevPressedState == _isPressed) return;
@@ -31,14 +32,16 @@ public class Button : Subject
         //onReleased?.Invoke();
     }
     
-    private void OnTriggerEnter2D(Collider2D other)
+    protected virtual void OnTriggerEnter2D(Collider2D other)
     {
-        Press();
+        if(!other.CompareTag("Player")) return;
+        if(_inputs == null)
+            _inputs = other.GetComponent<PlayerInputHandler>();
     }
 
-    private void OnTriggerExit2D(Collider2D col)
+    protected virtual void OnTriggerExit2D(Collider2D other)
     {
-        Release();
+        if(!other.CompareTag("Player")) return;
     }
 
 
