@@ -1,18 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
-public class FloorDisplay : MonoBehaviour
+public class FloorDisplay : Observer
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private TMP_Text text;
+    public override void OnNotify(string message, params object[] args)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        text.text = message;
     }
 }

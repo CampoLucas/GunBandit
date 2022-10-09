@@ -71,7 +71,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f28a91c78830e524280d7447f4ec5362, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  floor: 
+  subscribers:
+  - {fileID: 0}
+  floor: Ground
   nextStairs: {fileID: 0}
 --- !u!1 &8769585789941797133
 GameObject:
