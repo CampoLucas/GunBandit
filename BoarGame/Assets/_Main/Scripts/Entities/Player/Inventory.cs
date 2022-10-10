@@ -15,15 +15,18 @@ public class Inventory : MonoBehaviour
 {
     private List<InventoryWeapon> _weaponList;
     private Animator _animator;
-    private int _itemIndex;
+    [SerializeField] private int _itemIndex;
     
     [SerializeField] private int maxWeaponCapacity = 2;
-    [SerializeField] private Transform handPos;
     
     public Weapon2 CurrentWeapon()
     {
         if (_weaponList.Count > 0)
+        {
+            // if (_itemIndex > _weaponList.Count)
+            //     _itemIndex = _weaponList.Count;
             return _weaponList[_itemIndex].Weapon;
+        }
         return null;
     }
     
@@ -72,9 +75,17 @@ public class Inventory : MonoBehaviour
 
     public void DropItem()
     {
-        _weaponList.Remove(_weaponList[_itemIndex]);
+        var currentIndex = _itemIndex;
+        if (_itemIndex > 0)
+            _itemIndex--;
+        _weaponList.Remove(_weaponList[currentIndex]);
+        // if (_itemIndex > _weaponList.Count)
+        //     _itemIndex--;
         if (_weaponList.Count > 0)
         {
+            if (_itemIndex > _weaponList.Count)
+                _itemIndex = _weaponList.Count;
+            
             var item = CurrentWeapon().gameObject;
             item.SetActive(true);
            
@@ -91,6 +102,11 @@ public class Inventory : MonoBehaviour
     public bool HasFullInventory()
     {
          return _weaponList.Count >= maxWeaponCapacity;
+    }
+
+    public bool HasAWeapon()
+    {
+        return CurrentWeapon();
     }
 
     public void ChangeWeapon(bool up)

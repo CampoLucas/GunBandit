@@ -18,14 +18,14 @@ public class CmdSlideDoor : ICommand
     
     public void Do()
     {
-        if(Vector3.Distance(_transform.position, _endPos) < .03f) return;
+        if(Vector3.Distance(_transform.position, _endPos) < .1f) return;
         //_transform.position = Vector3.Lerp(_transform.position, _pos, _speed * Time.deltaTime);
         _transform.position = Vector3.MoveTowards(_transform.position, _endPos, _speed * Time.deltaTime);
     }
 
     public void Undo()
     {
-        if(Vector3.Distance(_transform.position, _startPos) <= .03f) return;
+        if(Vector3.Distance(_transform.position, _startPos) <= .1f) return;
         //_transform.position = Vector3.Lerp(_transform.position, _startPos, _speed * Time.deltaTime);
         _transform.position = Vector3.MoveTowards(_transform.position, _startPos, _speed * Time.deltaTime);
     }

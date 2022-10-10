@@ -68,7 +68,7 @@ public class Player : Entity
 
     private void Throw()
     {
-        if(Inventory.CurrentWeapon() == null) return;
+        if(!Inventory.HasAWeapon()) return;
         //Hacer que el jugador lanze el arma
         Inventory.CurrentWeapon().Throw();
         Drop();
@@ -79,24 +79,26 @@ public class Player : Entity
 
     private void PickUpWeapon()
     {
-        if(Inventory.CurrentWeapon() == null) return;
+        if(!Inventory.HasAWeapon()) return;
         _pick.PickUp(Inventory.CurrentWeapon());
     }
 
     private void Drop()
     {
-        if(Inventory.CurrentWeapon() == null) return;
+        if(!Inventory.HasAWeapon()) return;
         _pick.Drop();
         Inventory.DropItem();
     }
 
     private void SwapWeaponUp()
     {
+        if(!Inventory.HasAWeapon()) return;
         Inventory.ChangeWeapon(true);
     }
     
     private void SwapWeaponDown()
     {
+        if(!Inventory.HasAWeapon()) return;
         Inventory.ChangeWeapon(false);
     }
 }
