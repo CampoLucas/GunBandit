@@ -23,7 +23,6 @@ public class Throwable : MonoBehaviour, IThrowable
 
     public void Throw()
     {
-        transform.parent = null;
         if (_stats != null) _rigidbody.AddForce(transform.up * _stats.ThrowStrength, ForceMode2D.Impulse);
     }
 }

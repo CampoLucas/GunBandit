@@ -13,15 +13,16 @@ public class Player : Entity
     private PlayerInputHandler _input;
     private IRotation _rotation;
     private IMovement _movement;
+    private PickUpWeapon _pick;
 
-    public Inventory Inventory;
-
+    public Inventory Inventory { get; private set; }
 
     private void Awake()
     {
         _input = GetComponent<PlayerInputHandler>();
         _rotation = GetComponent<IRotation>();
         _movement = GetComponent<IMovement>();
+        _pick = GetComponent<PickUpWeapon>();
         Inventory = GetComponent<Inventory>();
     }
 
@@ -30,6 +31,8 @@ public class Player : Entity
         _input.OnFire += Fire;
         _input.OnThrow += Throw;
         _input.OnReload += Reload;
+        _input.OnScrollUp += SwapWeaponUp;
+        _input.OnScrollDown += SwapWeaponDown;
     }
 
     private void Update()
@@ -43,6 +46,8 @@ public class Player : Entity
         _input.OnFire -= Fire;
         _input.OnThrow -= Throw;
         _input.OnReload -= Reload;
+        _input.OnScrollUp -= SwapWeaponUp;
+        _input.OnScrollDown -= SwapWeaponDown;
     }
     private void Move(Vector2 direction) => _movement.Move(direction);
     private void Rotate(Vector2 mousePos) => _rotation.Rotate(mousePos);
@@ -64,9 +69,34 @@ public class Player : Entity
     private void Throw()
     {
         if(Inventory.CurrentWeapon() == null) return;
+        //Hacer que el jugador lanze el arma
         Inventory.CurrentWeapon().Throw();
-        Inventory.DropItem();
+        Drop();
+        
         //WeaponInventory.CurrentWeapon = null;
         //Remove the weapon from inventory
+    }
+
+    private void PickUpWeapon()
+    {
+        if(Inventory.CurrentWeapon() == null) return;
+        _pick.PickUp(Inventory.CurrentWeapon());
+    }
+
+    private void Drop()
+    {
+        if(Inventory.CurrentWeapon() == null) return;
+        _pick.Drop();
+        Inventory.DropItem();
+    }
+
+    private void SwapWeaponUp()
+    {
+        Inventory.ChangeWeapon(true);
+    }
+    
+    private void SwapWeaponDown()
+    {
+        Inventory.ChangeWeapon(false);
     }
 }

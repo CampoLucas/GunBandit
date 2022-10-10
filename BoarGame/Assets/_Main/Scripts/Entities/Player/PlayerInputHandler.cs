@@ -7,6 +7,7 @@ public class PlayerInputHandler : MonoBehaviour
 
     private Vector2 _movementInput;
     private Vector2 _mousePos;
+    private float _mouseScrollY;
     private bool _fireInput;
     
     /// <summary>
@@ -20,6 +21,8 @@ public class PlayerInputHandler : MonoBehaviour
     public Action OnInteractPerformed;
     public Action OnInteractStarted;
     public Action OnInteractCancelled;
+    public Action OnScrollUp;
+    public Action OnScrollDown;
 
     private void OnEnable()
     {
@@ -28,13 +31,20 @@ public class PlayerInputHandler : MonoBehaviour
             _inputActions = new PlayerControls();
             _inputActions.Player.Movement.performed += inputActions => _movementInput = inputActions.ReadValue<Vector2>();
             _inputActions.Player.Point.performed += i => _mousePos = i.ReadValue<Vector2>();
+            _inputActions.Player.MouseScrollY.performed += i => _mouseScrollY = i.ReadValue<float>();
+            
             _inputActions.Player.Fire.started += i => _fireInput = true;
             _inputActions.Player.Fire.canceled += i => _fireInput = false;
+            
             _inputActions.Player.Throw.performed += i => OnThrow?.Invoke();
             _inputActions.Player.Reload.performed += i => OnReload?.Invoke();
+            
             _inputActions.Player.Interact.performed += i => OnInteractPerformed?.Invoke();
             _inputActions.Player.Interact.started += i => OnInteractStarted?.Invoke();
             _inputActions.Player.Interact.canceled += i => OnInteractCancelled?.Invoke();
+            
+            
+            
         }
         _inputActions.Enable();
     }
@@ -49,7 +59,7 @@ public class PlayerInputHandler : MonoBehaviour
     private void HandleAllInputs()
     {
         HandleFireInput();
-        HandleInteractInput();
+        HandleScrollInput();
     }
 
     private void HandleFireInput()
@@ -57,9 +67,17 @@ public class PlayerInputHandler : MonoBehaviour
         if(_fireInput)
             OnFire?.Invoke();
     }
-    private void HandleInteractInput()
+    private void HandleScrollInput()
     {
-        
+        switch (_mouseScrollY)
+        {
+            case > 0:
+                OnScrollUp?.Invoke();
+                break;
+            case < 0:
+                OnScrollDown?.Invoke();
+                break;
+        }
     }
 
 }
