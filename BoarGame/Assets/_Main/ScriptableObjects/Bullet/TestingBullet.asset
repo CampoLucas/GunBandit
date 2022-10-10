@@ -19,4 +19,4 @@ MonoBehaviour:
     icon: {fileID: 0}
   force: 15
   range: 2
-  damage: 5
+  damage: 50

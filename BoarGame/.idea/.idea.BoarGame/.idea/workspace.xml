@@ -11,6 +11,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6afd1274f120405096bc1ad9e2010ba6157a00/09/8f8264d3/Transform.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Bullet/Bullet.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Entity.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Item.cs" root0="FORCE_HIGHLIGHTING" />
@@ -127,7 +128,7 @@
       <workItem from="1665160952097" duration="5926000" />
       <workItem from="1665264716604" duration="13928000" />
       <workItem from="1665346931252" duration="7852000" />
-      <workItem from="1665406341693" duration="9725000" />
+      <workItem from="1665406341693" duration="16851000" />
     </task>
     <servers />
   </component>

@@ -23,8 +23,11 @@ MonoBehaviour:
   type: 1
   throwStrength: 15
   bulletData: {fileID: 11400000, guid: 71f72a228a29ad14fa47ebd4bdc4bb29, type: 2}
+  bulletPrefab: {fileID: 2486643567698640556, guid: 554e3b63cea90844a9af8c77553decff, type: 3}
   fireRate: 0.54
-  recoil: 0.5
-  ammo: 20
-  magAmmo: 5
-  reloadSpeed: 0.4
+  recoil: 0.59
+  snappiness: 6.15
+  returnSpeed: 6.11
+  ammo: 500
+  magAmmo: 20
+  reloadSpeed: 2

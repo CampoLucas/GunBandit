@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7782943706561257540}
   m_Layer: 7
   m_Name: SpawnPos
-  m_TagString: Untagged
+  m_TagString: GunBarrel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -106,7 +106,7 @@ SpriteRenderer:
   m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 5300a6ef2c5d3864e9bd09aaf3056db4, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.4056604, g: 0.4056604, b: 0.4056604, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -150,7 +150,7 @@ GameObject:
   - component: {fileID: 9117446205885325854}
   - component: {fileID: 1753176536}
   m_Layer: 7
-  m_Name: Shotgun
+  m_Name: AK-47
   m_TagString: Untagged
   m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
