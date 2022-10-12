@@ -13,14 +13,12 @@ MonoBehaviour:
   m_Name: Grenade
   m_EditorClassIdentifier: 
   id: default
+  sprite: {fileID: 0}
   displayName: 
-  render:
-    sprite: {fileID: 0}
-    icon: {fileID: 0}
-  rigidbody:
-    mass: 0.55
-    linearDrag: 0.5
-  type: 2
+  icon: {fileID: 0}
+  mass: 1
+  linearDrag: 0.5
+  animation: 2
   throwStrength: 5
   timeToExplode: 3
   explosionRange: 2
@@ -29,3 +27,4 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   explosionParticles: {fileID: 5319471639944885367, guid: 8b3bd765441ff164b9653a067dd29c50, type: 3}
+  <Ammmo>k__BackingField: 0

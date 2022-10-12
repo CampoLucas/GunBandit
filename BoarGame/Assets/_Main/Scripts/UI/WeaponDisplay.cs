@@ -46,7 +46,7 @@ public class WeaponDisplay : MonoBehaviour
 
     private void ChangeIcon(Weapon2 currentWeapon)
     {
-        var data = currentWeapon ? currentWeapon.GetData() : null;
+        var data = currentWeapon ? currentWeapon.GetData() as WeaponSO : null;
         icon.sprite = data ? data.Icon : defaultIcon;
         weaponName.text = data ? data.name : "";
     }

@@ -12,8 +12,6 @@ public class SpreadFire : MonoBehaviour, IAttack, IFactory<Bullet, StatsSO>
     private Transform _bulletSpawnPos;
 
     [SerializeField] private ParticleSystem muzzleFlash;
-    [SerializeField] private int pellets = 10;
-    [SerializeField] private float spreadAngle = 10;
 
     public Bullet Product => _stats.BulletPrefab;
 
@@ -35,10 +33,10 @@ public class SpreadFire : MonoBehaviour, IAttack, IFactory<Bullet, StatsSO>
         _lastFiredTime = Time.time;
 
         muzzleFlash.Play();
-        for (int i = 0; i < pellets; i++)
+        for (int i = 0; i < _stats.Pellets; i++)
         {
             var pellet = Create();
-            var targetRot = Quaternion.RotateTowards(_bulletSpawnPos.rotation, Random.rotation, spreadAngle);
+            var targetRot = Quaternion.RotateTowards(_bulletSpawnPos.rotation, Random.rotation, _stats.Spread);
             var targetUp = targetRot * Vector3.up;
             pellet.transform.rotation = targetRot;
             pellet.InitStats(_stats.BulletData, targetUp);

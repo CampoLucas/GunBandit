@@ -69,7 +69,7 @@ public class Inventory : MonoBehaviour
         else
         {
             //Todo: IAnimator
-            _animator.SetFloat("WeaponType", (int)data.Type);
+            _animator.SetFloat("WeaponType", (int)data.Animation);
         }
     }
 
@@ -90,7 +90,7 @@ public class Inventory : MonoBehaviour
             item.SetActive(true);
            
             //Todo: IAnimator
-            _animator.SetFloat("WeaponType", (int)_weaponList[_itemIndex].Data.Type);
+            _animator.SetFloat("WeaponType", (int)_weaponList[_itemIndex].Data.Animation);
         }
         else
         {
@@ -127,7 +127,7 @@ public class Inventory : MonoBehaviour
     {
         SlotOrder();
         DisableWeapon();
-        _animator.SetFloat("WeaponType", (int)_weaponList[_itemIndex].Data.Type);
+        _animator.SetFloat("WeaponType", (int)_weaponList[_itemIndex].Data.Animation);
     }
 
     private void SlotOrder()

@@ -12,22 +12,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4365ea88abe07f4ca6683e0b1d0d63a, type: 3}
   m_Name: Pistol
   m_EditorClassIdentifier: 
-  id: Gun1
+  id: Pistol
+  sprite: {fileID: 21300000, guid: 13d4af9aaf7e8c44198e958c65b7f5ac, type: 3}
   displayName: Pistol
-  render:
-    sprite: {fileID: 21300000, guid: 13d4af9aaf7e8c44198e958c65b7f5ac, type: 3}
-    icon: {fileID: 21300000, guid: 9c369bcfa84d8ea4e9d6e851b6fbc846, type: 3}
-  rigidbody:
-    mass: 1
-    linearDrag: 2
-  type: 1
+  icon: {fileID: 21300000, guid: 13d4af9aaf7e8c44198e958c65b7f5ac, type: 3}
+  mass: 1
+  linearDrag: 1
+  animation: 1
   throwStrength: 15
-  bulletData: {fileID: 11400000, guid: 71f72a228a29ad14fa47ebd4bdc4bb29, type: 2}
-  bulletPrefab: {fileID: 2486643567698640556, guid: 554e3b63cea90844a9af8c77553decff, type: 3}
+  type: 0
   fireRate: 0.54
-  recoil: 0.59
-  snappiness: 6.15
-  returnSpeed: 6.11
+  reloadSpeed: 2
   ammo: 500
   magAmmo: 20
-  reloadSpeed: 2
+  pellets: 5
+  spread: 15
+  hasRecoil: 1
+  recoil: 0.51
+  snappiness: 6.15
+  returnSpeed: 6.11
+  bulletData: {fileID: 11400000, guid: 71f72a228a29ad14fa47ebd4bdc4bb29, type: 2}
+  bulletPrefab: {fileID: 2486643567698640556, guid: 554e3b63cea90844a9af8c77553decff, type: 3}

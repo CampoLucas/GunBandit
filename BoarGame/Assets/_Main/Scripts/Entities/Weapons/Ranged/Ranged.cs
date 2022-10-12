@@ -18,7 +18,8 @@ public class Ranged : Weapon2
     {
         
         base.Attack();
-        if(_recoil)
+        var stats = GetData() as GunSO;
+        if(_recoil && stats.HasRecoil)
             _recoil.RecoilFire();
     }
 

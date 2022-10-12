@@ -12,6 +12,7 @@ public class GrenadeSO : WeaponSO
     [SerializeField] private LayerMask explosionMask;
     [SerializeField] private ParticleSystem explosionParticles;
 
+    [field: SerializeField] public float Ammmo { get; private set; }
     public float TimeToExplode => timeToExplode;
     public float Range => explosionRange;
     public float Force => explosionForce;

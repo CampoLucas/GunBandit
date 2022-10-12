@@ -13,21 +13,23 @@ MonoBehaviour:
   m_Name: Shotgun
   m_EditorClassIdentifier: 
   id: Shotgun
+  sprite: {fileID: 21300000, guid: 5300a6ef2c5d3864e9bd09aaf3056db4, type: 3}
   displayName: Shotgun
-  render:
-    sprite: {fileID: 21300000, guid: 5300a6ef2c5d3864e9bd09aaf3056db4, type: 3}
-    icon: {fileID: 21300000, guid: 9c369bcfa84d8ea4e9d6e851b6fbc846, type: 3}
-  rigidbody:
-    mass: 1
-    linearDrag: 2
-  type: 2
+  icon: {fileID: 21300000, guid: 13d4af9aaf7e8c44198e958c65b7f5ac, type: 3}
+  mass: 1
+  linearDrag: 1
+  animation: 2
   throwStrength: 15
-  bulletData: {fileID: 11400000, guid: 45ee04e9ce639b644b8c320aff25bdd9, type: 2}
-  bulletPrefab: {fileID: 2486643567698640556, guid: 554e3b63cea90844a9af8c77553decff, type: 3}
+  type: 1
   fireRate: 1.16
+  reloadSpeed: 5.47
+  ammo: 500
+  magAmmo: 20
+  pellets: 5
+  spread: 15
+  hasRecoil: 0
   recoil: 1.9
   snappiness: 0.2
   returnSpeed: 0.2
-  ammo: 500
-  magAmmo: 20
-  reloadSpeed: 5.47
+  bulletData: {fileID: 11400000, guid: 45ee04e9ce639b644b8c320aff25bdd9, type: 2}
+  bulletPrefab: {fileID: 2486643567698640556, guid: 554e3b63cea90844a9af8c77553decff, type: 3}
