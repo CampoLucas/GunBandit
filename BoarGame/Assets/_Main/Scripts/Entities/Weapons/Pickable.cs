@@ -30,8 +30,8 @@ public class Pickable : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if(_inputs == null)
-            _inputs.OnInteractPerformed -= AddItem;
+        if(!other.CompareTag("Player")) return;
+        _inputs.OnInteractPerformed -= AddItem;
     }
 
     private void AddItem()

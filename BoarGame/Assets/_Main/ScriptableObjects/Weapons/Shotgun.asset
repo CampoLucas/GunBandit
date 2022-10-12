@@ -24,7 +24,7 @@ MonoBehaviour:
   throwStrength: 15
   bulletData: {fileID: 11400000, guid: 45ee04e9ce639b644b8c320aff25bdd9, type: 2}
   bulletPrefab: {fileID: 2486643567698640556, guid: 554e3b63cea90844a9af8c77553decff, type: 3}
-  fireRate: 1.03
+  fireRate: 1.16
   recoil: 1.9
   snappiness: 0.2
   returnSpeed: 0.2

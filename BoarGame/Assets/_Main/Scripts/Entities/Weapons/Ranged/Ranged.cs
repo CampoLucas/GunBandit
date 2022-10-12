@@ -16,6 +16,7 @@ public class Ranged : Weapon2
 
     public override void Attack()
     {
+        
         base.Attack();
         if(_recoil)
             _recoil.RecoilFire();

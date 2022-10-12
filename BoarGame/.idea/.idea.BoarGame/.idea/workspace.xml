@@ -22,6 +22,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Objects/Switches/MomentaryButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Player/PickUpWeapon.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Player/ThrowWeapon.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Weapons/Grenade/ActivateGrenade.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Weapons/Pickable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Weapons/SwapState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Main/Scripts/SO/Character/CharacterSO.cs" root0="FORCE_HIGHLIGHTING" />
@@ -128,7 +129,9 @@
       <workItem from="1665160952097" duration="5926000" />
       <workItem from="1665264716604" duration="13928000" />
       <workItem from="1665346931252" duration="7852000" />
-      <workItem from="1665406341693" duration="16851000" />
+      <workItem from="1665406341693" duration="24187000" />
+      <workItem from="1665504955664" duration="398000" />
+      <workItem from="1665583776458" duration="3637000" />
     </task>
     <servers />
   </component>

@@ -33,11 +33,6 @@ public class Weapon2 : Entity, IWeapon
         _throwable.Throw();
     }
 
-    public void Sheath(in bool isSheath)
-    {
-        gameObject.SetActive(isSheath);
-    }
-
     public void ChangeState(WeaponState state)
     {
         _swap.ChangeState(state);

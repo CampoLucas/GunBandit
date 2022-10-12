@@ -9,6 +9,8 @@ public class Fire : MonoBehaviour, IAttack, IFactory<Bullet, StatsSO>
     private float _lastFiredTime;
     private Transform _bulletSpawnPos;
     
+    [SerializeField] private ParticleSystem muzzleFlash;
+    
     public Bullet Product => _stats.BulletPrefab;
 
     private void Awake()
@@ -28,6 +30,7 @@ public class Fire : MonoBehaviour, IAttack, IFactory<Bullet, StatsSO>
         
         if (!(_lastFiredTime + _stats.FireRate < Time.time)) return;
         _lastFiredTime = Time.time;
+        muzzleFlash.Play();
         var bullet = Create();
         bullet.InitStats(_stats.BulletData, _bulletSpawnPos.transform.up);
         _reloadable.DecreaseAmmo();

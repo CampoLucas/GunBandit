@@ -11,6 +11,7 @@ public class SpreadFire : MonoBehaviour, IAttack, IFactory<Bullet, StatsSO>
     private float _lastFiredTime;
     private Transform _bulletSpawnPos;
 
+    [SerializeField] private ParticleSystem muzzleFlash;
     [SerializeField] private int pellets = 10;
     [SerializeField] private float spreadAngle = 10;
 
@@ -33,6 +34,7 @@ public class SpreadFire : MonoBehaviour, IAttack, IFactory<Bullet, StatsSO>
         if (!(_lastFiredTime + _stats.FireRate < Time.time)) return;
         _lastFiredTime = Time.time;
 
+        muzzleFlash.Play();
         for (int i = 0; i < pellets; i++)
         {
             var pellet = Create();
