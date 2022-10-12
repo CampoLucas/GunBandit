@@ -4,42 +4,46 @@ using Random = UnityEngine.Random;
 
 public class Fire : MonoBehaviour, IAttack, IFactory<Bullet, StatsSO>
 {
-    private GunSO _stats;
-    private IReloadable _reloadable;
-    private float _lastFiredTime;
-    private Transform _bulletSpawnPos;
+    protected GunSO Stats;
+    protected IReloadable Reloadable;
+    protected float LastFiredTime;
+    protected Transform BulletSpawnPos;
+    protected ParticleSystem Muzzle;
     
-    [SerializeField] private ParticleSystem muzzleFlash;
-    
-    public Bullet Product => _stats.BulletPrefab;
+    public Bullet Product => Stats.BulletPrefab;
 
     private void Awake()
     {
-        _stats = GetComponent<Ranged>().GetData() as GunSO;
-        _reloadable = GetComponent<Reloadable>();
+        Stats = GetComponent<Ranged>().GetData() as GunSO;
+        Reloadable = GetComponent<Reloadable>();
         foreach (Transform child in gameObject.transform)
         {
             if (child.CompareTag($"GunBarrel"))
-                _bulletSpawnPos = child.transform;
+                BulletSpawnPos = child.transform;
         }
+
+        if (Stats == null) return;
+        var muzzle = Instantiate(Stats.Muzzle, BulletSpawnPos);
+        muzzle.transform.position = BulletSpawnPos.position;
+        Muzzle = muzzle;
     }
 
-    public void Attack()
+    public virtual void Attack()
     {
-        if (_reloadable.OutOfAmmo() || _reloadable.IsReloading()) return;
+        if (Reloadable.OutOfAmmo() || Reloadable.IsReloading()) return;
         
-        if (!(_lastFiredTime + _stats.FireRate < Time.time)) return;
-        _lastFiredTime = Time.time;
-        muzzleFlash.Play();
+        if (!(LastFiredTime + Stats.FireRate < Time.time)) return;
+        LastFiredTime = Time.time;
+        Muzzle.Play();
         var bullet = Create();
-        bullet.InitStats(_stats.BulletData, _bulletSpawnPos.transform.up);
-        _reloadable.DecreaseAmmo();
+        bullet.InitStats(Stats.BulletData, BulletSpawnPos.transform.up);
+        Reloadable.DecreaseAmmo();
     }
 
     
     public Bullet Create()
     {
-        Bullet e = Instantiate(Product, _bulletSpawnPos.position, Quaternion.identity);
+        Bullet e = Instantiate(Product, BulletSpawnPos.position, Quaternion.identity);
         e.transform.rotation = transform.rotation;
         
         return e;

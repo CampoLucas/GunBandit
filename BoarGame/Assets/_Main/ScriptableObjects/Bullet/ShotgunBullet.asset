@@ -13,10 +13,7 @@ MonoBehaviour:
   m_Name: ShotgunBullet
   m_EditorClassIdentifier: 
   id: ShotgunBullet
-  displayName: 
-  render:
-    sprite: {fileID: -1720688555, guid: c8326da72cab19b4b875fa7e166dec81, type: 3}
-    icon: {fileID: 0}
+  sprite: {fileID: -1720688555, guid: c8326da72cab19b4b875fa7e166dec81, type: 3}
   force: 10
   range: 0.5
   damage: 5

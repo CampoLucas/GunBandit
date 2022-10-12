@@ -21,6 +21,7 @@ MonoBehaviour:
   animation: 2
   throwStrength: 15
   type: 0
+  muzzle: {fileID: 4958908830864908261, guid: d71e45ea7c3e8174c905d66053e58a6b, type: 3}
   fireRate: 0.2
   reloadSpeed: 1
   ammo: 500

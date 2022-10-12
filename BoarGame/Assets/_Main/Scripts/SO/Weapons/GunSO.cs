@@ -9,6 +9,8 @@ using UnityEditor;
 public class GunSO : WeaponSO
 {
     [SerializeField] private GunType type = GunType.Gun;
+
+    [SerializeField] private ParticleSystem muzzle;
     
     [Range(0.0001f, 20)] [SerializeField] private float fireRate = 0.1f;
     [Range(0.0001f, 20)][SerializeField] private float reloadSpeed = 1f;
@@ -28,6 +30,7 @@ public class GunSO : WeaponSO
     [SerializeField] private Bullet bulletPrefab;
     
     public GunType Type => type;
+    public ParticleSystem Muzzle => muzzle;
     public float FireRate => fireRate;
     public float ReloadSpeed => reloadSpeed;
     public int Ammo => ammo;
@@ -51,6 +54,7 @@ class GunSOEditor : Editor
     private SerializedProperty _id;
     
     private SerializedProperty _sprite;
+    private SerializedProperty _muzzle;
     
     private SerializedProperty _displayName;
     private SerializedProperty _icon;
@@ -90,7 +94,9 @@ class GunSOEditor : Editor
     private void OnEnable()
     {
         _id = serializedObject.FindProperty("id");
+        
         _sprite = serializedObject.FindProperty("sprite");
+        _muzzle = serializedObject.FindProperty("muzzle");
         
         _displayName = serializedObject.FindProperty("displayName");
         _icon = serializedObject.FindProperty("icon");
@@ -138,6 +144,7 @@ class GunSOEditor : Editor
         if (_renderer)
         {
             EditorGUILayout.PropertyField(_sprite);
+            EditorGUILayout.PropertyField(_muzzle);
         }
         EditorGUILayout.EndFoldoutHeaderGroup();
         

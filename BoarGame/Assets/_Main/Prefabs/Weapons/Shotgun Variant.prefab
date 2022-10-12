@@ -121,7 +121,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7782943707593185564, guid: 20b45d4309846f446841c5f1ac78b912, type: 3}
       propertyPath: m_Name
-      value: Shotgun
+      value: Shotgun Variant
       objectReference: {fileID: 0}
     - target: {fileID: 7782943707593185571, guid: 20b45d4309846f446841c5f1ac78b912, type: 3}
       propertyPath: m_RootOrder
@@ -173,14 +173,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 479599176548771881, guid: 20b45d4309846f446841c5f1ac78b912, type: 3}
-    - {fileID: 1753176536, guid: 20b45d4309846f446841c5f1ac78b912, type: 3}
-    - {fileID: 1290821617, guid: 20b45d4309846f446841c5f1ac78b912, type: 3}
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 20b45d4309846f446841c5f1ac78b912, type: 3}
---- !u!198 &837385047271713122 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 4958908829860979632, guid: 20b45d4309846f446841c5f1ac78b912, type: 3}
-  m_PrefabInstance: {fileID: 5714900857866406610}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2543964370523116494 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7782943707593185564, guid: 20b45d4309846f446841c5f1ac78b912, type: 3}
@@ -198,6 +192,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34657925c9bd3f74aa8b78b551459b43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  muzzleFlash: {fileID: 837385047271713122}
-  pellets: 5
-  spreadAngle: 15

@@ -13,10 +13,7 @@ MonoBehaviour:
   m_Name: PistolBullet
   m_EditorClassIdentifier: 
   id: PistolBullet
-  displayName: 
-  render:
-    sprite: {fileID: -1720688555, guid: c8326da72cab19b4b875fa7e166dec81, type: 3}
-    icon: {fileID: 0}
+  sprite: {fileID: -1720688555, guid: c8326da72cab19b4b875fa7e166dec81, type: 3}
   force: 15
   range: 1
   damage: 100
