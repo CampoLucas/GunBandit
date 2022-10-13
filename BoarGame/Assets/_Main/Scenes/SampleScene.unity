@@ -7309,10 +7309,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1806874665, guid: dfb9e3cf000a71848a6d5993540a2780, type: 3}
-      propertyPath: maxWeaponCapacity
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 3242269579498017134, guid: dfb9e3cf000a71848a6d5993540a2780, type: 3}
       propertyPath: m_Name
       value: Player
