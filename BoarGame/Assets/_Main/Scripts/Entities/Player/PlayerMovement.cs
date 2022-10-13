@@ -23,7 +23,7 @@ public class PlayerMovement : MonoBehaviour, IMovement
     /// <param name="dir">Direction it moves towards</param>
     public void Move(Vector2 dir)
     {
-        _rigidbody.velocity = dir * _stats.Speed;
+        _rigidbody.velocity = dir * (_stats.Speed * Time.fixedDeltaTime);
     }
 
 }

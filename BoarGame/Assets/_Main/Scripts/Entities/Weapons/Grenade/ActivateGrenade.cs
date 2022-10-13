@@ -49,10 +49,4 @@ public class ActivateGrenade : MonoBehaviour, IAttack
         
         Destroy(this.gameObject);
     }
-    
-    private void OnDrawGizmosSelected()
-    {
-        Gizmos.color = Color.green;
-        Gizmos.DrawWireSphere(transform.position, _stats.Range);
-    }
 }

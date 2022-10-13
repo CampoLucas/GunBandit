@@ -1,9 +1,5 @@
 using UnityEngine;
 
-#if UNITY_EDITOR
-using UnityEditor;
-#endif
-
 [CreateAssetMenu(fileName = "Stats", menuName = "Entities/Stats", order = 1)]
 public class StatsSO : ScriptableObject
 {

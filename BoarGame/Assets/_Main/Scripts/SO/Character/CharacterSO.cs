@@ -8,7 +8,7 @@ using UnityEditor;
 public class CharacterSO : StatsSO
 {
     [Header("Movement")]
-    [Range(0f, 10f)][SerializeField] private float speed = 2f;
+    [Range(0f, 800f)][SerializeField] private float speed = 2f;
     
     public float Speed => speed;
 }
@@ -18,14 +18,15 @@ public class CharacterSO : StatsSO
 class CharacterSOEditor : Editor
 {
 #region SerializedProperties
-    private bool _identification;
     private SerializedProperty _id;
     
-    private bool _renderer;
     private SerializedProperty _sprite;
     
-    private bool _stats;
     private SerializedProperty _speed;
+    
+    private bool _identification = true;
+    private bool _renderer = true;
+    private bool _stats = true;
 #endregion
 
     private void OnEnable()
