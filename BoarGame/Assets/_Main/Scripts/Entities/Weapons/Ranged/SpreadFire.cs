@@ -8,7 +8,7 @@ public class SpreadFire : Fire
 {
     public override void Attack()
     {
-        if (Reloadable.OutOfAmmo() || Reloadable.IsReloading()) return;
+        //if (Reloadable.OutOfAmmo() || Reloadable.IsReloading()) return;
         
         if (!(LastFiredTime + Stats.FireRate < Time.time)) return;
         LastFiredTime = Time.time;

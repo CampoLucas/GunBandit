@@ -4,23 +4,21 @@ public class CmdPickUpWeapon : ICommand
 {
     private readonly Weapon2 _weapon;
     private readonly Transform _transform;
-    private readonly Transform _handTransform;
 
-    public CmdPickUpWeapon(Weapon2 weapon, Transform transform, Transform handTransform)
+    public CmdPickUpWeapon(Weapon2 weapon, Transform transform)
     {
         _weapon = weapon;
         _transform = transform;
-        _handTransform = handTransform;
     }
     
     public void Do()
     {
         var item = _weapon.gameObject;
-        var handTransform = _handTransform.transform;
+        var transform1 = _transform.transform;
         
         item.transform.parent = _transform;
-        item.transform.rotation = handTransform.rotation;
-        item.transform.position = handTransform.position;
+        item.transform.rotation = transform1.rotation;
+        item.transform.position = transform1.position;
     }
 
     public void Undo()

@@ -15,22 +15,21 @@ MonoBehaviour:
   id: AK47
   sprite: {fileID: 21300000, guid: 5300a6ef2c5d3864e9bd09aaf3056db4, type: 3}
   displayName: AK-47
-  icon: {fileID: 21300000, guid: 13d4af9aaf7e8c44198e958c65b7f5ac, type: 3}
+  icon: {fileID: 21300000, guid: 9c369bcfa84d8ea4e9d6e851b6fbc846, type: 3}
   mass: 1
   linearDrag: 1
   animation: 2
   throwStrength: 15
-  type: 0
   muzzle: {fileID: 4958908830864908261, guid: d71e45ea7c3e8174c905d66053e58a6b, type: 3}
   fireRate: 0.2
-  reloadSpeed: 1
+  reloadSpeed: 1.2
   ammo: 500
   magAmmo: 20
   pellets: 5
   spread: 15
   hasRecoil: 1
-  recoil: 1.56
-  snappiness: 13.82
-  returnSpeed: 7.73
+  recoil: 2
+  snappiness: 5.9
+  returnSpeed: 10.2
   bulletData: {fileID: 11400000, guid: dda96fa17a429754ab20152ba767d654, type: 2}
   bulletPrefab: {fileID: 2486643567698640556, guid: 554e3b63cea90844a9af8c77553decff, type: 3}

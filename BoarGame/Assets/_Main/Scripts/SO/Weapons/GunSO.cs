@@ -27,7 +27,7 @@ public class GunSO : WeaponSO
     
     [SerializeField] private BulletSO bulletData;
     [SerializeField] private Bullet bulletPrefab;
-    
+
     public ParticleSystem Muzzle => muzzle;
     public float FireRate => fireRate;
     public float ReloadSpeed => reloadSpeed;

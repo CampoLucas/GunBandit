@@ -10,7 +10,7 @@ public class PickUpWeapon : MonoBehaviour
     
     public void PickUp(Weapon2 weapon)
     {
-        var pickUp = new CmdPickUpWeapon(weapon, transform, handTransform);
+        var pickUp = new CmdPickUpWeapon(weapon, handTransform);
         _invoker.AddCommand(pickUp);
     }
     

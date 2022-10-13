@@ -15,22 +15,21 @@ MonoBehaviour:
   id: Shotgun
   sprite: {fileID: 21300000, guid: 5300a6ef2c5d3864e9bd09aaf3056db4, type: 3}
   displayName: Shotgun
-  icon: {fileID: 21300000, guid: 13d4af9aaf7e8c44198e958c65b7f5ac, type: 3}
+  icon: {fileID: 21300000, guid: 9c369bcfa84d8ea4e9d6e851b6fbc846, type: 3}
   mass: 1
   linearDrag: 1
   animation: 2
   throwStrength: 15
-  type: 1
   muzzle: {fileID: 2836053498663775094, guid: 4d83ec5dc0dad074f9e862941412769f, type: 3}
   fireRate: 1.16
-  reloadSpeed: 5.47
+  reloadSpeed: 2.5
   ammo: 500
-  magAmmo: 20
+  magAmmo: 2
   pellets: 5
-  spread: 15
-  hasRecoil: 0
-  recoil: 1.9
-  snappiness: 0.2
-  returnSpeed: 0.2
+  spread: 20
+  hasRecoil: 1
+  recoil: 0.3
+  snappiness: 3.7
+  returnSpeed: 10.7
   bulletData: {fileID: 11400000, guid: 45ee04e9ce639b644b8c320aff25bdd9, type: 2}
   bulletPrefab: {fileID: 2486643567698640556, guid: 554e3b63cea90844a9af8c77553decff, type: 3}

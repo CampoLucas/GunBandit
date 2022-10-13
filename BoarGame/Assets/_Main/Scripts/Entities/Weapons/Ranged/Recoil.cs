@@ -29,7 +29,7 @@ public class Recoil : MonoBehaviour
         if(_ranged.CurrentState != WeaponState.Equipped) return;
         _targetRotation = Vector3.Lerp(_targetRotation, Vector3.zero, _stats.ReturnSpeed * Time.deltaTime);
         _currentRotation = Vector3.Slerp(_currentRotation, _targetRotation, _stats.Snappiness * Time.fixedDeltaTime);
-        _bulletSpawnPos.localRotation = Quaternion.Euler(_currentRotation);
+        transform.localRotation = Quaternion.Euler(_currentRotation);
     }
 
     public void RecoilFire()

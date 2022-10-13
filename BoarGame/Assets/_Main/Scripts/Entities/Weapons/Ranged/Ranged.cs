@@ -16,7 +16,7 @@ public class Ranged : Weapon2
 
     public override void Attack()
     {
-        
+        if (Reloadable.OutOfAmmo() || Reloadable.IsReloading()) return;
         base.Attack();
         var stats = GetData() as GunSO;
         if(_recoil && stats.HasRecoil)
