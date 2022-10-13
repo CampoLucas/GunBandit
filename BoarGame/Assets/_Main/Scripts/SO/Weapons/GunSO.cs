@@ -8,8 +8,6 @@ using UnityEditor;
 [CreateAssetMenu(fileName = "Gun", menuName = "Entities/Stats/Weapons/Gun", order = 0)]
 public class GunSO : WeaponSO
 {
-    [SerializeField] private GunType type = GunType.Gun;
-
     [SerializeField] private ParticleSystem muzzle;
     
     [Range(0.0001f, 20)] [SerializeField] private float fireRate = 0.1f;
@@ -17,6 +15,7 @@ public class GunSO : WeaponSO
 
     [Range(0, 500)] [SerializeField] private int ammo = 60;
     [Range(0, 20) ][SerializeField] private int magAmmo = 6;
+    
     
     [SerializeField] private int pellets = 5;
     [SerializeField] private float spread = 15f;
@@ -29,7 +28,6 @@ public class GunSO : WeaponSO
     [SerializeField] private BulletSO bulletData;
     [SerializeField] private Bullet bulletPrefab;
     
-    public GunType Type => type;
     public ParticleSystem Muzzle => muzzle;
     public float FireRate => fireRate;
     public float ReloadSpeed => reloadSpeed;
@@ -44,7 +42,6 @@ public class GunSO : WeaponSO
     public BulletSO BulletData => bulletData;
     public Bullet BulletPrefab => bulletPrefab;
 }
-public enum GunType { Gun, Shotgun}
 
 #if UNITY_EDITOR
 [CustomEditor(typeof(GunSO))]
@@ -63,7 +60,6 @@ class GunSOEditor : Editor
     private SerializedProperty _linearDrag;
 
     private SerializedProperty _animation;
-    private SerializedProperty _type;
 
     private SerializedProperty _throwStrength;
     private SerializedProperty _fireRate;
@@ -89,6 +85,11 @@ class GunSOEditor : Editor
     private bool _physics = true;
     private bool _weaponStats = true;
     private bool _bulletStats = true;
+
+    private int _weaponType = 0;
+    private string[] _weaponTypes = new string[2] { "Automatic", "Shotgun" };
+    
+    
 #endregion
 
     private void OnEnable()
@@ -105,7 +106,6 @@ class GunSOEditor : Editor
         _linearDrag = serializedObject.FindProperty("linearDrag");
 
         _animation = serializedObject.FindProperty("animation");
-        _type = serializedObject.FindProperty("type");
         
         _throwStrength = serializedObject.FindProperty("throwStrength");
         _fireRate = serializedObject.FindProperty("fireRate");
@@ -130,7 +130,7 @@ class GunSOEditor : Editor
     {
         var gun = target as GunSO;
         serializedObject.Update();
-        
+
         // ID ---------------------------------------------------------------------------------------------------------
         _identification = EditorGUILayout.BeginFoldoutHeaderGroup(_identification, "Identification");
         if (_identification)
@@ -162,20 +162,20 @@ class GunSOEditor : Editor
         if (_physics)
         {
             EditorGUILayout.LabelField("RigidBody");
+            
             EditorGUILayout.PropertyField(_mass);
             EditorGUILayout.PropertyField(_linearDrag);
         }
         EditorGUILayout.EndFoldoutHeaderGroup();
         
         // Animation --------------------------------------------------------------------------------------------------
-        EditorGUILayout.Space(50);
         EditorGUILayout.LabelField("Animation");
         EditorGUILayout.PropertyField(_animation);
         
         // Weapon staff -----------------------------------------------------------------------------------------------
-        EditorGUILayout.Space(50);
+        EditorGUILayout.Space(10);
         EditorGUILayout.LabelField("Weapon");
-        EditorGUILayout.PropertyField(_type);
+        _weaponType = EditorGUILayout.Popup("Type", _weaponType, _weaponTypes);
 
         // Stats ------------------------------------------------------------------------------------------------------
         _weaponStats = EditorGUILayout.BeginFoldoutHeaderGroup(_weaponStats, "Stats");
@@ -190,7 +190,8 @@ class GunSOEditor : Editor
             EditorGUILayout.PropertyField(_ammo);
             EditorGUILayout.PropertyField(_magAmmo);
 
-            if (gun && gun.Type == GunType.Shotgun)
+            // if it is type shotgun
+            if (_weaponType == 1)
             {
                 EditorGUILayout.Space(10);
                 EditorGUILayout.LabelField("Pellets");

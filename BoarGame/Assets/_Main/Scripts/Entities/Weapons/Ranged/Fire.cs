@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 using Random = UnityEngine.Random;
 
 public class Fire : MonoBehaviour, IAttack, IFactory<Bullet, StatsSO>
@@ -9,6 +10,8 @@ public class Fire : MonoBehaviour, IAttack, IFactory<Bullet, StatsSO>
     protected float LastFiredTime;
     protected Transform BulletSpawnPos;
     protected ParticleSystem Muzzle;
+    private Light2D _light;
+    private ChangeLightColor _lightColor;
     
     public Bullet Product => Stats.BulletPrefab;
 
@@ -24,8 +27,23 @@ public class Fire : MonoBehaviour, IAttack, IFactory<Bullet, StatsSO>
 
         if (Stats == null) return;
         var muzzle = Instantiate(Stats.Muzzle, BulletSpawnPos);
-        muzzle.transform.position = BulletSpawnPos.position;
         Muzzle = muzzle;
+        _light = muzzle.GetComponentInChildren<Light2D>();
+        _lightColor = _light.GetComponent<ChangeLightColor>();
+
+    }
+
+    private void Start()
+    {
+        Muzzle.transform.position = BulletSpawnPos.position;
+        _light.enabled = false;
+    }
+
+    private void Update()
+    {
+        _light.enabled = Muzzle.isPlaying;
+        if (!Muzzle.isPlaying) return;
+        _lightColor.ChangeColor();
     }
 
     public virtual void Attack()

@@ -7,9 +7,37 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 74761640553990825, guid: d71e45ea7c3e8174c905d66053e58a6b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.38
+      objectReference: {fileID: 0}
+    - target: {fileID: 74761640553990825, guid: d71e45ea7c3e8174c905d66053e58a6b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7070911
+      objectReference: {fileID: 0}
+    - target: {fileID: 74761640553990825, guid: d71e45ea7c3e8174c905d66053e58a6b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.0047180355
+      objectReference: {fileID: 0}
+    - target: {fileID: 74761640553990825, guid: d71e45ea7c3e8174c905d66053e58a6b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7070911
+      objectReference: {fileID: 0}
+    - target: {fileID: 74761640553990825, guid: d71e45ea7c3e8174c905d66053e58a6b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.0047180355
+      objectReference: {fileID: 0}
+    - target: {fileID: 74761640553990825, guid: d71e45ea7c3e8174c905d66053e58a6b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90
+      objectReference: {fileID: 0}
     - target: {fileID: 2867718947651923865, guid: d71e45ea7c3e8174c905d66053e58a6b, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.0015
+      objectReference: {fileID: 0}
+    - target: {fileID: 2880815165316771171, guid: d71e45ea7c3e8174c905d66053e58a6b, type: 3}
+      propertyPath: m_PointLightOuterRadius
+      value: 1.6
       objectReference: {fileID: 0}
     - target: {fileID: 4007731170514353804, guid: d71e45ea7c3e8174c905d66053e58a6b, type: 3}
       propertyPath: m_IsActive
@@ -117,7 +145,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6546107078885846684, guid: d71e45ea7c3e8174c905d66053e58a6b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.046
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6546107078885846684, guid: d71e45ea7c3e8174c905d66053e58a6b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -153,7 +181,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7500399972648277535, guid: d71e45ea7c3e8174c905d66053e58a6b, type: 3}
       propertyPath: m_Name
-      value: MuzzleFlash1
+      value: MF_Shotgun
       objectReference: {fileID: 0}
     - target: {fileID: 8656044018781882672, guid: d71e45ea7c3e8174c905d66053e58a6b, type: 3}
       propertyPath: m_IsActive
