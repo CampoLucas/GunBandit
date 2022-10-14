@@ -16,10 +16,11 @@ MonoBehaviour:
   sprite: {fileID: 21300000, guid: 5300a6ef2c5d3864e9bd09aaf3056db4, type: 3}
   displayName: Shotgun
   icon: {fileID: 21300000, guid: 9c369bcfa84d8ea4e9d6e851b6fbc846, type: 3}
-  mass: 1
-  linearDrag: 1
+  physicsMaterial: {fileID: 6200000, guid: b224158885d40b0419c2dcbb612df778, type: 2}
+  mass: 4
+  drag: 2
   animation: 2
-  throwStrength: 15
+  throwStrength: 50
   muzzle: {fileID: 2836053498663775094, guid: 4d83ec5dc0dad074f9e862941412769f, type: 3}
   fireRate: 1.16
   reloadSpeed: 2.5

@@ -591,7 +591,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &165101451
 Transform:
   m_ObjectHideFlags: 0
@@ -2045,7 +2045,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.1
+  m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
   m_ApplyToSortingLayers: 0000000095a51a88b9f6b8e3ff844e297bece9bfb949c5e1953db48a
@@ -2652,7 +2652,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &980275667
 Transform:
   m_ObjectHideFlags: 0
@@ -3322,7 +3322,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1192764544
 Transform:
   m_ObjectHideFlags: 0
@@ -4102,7 +4102,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1402728795
 Transform:
   m_ObjectHideFlags: 0
@@ -4138,7 +4138,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1423961996
 Transform:
   m_ObjectHideFlags: 0
@@ -4792,7 +4792,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1739034814
 Transform:
   m_ObjectHideFlags: 0
@@ -7323,6 +7323,10 @@ PrefabInstance:
       propertyPath: handTransform
       value: 
       objectReference: {fileID: 1574013894}
+    - target: {fileID: 1806874672, guid: dfb9e3cf000a71848a6d5993540a2780, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3242269579498017134, guid: dfb9e3cf000a71848a6d5993540a2780, type: 3}
       propertyPath: m_Name
       value: Player

@@ -47,6 +47,6 @@ public class ActivateGrenade : MonoBehaviour, IAttack
             body.AddForce(direction * (_stats.Force));
         }
         
-        Destroy(this.gameObject);
+        Destroy(this);
     }
 }

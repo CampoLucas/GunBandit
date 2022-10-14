@@ -97,6 +97,6 @@ public class SwapState : MonoBehaviour, ISwapState
                 
         _rigidbody.bodyType = RigidbodyType2D.Dynamic;
         _rigidbody.constraints = RigidbodyConstraints2D.None;
-        if (_stats != null) _rigidbody.drag = _stats.LinearDrag;
+        //if (_stats != null) _rigidbody.drag = _stats.Drag;
     }
 }

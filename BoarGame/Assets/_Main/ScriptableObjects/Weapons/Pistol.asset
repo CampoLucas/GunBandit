@@ -16,10 +16,11 @@ MonoBehaviour:
   sprite: {fileID: 21300000, guid: 13d4af9aaf7e8c44198e958c65b7f5ac, type: 3}
   displayName: Pistol
   icon: {fileID: 21300000, guid: 9c369bcfa84d8ea4e9d6e851b6fbc846, type: 3}
-  mass: 1
-  linearDrag: 1
+  physicsMaterial: {fileID: 6200000, guid: b224158885d40b0419c2dcbb612df778, type: 2}
+  mass: 3
+  drag: 2
   animation: 1
-  throwStrength: 15
+  throwStrength: 50
   muzzle: {fileID: 7584703036450201219, guid: ccae3ebe6eaa421439f5a4f26ddc5ef9, type: 3}
   fireRate: 0.54
   reloadSpeed: 1

@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4084a96e8bddf9940ac2239bd340b59f, type: 3}
   m_Name: Player
   m_EditorClassIdentifier: 
-  id: default
-  sprite: {fileID: 0}
+  id: player
+  sprite: {fileID: 186508923, guid: 3521271d7c40f514bbc5c87eafba3371, type: 3}
   speed: 338

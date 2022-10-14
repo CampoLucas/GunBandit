@@ -17,8 +17,9 @@ public class Player : Entity
     public PickUpWeapon Pick { get; private set; }
     public Inventory Inventory { get; private set; }
 
-    private void Awake()
+    protected override void Awake()
     {
+        base.Awake();
         Input = GetComponent<PlayerInputHandler>();
         _rotation = GetComponent<IRotation>();
         _movement = GetComponent<IMovement>();
@@ -26,8 +27,9 @@ public class Player : Entity
         Inventory = GetComponent<Inventory>();
     }
 
-    private void Start()
+    protected override void Start()
     {
+        base.Start();
         Input.OnFire += Fire;
         Input.OnThrow += Throw;
         Input.OnReload += Reload;
@@ -69,12 +71,8 @@ public class Player : Entity
     private void Throw()
     {
         if(!Inventory.HasAWeapon()) return;
-        //Hacer que el jugador lanze el arma
         Inventory.CurrentWeapon().Throw();
         Drop();
-        
-        //WeaponInventory.CurrentWeapon = null;
-        //Remove the weapon from inventory
     }
 
     public void PickUpWeapon()
