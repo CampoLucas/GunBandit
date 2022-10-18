@@ -9,10 +9,13 @@ public class SpreadFire : Fire
     public override void Attack()
     {
         if (Reloadable.OutOfAmmo() || Reloadable.IsReloading()) return;
-        
-        if (!(LastFiredTime + Stats.FireRate < Time.time)) return;
-        LastFiredTime = Time.time;
 
+        if (Stats.Hold)
+        {
+            if (!(LastFiredTime + Stats.FireRate < Time.time)) return;
+            LastFiredTime = Time.time;
+        }
+        
         Muzzle.Play();
         for (int i = 0; i < Stats.Pellets; i++)
         {

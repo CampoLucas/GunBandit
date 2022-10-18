@@ -8,6 +8,7 @@ public class PlayerInputHandler : MonoBehaviour
     private Vector2 _movementInput;
     private Vector2 _mousePos;
     private float _mouseScrollY;
+    private bool _isHolding;
     private bool _fireInput;
     
     /// <summary>
@@ -54,6 +55,12 @@ public class PlayerInputHandler : MonoBehaviour
         HandleAllInputs();
     }
 
+    private void LateUpdate()
+    {
+        if(_isHolding) return;
+        _fireInput = false;
+    }
+
     private void OnDisable() => _inputActions.Disable();
 
     private void HandleAllInputs()
@@ -79,5 +86,7 @@ public class PlayerInputHandler : MonoBehaviour
                 break;
         }
     }
+
+    public void SetHolding(in bool isHolding) => _isHolding = isHolding;
 
 }

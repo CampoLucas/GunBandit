@@ -60,6 +60,7 @@ class GunSOEditor : Editor
     private SerializedProperty _linearDrag;
 
     private SerializedProperty _animation;
+    private SerializedProperty _hold;
 
     private SerializedProperty _throwStrength;
     private SerializedProperty _fireRate;
@@ -106,6 +107,7 @@ class GunSOEditor : Editor
         _linearDrag = serializedObject.FindProperty("linearDrag");
 
         _animation = serializedObject.FindProperty("animation");
+        _hold = serializedObject.FindProperty("hold");
         
         _throwStrength = serializedObject.FindProperty("throwStrength");
         _fireRate = serializedObject.FindProperty("fireRate");
@@ -171,7 +173,8 @@ class GunSOEditor : Editor
         // Animation --------------------------------------------------------------------------------------------------
         EditorGUILayout.LabelField("Animation");
         EditorGUILayout.PropertyField(_animation);
-        
+        EditorGUILayout.PropertyField(_hold);
+
         // Weapon staff -----------------------------------------------------------------------------------------------
         EditorGUILayout.Space(10);
         EditorGUILayout.LabelField("Weapon");
@@ -182,7 +185,10 @@ class GunSOEditor : Editor
         if (_weaponStats)
         {
             EditorGUILayout.PropertyField(_throwStrength);
-            EditorGUILayout.PropertyField(_fireRate);
+            if (gun && gun.Hold)
+            {
+                EditorGUILayout.PropertyField(_fireRate);
+            }
             EditorGUILayout.PropertyField(_reloadSpeed);
             
             EditorGUILayout.Space(10);

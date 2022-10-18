@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class WeaponSO : StatsSO
 {
+    [SerializeField] private bool hold = true;
     [SerializeField] private string displayName;
     [SerializeField] private Sprite icon;
     [SerializeField] private float mass = 1f;
@@ -13,6 +14,7 @@ public class WeaponSO : StatsSO
     [Range(0.0001f, 50)][SerializeField] private float throwStrength = 5f;
     
     
+    public bool Hold => hold;
     public float ThrowStrength => throwStrength;
     
     public float Mass => mass;
@@ -24,4 +26,6 @@ public class WeaponSO : StatsSO
 }
 
 //ToDo: animation script
-public enum AnimationType { Empty, Pistol, Shotgun}
+public enum AnimationType { Empty, Pistol, Shotgun }
+
+public enum InputType { Hold, Tap }

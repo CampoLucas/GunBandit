@@ -58,7 +58,8 @@ public class Player : Entity
         Inventory.CurrentWeapon().Attack();
         var gun = Inventory.CurrentWeapon() as Ranged;
         if (!gun) return;
-    }
+    } 
+    
     private void Reload()
     {
         var gun = Inventory.CurrentWeapon() as Ranged;
@@ -81,6 +82,8 @@ public class Player : Entity
     {
         if(!Inventory.HasAWeapon()) return;
         _pick.PickUp(Inventory.CurrentWeapon());
+        var stats = Inventory.CurrentWeapon().GetData() as WeaponSO;
+        ChangeAttackInput(stats.Hold);
     }
 
     private void Drop()
@@ -88,17 +91,29 @@ public class Player : Entity
         if(!Inventory.HasAWeapon()) return;
         _pick.Drop();
         Inventory.DropItem();
+        if(!Inventory.HasAWeapon()) return;
+        var stats = Inventory.CurrentWeapon().GetData() as WeaponSO;
+        ChangeAttackInput(stats.Hold);
     }
 
     private void SwapWeaponUp()
     {
         if(!Inventory.HasAWeapon()) return;
         Inventory.ChangeWeapon(true);
+        var stats = Inventory.CurrentWeapon().GetData() as WeaponSO;
+        ChangeAttackInput(stats.Hold);
     }
     
     private void SwapWeaponDown()
     {
         if(!Inventory.HasAWeapon()) return;
         Inventory.ChangeWeapon(false);
+        var stats = Inventory.CurrentWeapon().GetData() as WeaponSO;
+        ChangeAttackInput(stats.Hold);
+    }
+
+    public void ChangeAttackInput(bool canHold)
+    {
+        _input.SetHolding(canHold);
     }
 }
