@@ -48,7 +48,7 @@ public class Fire : MonoBehaviour, IAttack, IFactory<Bullet, StatsSO>
 
     public virtual void Attack()
     {
-        //if (Reloadable.OutOfAmmo() || Reloadable.IsReloading()) return;
+        if (Reloadable.OutOfAmmo() || Reloadable.IsReloading()) return;
         
         if (!(LastFiredTime + Stats.FireRate < Time.time)) return;
         LastFiredTime = Time.time;

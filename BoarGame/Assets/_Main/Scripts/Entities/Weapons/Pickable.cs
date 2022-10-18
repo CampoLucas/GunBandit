@@ -7,6 +7,7 @@ public class Pickable : MonoBehaviour
 {
     private WeaponSO _data;
     private Collider _collider;
+    private PlayerInputHandler _inputs;
     private Inventory _inventory;
 
     public WeaponSO GetData() => _data;
@@ -19,20 +20,18 @@ public class Pickable : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         if(!other.CompareTag("Player")) return;
-        var player = other.GetComponent<Player>();
-        if(!player) return;
-        if (!_inventory)
-            _inventory = player.Inventory;
-        player.Input.OnInteractPerformed += AddItem;
+        if(_inputs == null)
+            _inputs = other.GetComponent<PlayerInputHandler>();
+        if(_inventory == null) 
+            _inventory = other.GetComponent<Player>().Inventory;
+        _inputs.OnInteractPerformed += AddItem;
         
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
         if(!other.CompareTag("Player")) return;
-        var player = other.GetComponent<Player>();
-        if(!player) return;
-        player.Input.OnInteractPerformed -= AddItem;
+        _inputs.OnInteractPerformed -= AddItem;
     }
 
     private void AddItem()

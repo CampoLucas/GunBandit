@@ -15,9 +15,6 @@ public class Inventory : MonoBehaviour
 {
     private List<InventoryWeapon> _weaponList;
     private Animator _animator;
-    private Player _player;
-    
-    [SerializeField] private Transform handTransform;
     [SerializeField] private int _itemIndex;
     
     [SerializeField] private int maxWeaponCapacity = 2;
@@ -37,7 +34,6 @@ public class Inventory : MonoBehaviour
     private void Awake()
     {
         _weaponList = new List<InventoryWeapon>();
-        _player = GetComponent<Player>();
         //Chequea si tiene algun arma y la equipa
         for (int i = 0; i < _weaponList.Count; i++)
         {
@@ -64,22 +60,17 @@ public class Inventory : MonoBehaviour
             Weapon = weapon
         });
         
-        
-        
         weapon.ChangeState(WeaponState.Equipped);
         if (_weaponList.Count > 1)
         {
             var item = itemToPickup.gameObject;
-            weapon.gameObject.transform.parent = handTransform;
             item.SetActive(false);
         }
         else
         {
             //Todo: IAnimator
             _animator.SetFloat("WeaponType", (int)data.Animation);
-            _player.PickUpWeapon();
         }
-
     }
 
     public void DropItem()
@@ -97,11 +88,9 @@ public class Inventory : MonoBehaviour
             
             var item = CurrentWeapon().gameObject;
             item.SetActive(true);
-            //PickUp(CurrentWeapon());
            
             //Todo: IAnimator
             _animator.SetFloat("WeaponType", (int)_weaponList[_itemIndex].Data.Animation);
-            _player.PickUpWeapon();
         }
         else
         {
@@ -139,7 +128,6 @@ public class Inventory : MonoBehaviour
         SlotOrder();
         DisableWeapon();
         _animator.SetFloat("WeaponType", (int)_weaponList[_itemIndex].Data.Animation);
-        _player.PickUpWeapon();
     }
 
     private void SlotOrder()

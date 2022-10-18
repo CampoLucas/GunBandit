@@ -10,44 +10,44 @@ using UnityEngine.InputSystem;
 /// </summary>
 public class Player : Entity
 {
+    private PlayerInputHandler _input;
     private IRotation _rotation;
     private IMovement _movement;
+    private PickUpWeapon _pick;
 
-    public PlayerInputHandler Input { get; private set; }
-    public PickUpWeapon Pick { get; private set; }
     public Inventory Inventory { get; private set; }
 
     private void Awake()
     {
-        Input = GetComponent<PlayerInputHandler>();
+        _input = GetComponent<PlayerInputHandler>();
         _rotation = GetComponent<IRotation>();
         _movement = GetComponent<IMovement>();
-        Pick = GetComponent<PickUpWeapon>();
+        _pick = GetComponent<PickUpWeapon>();
         Inventory = GetComponent<Inventory>();
     }
 
     private void Start()
     {
-        Input.OnFire += Fire;
-        Input.OnThrow += Throw;
-        Input.OnReload += Reload;
-        Input.OnScrollUp += SwapWeaponUp;
-        Input.OnScrollDown += SwapWeaponDown;
+        _input.OnFire += Fire;
+        _input.OnThrow += Throw;
+        _input.OnReload += Reload;
+        _input.OnScrollUp += SwapWeaponUp;
+        _input.OnScrollDown += SwapWeaponDown;
     }
 
     private void Update()
     {
-        Move(Input.MovementInput);
-        Rotate(Input.MousePosition);
+        Move(_input.MovementInput);
+        Rotate(_input.MousePosition);
     }
 
     private void OnDisable()
     {
-        Input.OnFire -= Fire;
-        Input.OnThrow -= Throw;
-        Input.OnReload -= Reload;
-        Input.OnScrollUp -= SwapWeaponUp;
-        Input.OnScrollDown -= SwapWeaponDown;
+        _input.OnFire -= Fire;
+        _input.OnThrow -= Throw;
+        _input.OnReload -= Reload;
+        _input.OnScrollUp -= SwapWeaponUp;
+        _input.OnScrollDown -= SwapWeaponDown;
     }
     private void Move(Vector2 direction) => _movement.Move(direction);
     private void Rotate(Vector2 mousePos) => _rotation.Rotate(mousePos);
@@ -77,16 +77,16 @@ public class Player : Entity
         //Remove the weapon from inventory
     }
 
-    public void PickUpWeapon()
+    private void PickUpWeapon()
     {
         if(!Inventory.HasAWeapon()) return;
-        Pick.PickUp(Inventory.CurrentWeapon());
+        _pick.PickUp(Inventory.CurrentWeapon());
     }
 
     private void Drop()
     {
         if(!Inventory.HasAWeapon()) return;
-        Pick.Drop();
+        _pick.Drop();
         Inventory.DropItem();
     }
 
