@@ -6,15 +6,17 @@ using UnityEngine;
 public class Bullet : Entity
 {
     private Rigidbody2D _rigidbody;
+    private SpriteRenderer _sprite;
     private BulletSO _stats;
     private Vector2 _dir;
-    protected override void Awake()
+    private void Awake()
     {
-        base.Awake();
         _rigidbody = GetComponent<Rigidbody2D>();
+        _sprite = GetComponentInChildren<SpriteRenderer>();
     }
 
-    protected override void Start()
+
+    private void Start()
     {
         _rigidbody.AddForce(_dir * _stats.Force, ForceMode2D.Impulse);
         Destroy(gameObject, _stats.Range);
@@ -22,8 +24,8 @@ public class Bullet : Entity
     
     public void InitStats(BulletSO data, Vector2 dir)
     {
-        InitStats();
         _stats = data;
+        _sprite.sprite = data.Sprite;
         _dir = dir;
     }
 

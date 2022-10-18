@@ -16,11 +16,10 @@ MonoBehaviour:
   sprite: {fileID: 21300000, guid: 5300a6ef2c5d3864e9bd09aaf3056db4, type: 3}
   displayName: AK-47
   icon: {fileID: 21300000, guid: 9c369bcfa84d8ea4e9d6e851b6fbc846, type: 3}
-  physicsMaterial: {fileID: 6200000, guid: b224158885d40b0419c2dcbb612df778, type: 2}
-  mass: 4
-  drag: 2
+  mass: 1
+  linearDrag: 1
   animation: 2
-  throwStrength: 50
+  throwStrength: 15
   muzzle: {fileID: 4958908830864908261, guid: d71e45ea7c3e8174c905d66053e58a6b, type: 3}
   fireRate: 0.2
   reloadSpeed: 1.2
