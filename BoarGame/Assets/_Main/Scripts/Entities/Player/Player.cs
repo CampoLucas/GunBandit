@@ -14,6 +14,7 @@ public class Player : Entity
     private IRotation _rotation;
     private IMovement _movement;
     private PickUpWeapon _pick;
+    private Damageable _damageable;
 
     public Inventory Inventory { get; private set; }
 
@@ -24,6 +25,7 @@ public class Player : Entity
         _movement = GetComponent<IMovement>();
         _pick = GetComponent<PickUpWeapon>();
         Inventory = GetComponent<Inventory>();
+        _damageable = GetComponent<Damageable>();
     }
 
     private void Start()
@@ -112,8 +114,18 @@ public class Player : Entity
         ChangeAttackInput(stats.Hold);
     }
 
-    public void ChangeAttackInput(bool canHold)
+    private void ChangeAttackInput(bool canHold)
     {
         _input.SetHolding(canHold);
+    }
+
+    public void TakeDamage(int amount)
+    {
+        _damageable.TakeDamage(amount);
+    }
+
+    public void AddHealth(int amount)
+    {
+        _damageable.AddHealth(amount);
     }
 }

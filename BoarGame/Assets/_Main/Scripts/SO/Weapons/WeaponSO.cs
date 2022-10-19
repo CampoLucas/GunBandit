@@ -12,8 +12,8 @@ public class WeaponSO : StatsSO
     //ToDo: animation script
     [SerializeField] private AnimationType animation = AnimationType.Empty;
     [Range(0.0001f, 50)][SerializeField] private float throwStrength = 5f;
-    
-    
+
+
     public bool Hold => hold;
     public float ThrowStrength => throwStrength;
     

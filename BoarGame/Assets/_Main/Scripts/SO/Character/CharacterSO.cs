@@ -7,10 +7,11 @@ using UnityEditor;
 [CreateAssetMenu(fileName = "Character", menuName = "Entities/Stats/Character", order = 1)]
 public class CharacterSO : StatsSO
 {
-    [Header("Movement")]
-    [Range(0f, 800f)][SerializeField] private float speed = 2f;
+    [SerializeField] private float speed = 2f;
+    [SerializeField] private int maxHealth = 100;
     
     public float Speed => speed;
+    public int MaxHealth => maxHealth;
 }
 
 #if UNITY_EDITOR

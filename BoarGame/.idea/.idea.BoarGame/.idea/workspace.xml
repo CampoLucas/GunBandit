@@ -12,7 +12,9 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6afd1274f120405096bc1ad9e2010ba6157a00/09/8f8264d3/Transform.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6afd1274f120405096bc1ad9e2010ba6157a00/f7/3c34d9c9/Object.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Main/Scripts/ChangeLightColor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Main/Scripts/DmageTest.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Bullet/Bullet.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Entity.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Item.cs" root0="FORCE_HIGHLIGHTING" />
@@ -137,6 +139,8 @@
       <workItem from="1665606995598" duration="18161000" />
       <workItem from="1666095480814" duration="2367000" />
       <workItem from="1666100955356" duration="1983000" />
+      <workItem from="1666206117008" duration="97000" />
+      <workItem from="1666207960359" duration="2920000" />
     </task>
     <servers />
   </component>
