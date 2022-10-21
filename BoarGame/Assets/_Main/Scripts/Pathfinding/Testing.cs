@@ -5,24 +5,25 @@ using UnityEngine;
 
 public class Testing : MonoBehaviour
 {
-    private Grid _grid;
+    private Grid<GameObject> _grid;
+    [SerializeField] private GameObject objPrefab;
     
     private void Start()
     {
-        _grid = new Grid(4, 2, 1f, new Vector3(2, 0));
+        _grid = new Grid<GameObject>(4, 2, 1f, new Vector3(2, 0), (Grid<GameObject> grid, int x, int y) => Create(x, y));
     }
 
     private void Update()
     {
         if (Input.GetMouseButtonDown(0))
         {
-            _grid.SetValue(GetMouseWorldPosition(), 47);
+            //_grid.SetObject(GetMouseWorldPosition(), true);
         }
 
         if (Input.GetMouseButtonDown(1))
         {
 #if UNITY_EDITOR
-            Debug.Log(_grid.GetValue(GetMouseWorldPosition()));
+            Debug.Log(_grid.GetObject(GetMouseWorldPosition()));
 #endif
         }
     }
@@ -37,5 +38,12 @@ public class Testing : MonoBehaviour
     private Vector3 GetMouseWorldPositionWithZ(Vector3 screenPos, Camera worldCamera)
     {
         return worldCamera.ScreenToWorldPoint(screenPos);
+    }
+
+    private GameObject Create(int x, int y)
+    {
+        var obj = Instantiate(objPrefab);
+        obj.transform.position = new Vector3(x, y);
+        return obj;
     }
 }

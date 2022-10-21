@@ -60,3 +60,6 @@ TagManager:
   - name: Objects
     uniqueID: 2327068053
     locked: 0
+  - name: UIText
+    uniqueID: 3631126351
+    locked: 0
