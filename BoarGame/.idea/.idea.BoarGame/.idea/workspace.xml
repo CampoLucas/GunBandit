@@ -28,6 +28,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Weapons/Grenade/ActivateGrenade.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Weapons/Pickable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Weapons/SwapState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Main/Scripts/Pathfinding/Testing.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Main/Scripts/SO/Character/CharacterSO.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Main/Scripts/SO/StatsSO.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Main/Scripts/SO/Weapons/GunSO.cs" root0="FORCE_HIGHLIGHTING" />
@@ -140,7 +141,9 @@
       <workItem from="1666095480814" duration="2367000" />
       <workItem from="1666100955356" duration="1983000" />
       <workItem from="1666206117008" duration="97000" />
-      <workItem from="1666207960359" duration="2920000" />
+      <workItem from="1666207960359" duration="3327000" />
+      <workItem from="1666355067522" duration="450000" />
+      <workItem from="1666356375233" duration="5214000" />
     </task>
     <servers />
   </component>
