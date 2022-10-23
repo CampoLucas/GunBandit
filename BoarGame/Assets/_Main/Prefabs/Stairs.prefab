@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3085288271428376810}
   - component: {fileID: 4765442037842992074}
   - component: {fileID: 8052640192871735420}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: in
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -84,7 +84,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8769585789941797138}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Stairs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -119,7 +119,7 @@ GameObject:
   - component: {fileID: 8769585790387521458}
   - component: {fileID: 8769585790387521453}
   - component: {fileID: 6509858500133493063}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8240454337036570148}
   - component: {fileID: 8240454337036570149}
   - component: {fileID: 8240454337036570150}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: MomentaryButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74,7 +74,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8240454337092030397}
   - component: {fileID: 8240454337092030338}
-  m_Layer: 0
+  - component: {fileID: 3507084985403951006}
+  m_Layer: 10
   m_Name: sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -148,3 +149,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!58 &3507084985403951006
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8240454337092030396}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5

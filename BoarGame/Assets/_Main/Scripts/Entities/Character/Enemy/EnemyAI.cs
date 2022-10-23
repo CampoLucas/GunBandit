@@ -5,20 +5,43 @@ using UnityEngine;
 
 public class EnemyAI : MonoBehaviour
 {
+    private Enemy _enemy;
     private Vector3 _startPos;
-    [SerializeField] private GameObject target;
-
+    private Transform _target;
+    
     [Header("Field of View")] 
     [SerializeField] private float radius = 10;
     [SerializeField] private float angle = 90;
-    [SerializeField] private GameObject playerRef;
     [SerializeField] private LayerMask targetMask;
     [SerializeField] private LayerMask obstaclelMask;
     [SerializeField] private bool canSeePlayer;
 
+    public Action<Transform> OnChangeTarget;
+    public Action<float> OnSpeedChanged;
+    public Action OnFire;
+    
+
     private void Start()
     {
-        playerRef = GameObject.FindGameObjectWithTag("Player");
+        _enemy = GetComponent<Enemy>();
+        _target = GameObject.FindGameObjectWithTag("Player").transform;
+    }
+
+    private void Update()
+    {
+        if (_target.gameObject.CompareTag("Player"))
+        {
+            if (Vector3.Distance(transform.position, _target.position) < 4f)
+            {
+                OnSpeedChanged?.Invoke(0);
+                OnFire?.Invoke();
+            }
+            else
+            {
+                OnSpeedChanged?.Invoke(3);
+            }
+            
+        }
     }
 
     private IEnumerator FOVRoutine()
@@ -28,6 +51,14 @@ public class EnemyAI : MonoBehaviour
         while (true)
         {
             
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            OnChangeTarget?.Invoke(_target);
         }
     }
 }

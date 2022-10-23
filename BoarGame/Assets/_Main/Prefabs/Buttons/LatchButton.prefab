@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2127986778393881491}
   - component: {fileID: 2127986778393881488}
   - component: {fileID: 2127986778393881493}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: LatchButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74,7 +74,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2127986779195689138}
   - component: {fileID: 2127986779195689139}
-  m_Layer: 0
+  - component: {fileID: 21166261159729088}
+  m_Layer: 10
   m_Name: sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -138,7 +139,7 @@ SpriteRenderer:
   m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0.6132076, g: 0.6132076, b: 0.6132076, a: 1}
+  m_Color: {r: 0.21530366, g: 1, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -148,3 +149,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!58 &21166261159729088
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2127986779195689141}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
