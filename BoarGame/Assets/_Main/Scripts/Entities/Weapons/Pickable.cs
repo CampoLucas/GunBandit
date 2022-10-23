@@ -7,8 +7,9 @@ public class Pickable : MonoBehaviour
 {
     private WeaponSO _data;
     private Collider _collider;
+    
     private PlayerInputHandler _inputs;
-    private Inventory _inventory;
+    private IInventory _inventory;
 
     public WeaponSO GetData() => _data;
 
@@ -23,7 +24,7 @@ public class Pickable : MonoBehaviour
         if(_inputs == null)
             _inputs = other.GetComponent<PlayerInputHandler>();
         if(_inventory == null) 
-            _inventory = other.GetComponent<Player>().Inventory;
+            _inventory = other.GetComponent<Character>().Inventory;
         _inputs.OnInteractPerformed += AddItem;
         
     }

@@ -16,15 +16,15 @@
     <setting file="file://$PROJECT_DIR$/Assets/_Main/Scripts/ChangeLightColor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Main/Scripts/DmageTest.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Bullet/Bullet.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Character/Enemy/Enemy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Character/Enemy/EnemyAI.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Character/MovementTowards.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Entity.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Item.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Movement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Objects/Button.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Objects/Stairs/Stair.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Objects/Switches/LatchButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Objects/Switches/MomentaryButton.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Player/PickUpWeapon.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Player/ThrowWeapon.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Weapons/Grenade/ActivateGrenade.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Weapons/Pickable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Weapons/SwapState.cs" root0="FORCE_HIGHLIGHTING" />
@@ -42,6 +42,8 @@
     <setting file="file://$PROJECT_DIR$/Assets/_Main/Scripts/_Observer/Observer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Main/Scripts/_Observer/Subject.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Main/Scripts/_Strategy/Bullets/IBullet.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Main/Scripts/_Strategy/IDamageable.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Main/Scripts/_Strategy/IInventory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Main/Scripts/_Strategy/Weapons/ISwapState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.3.0/InputSystem/Actions/InputAction.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.3.0/InputSystem/InputSystem.cs" root0="SKIP_HIGHLIGHTING" />
@@ -143,7 +145,10 @@
       <workItem from="1666206117008" duration="97000" />
       <workItem from="1666207960359" duration="3327000" />
       <workItem from="1666355067522" duration="450000" />
-      <workItem from="1666356375233" duration="12174000" />
+      <workItem from="1666356375233" duration="19383000" />
+      <workItem from="1666448039752" duration="1757000" />
+      <workItem from="1666459700258" duration="4921000" />
+      <workItem from="1666467244640" duration="4542000" />
     </task>
     <servers />
   </component>
