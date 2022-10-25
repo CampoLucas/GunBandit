@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c2c7b180-e0b1-40f5-9a97-ec9df96896c5" name="Changes" comment="" />
+    <list default="true" id="c2c7b180-e0b1-40f5-9a97-ec9df96896c5" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Character/Enemy/FieldOfView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.BoarGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BoarGame/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Main/Prefabs/Doors/SlideDoor.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Prefabs/Doors/SlideDoor.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Main/Scenes/EnemyTest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Scenes/EnemyTest.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Character/Enemy/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Character/Enemy/Enemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Character/Enemy/EnemyAI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Character/Enemy/EnemyAI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,6 +26,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Bullet/Bullet.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Character/Enemy/Enemy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Character/Enemy/EnemyAI.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Character/Enemy/FieldOfView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Character/MovementTowards.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Entity.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Objects/Button.cs" root0="FORCE_HIGHLIGHTING" />
@@ -98,10 +107,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="5804">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="5804" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -148,7 +157,9 @@
       <workItem from="1666448039752" duration="1757000" />
       <workItem from="1666459700258" duration="4921000" />
       <workItem from="1666467244640" duration="4542000" />
-      <workItem from="1666529809409" duration="2927000" />
+      <workItem from="1666529809409" duration="3564000" />
+      <workItem from="1666545767488" duration="27000" />
+      <workItem from="1666712966864" duration="4665000" />
     </task>
     <servers />
   </component>

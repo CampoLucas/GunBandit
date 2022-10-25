@@ -9,6 +9,7 @@ public class Enemy : Character
     private EnemyAI _ai;
     private AIDestinationSetter _destination;
     private AIPath _path;
+    private FieldOfView _view;
 
     protected override void Awake()
     {
@@ -16,6 +17,7 @@ public class Enemy : Character
         _ai = GetComponent<EnemyAI>();
         _destination = GetComponent<AIDestinationSetter>();
         _path = GetComponent<AIPath>();
+        _view = GetComponent<FieldOfView>();
     }
 
     private void Start()
@@ -42,8 +44,13 @@ public class Enemy : Character
         _path.maxSpeed = speed;
     }
 
-    public void InitStats()
+    public bool CanSeePlayer()
     {
-        
+        return _view.CanSeePlayer;
+    }
+
+    public GameObject GetPlayerRef()
+    {
+        return _view.PlayerRef;
     }
 }

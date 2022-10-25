@@ -1934,9 +1934,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6544424437422153603}
     m_Modifications:
+    - target: {fileID: 7782943706561257541, guid: 20b45d4309846f446841c5f1ac78b912, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7782943706564139054, guid: 20b45d4309846f446841c5f1ac78b912, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7782943707593185564, guid: 20b45d4309846f446841c5f1ac78b912, type: 3}
       propertyPath: m_Name
       value: AK-47 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7782943707593185564, guid: 20b45d4309846f446841c5f1ac78b912, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7782943707593185571, guid: 20b45d4309846f446841c5f1ac78b912, type: 3}
       propertyPath: m_RootOrder
@@ -4744,7 +4756,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   data:
-    dataString: UEsDBBQAAAgIAACon+sNn90qYAIAABYFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQF1VMtu2zAQ/BWD56aQX0ncW6s4Tg+JjThFLrrQ5MoiTJECH/Ej8L93SUmW4qIn07Ozy5ndpT6JULYC5rRZGMGfNQfyY0DCmXwbdMEnONCtVmtxgpbzLrgrAolGzit1QiM+DGlWl+CMYD/VVgZygqBXItemnPMtpNo6i3BOpQUMGe1CtkLoc0AO+HMzCylHPI3uwumEp1kyOOORgXJgetS7hnnb8GqaV0zSsgIeNHfs8X3DHo8iTaGbhpF8n4byWkphGzHEHatodl0VYCC45YKityggWC1AbAsXdPZzl3luwTXGDT0+CIMtqouSX7ruW0ntrhb2QaUP1wyT0SSqqqs+/0O4GcZwbnT51F48TMIlrhBs90qPjFrX62wffviq3Ks9lTu6kfBegHrRC6O94hh0xodUb2H00P29eEsLYLsOr6Vegb7qOt4Osh1j8HCO9g+pFOUmdn5SA2upY7/j9MHgbH6j4LgbtimBaFDxx8Ib3faXqAk8CmMdhhqXKsjbaG8Clcxjz4Ib71JtFJh+hQoUle64wjrueohXsf9nPdLwXprbm1j7DK5SItzxk+QqtNL7y7RsoffPYIuld1Io6FodAi/YqFQrVe9Y31KbtvYmp6yXtvWCf90tcjtmk+k9HebTGWcsH94Ap3zCZ6NkuslnQKckLp9Q6JPKVS20aQ+OTXXFFS5a+xkZLAyt4r5zQ/cLcSq17ZhC5XrNDIBa1hUuwsHgJfgw+ZwLbNAanBMqDpx8ZkRqtgOeXQpl0en84AzNuioZqcSHdgHJSBq/GxkJ8GWZVwY+BOzD5W2xMzn/BVBLAwQUAAAICAAAqJ/rv5nNIm0AAAB4AAAACQAkAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAatWKkstKs7Mz1OyUjDRM9IzNNdRUEovSizIKAaKGII4pZkpIHa0kplxsompRaJhmqllSnJymqFuakpiikmKpZGBaVKaZWqiqVIsUH1JZUGqX2JuKkRPQGJJRlpmXkpmXrqee1FmijvIaKXYWgBQSwECLQAUAAAICAAAqJ/rDZ/dKmACAAAWBQAACwAkAAAAAAAAAAAAAAAAAAAAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwECLQAUAAAICAAAqJ/rv5nNIm0AAAB4AAAACQAkAAAAAAAAAAAAAACtAgAAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsFBgAAAAACAAIAuAAAAGUDAAAAAA==
+    dataString: UEsDBBQAAAgIAACon+sN/1vtYAIAABcFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQF1VMly2zAM/RUPz01H3pK4t1ZxnB4Se+J0ctGFJiGLY4rUcImXjP+9ICVZijs9GQYegPcAUJ9EKFsBc9osjODPmgP5MSDBJt8GXfAJDnSr1VqcoMW8C+6KAKIR80qd0OgfhjSrS3BGsJ9qKwM4QadXItemnPMtpNo6i+6cSgsYMtqFbIWuzwE54M/NLKQc0RrdBeuE1iwZnNFkoByYHvSuQd42uBrmFZO0rIAHzh16fN+gx6MIU6imQSTfp6G8llLYhgxxxyqKXVcFGAhquaCoLRIIUgsQ28IFnv3cZZ5bcI1wQ48PwuCI6qLkl67nVlK7q4l9UOlDm2EymkRWddXnfwA3wxjOjS6f2sbDJDRxhWC7V3pk1LreZPvuh6/MvdpTuaMbCe8FqBe9MNorjkFnfEj1FkYP3d+LtrQAtuv8NdUrp6+6ibeLbNcYNJyj/EMqRbmJk5/UjrXUcd5x+2BwN7+RcLwN25RAb2Dxx8Ib3faPqAk8CmMdhhqVKtDbaG8ClMzjzIIa71JtFJh+hQoUle64wjrueolXsf9nPdLwXpruTax9Blcp0d3hk+QqtNL7y7ZsoffPYIuld1Io6EYdAi84qFQrVd9YX1KbtvYmp6yXtvWCf70tcjtmk+k9HebTGWcsH94Ap3zCZ6NkuslnQKckHp9QqJPKVU20GQ+uTXXFFR5a+xkZLAyt4r1zQ/cLcSp1n6BQuV4zA6CWdYkLczDYBV8mn3OBE1qDc0LFjZPPjEjNdsCzS88sSp0fnKFZVyUjlfjQLngyksYPR0aC+3LNKwMfAvaheVvsTM5/AVBLAwQUAAAICAAAqJ/rv5nNIm0AAAB4AAAACQAkAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAatWKkstKs7Mz1OyUjDRM9IzNNdRUEovSizIKAaKGII4pZkpIHa0kplxsompRaJhmqllSnJymqFuakpiikmKpZGBaVKaZWqiqVIsUH1JZUGqX2JuKkRPQGJJRlpmXkpmXrqee1FmijvIaKXYWgBQSwECLQAUAAAICAAAqJ/rDf9b7WACAAAXBQAACwAkAAAAAAAAAAAAAAAAAAAAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwECLQAUAAAICAAAqJ/rv5nNIm0AAAB4AAAACQAkAAAAAAAAAAAAAACtAgAAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsFBgAAAAACAAIAuAAAAGUDAAAAAA==
     upgradeData: 
     file_cachedStartup: {fileID: 0}
     data_cachedStartup: 
@@ -6765,8 +6777,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2007690028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.0056, y: 10.9392, z: 0}
-  m_LocalScale: {x: 10.016087, y: 11.960058, z: 1}
+  m_LocalPosition: {x: -12.0056, y: 10.9241, z: 0}
+  m_LocalScale: {x: 10.016087, y: 11.989959, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 620314441}
@@ -7493,7 +7505,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5074475876282227010}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7534,6 +7546,8 @@ GameObject:
   - component: {fileID: 6544424437422153600}
   - component: {fileID: 8515370504043149020}
   - component: {fileID: 8515370504130848589}
+  - component: {fileID: 8515370504130848596}
+  - component: {fileID: 8515370504130848597}
   - component: {fileID: 8515370504130848592}
   - component: {fileID: 8515370504130848591}
   - component: {fileID: 8515370504130848590}
@@ -7543,10 +7557,10 @@ GameObject:
   - component: {fileID: 8515370504130848595}
   - component: {fileID: 8515370504130848594}
   - component: {fileID: 8515370504130848593}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
-  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -7557,8 +7571,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6544424437422153602}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.64, y: -0.87, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0.010657267, w: 0.9999432}
+  m_LocalPosition: {x: -3.13, y: 1.77, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7567,7 +7581,7 @@ Transform:
   - {fileID: 1252178691}
   m_Father: {fileID: 0}
   m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -1.221}
 --- !u!4 &6544424438796279972
 Transform:
   m_ObjectHideFlags: 0
@@ -7645,7 +7659,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6544424438796279972}
   - component: {fileID: 6544424438796279973}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7898,15 +7912,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 982a75fabf4161043b85907ed0ecfed2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 10
-  angle: 90
-  targetMask:
-    serializedVersion: 2
-    m_Bits: 0
-  obstaclelMask:
-    serializedVersion: 2
-    m_Bits: 0
-  canSeePlayer: 0
 --- !u!114 &8515370504130848593
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7991,6 +7996,50 @@ MonoBehaviour:
   tagPenalties: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   graphMask:
     value: -1
+--- !u!114 &8515370504130848596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6544424437422153602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed7b46f477a37364c9300f3b042191a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radius: 8.32
+  angle: 75
+  targetMask:
+    serializedVersion: 2
+    m_Bits: 8
+  obstacleMask:
+    serializedVersion: 2
+    m_Bits: 1088
+  color: {r: 1, g: 0, b: 0, a: 1}
+  CanSeePlayer: 0
+--- !u!114 &8515370504130848597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6544424437422153602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed7b46f477a37364c9300f3b042191a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radius: 13.51
+  angle: 95
+  targetMask:
+    serializedVersion: 2
+    m_Bits: 8
+  obstacleMask:
+    serializedVersion: 2
+    m_Bits: 1088
+  color: {r: 1, g: 0.9190924, b: 0, a: 1}
+  CanSeePlayer: 0
 --- !u!1001 &8769585790043873538
 PrefabInstance:
   m_ObjectHideFlags: 0

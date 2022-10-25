@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2754290070838503965}
   - component: {fileID: 2754290070838503966}
   - component: {fileID: 2754290070838503967}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Canvas (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -111,7 +111,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2754290070845288708}
   - component: {fileID: 2754290070845288731}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SlideDoor
   m_TagString: Untagged
   m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
@@ -167,7 +167,7 @@ GameObject:
   - component: {fileID: 2754290070896656161}
   - component: {fileID: 2754290070896656162}
   - component: {fileID: 2754290070896656163}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -299,7 +299,7 @@ GameObject:
   - component: {fileID: 2754290070944017991}
   - component: {fileID: 2754290070944017989}
   - component: {fileID: 2754290070944017990}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Frame1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -408,7 +408,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2754290071112626463}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Pivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -443,7 +443,7 @@ GameObject:
   - component: {fileID: 2754290071160147523}
   - component: {fileID: 2754290071160147532}
   - component: {fileID: 2754290071160147533}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -543,7 +543,7 @@ GameObject:
   - component: {fileID: 2754290071945443806}
   - component: {fileID: 2754290071945443805}
   - component: {fileID: 2754290071945443804}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -655,7 +655,7 @@ GameObject:
   - component: {fileID: 2754290072041087129}
   - component: {fileID: 2754290072041087130}
   - component: {fileID: 2754290072041087131}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Canvas (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -755,7 +755,7 @@ GameObject:
   - component: {fileID: 2754290072223139943}
   - component: {fileID: 2754290072223139941}
   - component: {fileID: 2754290072223139942}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Frame2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -867,7 +867,7 @@ GameObject:
   - component: {fileID: 2754290072656492166}
   - component: {fileID: 2754290072656492167}
   - component: {fileID: 2754290072656492160}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1000,7 +1000,7 @@ GameObject:
   - component: {fileID: 2754290072830512438}
   - component: {fileID: 2754290072830512439}
   - component: {fileID: 2754290072830512432}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
