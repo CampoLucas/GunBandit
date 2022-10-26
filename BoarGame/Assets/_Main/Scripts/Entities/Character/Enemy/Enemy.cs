@@ -10,7 +10,7 @@ public class Enemy : Character
     private EnemyAI _ai;
     private AIDestinationSetter _destination;
     private AIPath _path;
-    private FollowLinearRoute _linearRoute;
+    private FollowRoute _route;
     [SerializeField] private FieldOfView shortView;
     [SerializeField] private FieldOfView longView;
 
@@ -20,7 +20,7 @@ public class Enemy : Character
         _ai = GetComponent<EnemyAI>();
         _destination = GetComponent<AIDestinationSetter>();
         _path = GetComponent<AIPath>();
-        _linearRoute = GetComponent<FollowLinearRoute>();
+        _route = GetComponent<FollowRoute>();
     }
 
     private void Start()
@@ -28,7 +28,7 @@ public class Enemy : Character
         _ai.OnSpeedChanged += SetMaxSpeed;
         _ai.OnFire += Fire;
         _ai.OnChangeTarget += SetFollowTarget;
-        _linearRoute.OnPointChanged += SetFollowTarget;
+        _route.OnPointChanged += SetFollowTarget;
     }
 
     private void OnDisable()
@@ -36,15 +36,15 @@ public class Enemy : Character
         _ai.OnSpeedChanged -= SetMaxSpeed;
         _ai.OnFire -= Fire;
         _ai.OnChangeTarget -= SetFollowTarget;
-        _linearRoute.OnPointChanged -= SetFollowTarget;
+        _route.OnPointChanged -= SetFollowTarget;
     }
 
     public void SetFollowTarget(Transform target) => _destination.target = target;
     public void SetMaxSpeed(float speed) => _path.maxSpeed = speed;
-    public void ChangePoint() => _linearRoute.ChangePoint();
+    public void ChangePoint() => _route.ChangePoint();
     public bool CanSeePlayer() => shortView.CanSeePlayer;
     public bool IsAlerted() => longView.CanSeePlayer;
     public GameObject GetPlayerRef() => longView.PlayerRef;
-    public Transform GetSpawnPos() => _linearRoute.SpawnPoint;
-    public Transform GetCurrentPoint() => _linearRoute.CurrentPoint;
+    public Transform GetSpawnPos() => _route.SpawnPoint;
+    public Transform GetCurrentPoint() => _route.CurrentPoint;
 }

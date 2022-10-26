@@ -30,6 +30,7 @@ public class EnemyAI : MonoBehaviour
         if (!(_enemy.CanSeePlayer() || _enemy.IsAlerted()) && Vector3.Distance(transform.position, _enemy.GetCurrentPoint().position) < 0.1f)
         {
             _enemy.ChangePoint();
+            Debug.Log("PointReached");
         }
 
         if (_enemy.IsAlerted() && !_enemy.CanSeePlayer())
@@ -45,9 +46,9 @@ public class EnemyAI : MonoBehaviour
         }
         
         if (_enemy.CanSeePlayer())
-        {
             OnChangeTarget?.Invoke(_enemy.GetPlayerRef().transform);
-        }
+        else
+            OnChangeTarget?.Invoke(_enemy.GetCurrentPoint());
     }
 
    

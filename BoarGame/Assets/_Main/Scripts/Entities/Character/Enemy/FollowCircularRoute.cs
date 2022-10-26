@@ -2,21 +2,19 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FollowLinearRoute : MonoBehaviour
+public class FollowCircularRoute : MonoBehaviour, IFollowRoute
 {
     private int _index = 0;
-    private int _dir = 1;
     [SerializeField] private List<Transform> points;
     public Transform SpawnPoint => points[0];
     public Transform CurrentPoint => points[_index];
-
-    public Action<Transform> OnPointChanged;
+    public Action<Transform> OnPointChanged { get; set; }
 
     public void ChangePoint()
     {
-        if ((_index >= points.Count - 1 && _dir > 0) || (_index <= 0 && _dir < 0) )
-            _dir *= -1;
-        _index += _dir;
+        if (_index >= points.Count - 1)
+            _index = 0;
+        _index ++;
         OnPointChanged?.Invoke(CurrentPoint);
     }
 }
