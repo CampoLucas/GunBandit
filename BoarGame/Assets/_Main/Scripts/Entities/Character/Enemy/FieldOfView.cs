@@ -43,7 +43,6 @@ public class FieldOfView : MonoBehaviour
 
         if (rangeCheck.Length != 0)
         {
-            Debug.Log("print");
             foreach (var player in rangeCheck)
             {
                 var target = player.transform;
@@ -53,10 +52,13 @@ public class FieldOfView : MonoBehaviour
 
                 if (Vector3.Angle(transform.up, dirToTarget) < angle / 2)
                 {
-                    Debug.Log("print2");
                     var position = transform.position;
                     var distanceToTarget = Vector3.Distance(position, target.position);
-                    CanSeePlayer = true;
+
+                    if (!Physics2D.Raycast(transform.position, dirToTarget, distanceToTarget, obstacleMask))
+                        CanSeePlayer = true;
+                    else
+                        CanSeePlayer = false;
                 }
                 else
                 {
