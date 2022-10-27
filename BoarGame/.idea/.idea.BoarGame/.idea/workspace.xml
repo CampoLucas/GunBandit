@@ -6,11 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="c2c7b180-e0b1-40f5-9a97-ec9df96896c5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BoarGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BoarGame/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Electronic Highway Sign SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Electronic Highway Sign SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Main/Scenes/EnemyTest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Scenes/EnemyTest.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Character/Enemy/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Character/Enemy/Enemy.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Character/Enemy/EnemyAI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Character/Enemy/EnemyAI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Character/Enemy/FieldOfView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Character/Enemy/FieldOfView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Character/Enemy/FollowLinearRoute.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Character/Enemy/FollowRoute.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Character/Enemy/FollowLinearRoute.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Character/Enemy/FollowRoute.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Character/Enemy/FollowRoute.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Character/Enemy/FollowRoute.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Character/Player/Inventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Character/Player/Inventory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +40,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Weapons/Pickable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Weapons/SwapState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Main/Scripts/Pathfinding/Testing.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Main/Scripts/Route.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Main/Scripts/SO/Character/CharacterSO.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Main/Scripts/SO/StatsSO.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Main/Scripts/SO/Weapons/GunSO.cs" root0="FORCE_HIGHLIGHTING" />
@@ -109,10 +112,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="5872">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="5872" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -163,7 +166,8 @@
       <workItem from="1666545767488" duration="27000" />
       <workItem from="1666712966864" duration="4665000" />
       <workItem from="1666794071968" duration="1154000" />
-      <workItem from="1666802902495" duration="6101000" />
+      <workItem from="1666802902495" duration="7140000" />
+      <workItem from="1666873377598" duration="4787000" />
     </task>
     <servers />
   </component>
@@ -186,5 +190,115 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Character/Player/Inventory.cs</url>
+          <line>64</line>
+          <properties documentPath="D:\Multimedia\Github\BoarGame\BoarGame\Assets\_Main\Scripts\Entities\Character\Player\Inventory.cs" initialLine="64" containingFunctionPresentation="method 'AddItem'">
+            <startOffsets>
+              <option value="1546" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1591" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Weapons/Weapon2.cs</url>
+          <line>37</line>
+          <properties documentPath="D:\Multimedia\Github\BoarGame\BoarGame\Assets\_Main\Scripts\Entities\Weapons\Weapon2.cs" initialLine="37" containingFunctionPresentation="method 'ChangeState'">
+            <startOffsets>
+              <option value="763" />
+            </startOffsets>
+            <endOffsets>
+              <option value="788" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Character/Player/Inventory.cs</url>
+          <line>67</line>
+          <properties documentPath="D:\Multimedia\Github\BoarGame\BoarGame\Assets\_Main\Scripts\Entities\Character\Player\Inventory.cs" initialLine="67" containingFunctionPresentation="method 'AddItem'">
+            <startOffsets>
+              <option value="1616" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1657" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Character/Player/Inventory.cs</url>
+          <line>70</line>
+          <properties documentPath="D:\Multimedia\Github\BoarGame\BoarGame\Assets\_Main\Scripts\Entities\Character\Player\Inventory.cs" initialLine="70" containingFunctionPresentation="method 'AddItem'">
+            <startOffsets>
+              <option value="1715" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1750" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Character/Player/Inventory.cs</url>
+          <line>71</line>
+          <properties documentPath="D:\Multimedia\Github\BoarGame\BoarGame\Assets\_Main\Scripts\Entities\Character\Player\Inventory.cs" initialLine="71" containingFunctionPresentation="method 'AddItem'">
+            <startOffsets>
+              <option value="1763" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1785" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Character/Player/Inventory.cs</url>
+          <line>76</line>
+          <properties documentPath="D:\Multimedia\Github\BoarGame\BoarGame\Assets\_Main\Scripts\Entities\Character\Player\Inventory.cs" initialLine="76" containingFunctionPresentation="method 'AddItem'">
+            <startOffsets>
+              <option value="1861" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1915" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Character/Player/Inventory.cs</url>
+          <line>55</line>
+          <properties documentPath="D:\Multimedia\Github\BoarGame\BoarGame\Assets\_Main\Scripts\Entities\Character\Player\Inventory.cs" initialLine="55" containingFunctionPresentation="method 'AddItem'">
+            <startOffsets>
+              <option value="1305" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1339" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Character/Player/Inventory.cs</url>
+          <line>56</line>
+          <properties documentPath="D:\Multimedia\Github\BoarGame\BoarGame\Assets\_Main\Scripts\Entities\Character\Player\Inventory.cs" initialLine="56" containingFunctionPresentation="method 'AddItem'">
+            <startOffsets>
+              <option value="1348" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1398" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

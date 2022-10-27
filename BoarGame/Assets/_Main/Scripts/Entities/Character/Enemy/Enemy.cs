@@ -25,7 +25,9 @@ public class Enemy : Character
 
     private void Start()
     {
-        _ai.OnSpeedChanged += SetMaxSpeed;
+        _ai.OnMovementSpeedChanged += SetMaxMovementSpeed;
+        _ai.OnCanRotate += SetCanRotate;
+        _ai.OnRotateTowardsPlayer += Rotate;
         _ai.OnFire += Fire;
         _ai.OnChangeTarget += SetFollowTarget;
         _route.OnPointChanged += SetFollowTarget;
@@ -33,14 +35,17 @@ public class Enemy : Character
 
     private void OnDisable()
     {
-        _ai.OnSpeedChanged -= SetMaxSpeed;
+        _ai.OnMovementSpeedChanged -= SetMaxMovementSpeed;
+        _ai.OnCanRotate -= SetCanRotate;
+        _ai.OnRotateTowardsPlayer -= Rotate;
         _ai.OnFire -= Fire;
         _ai.OnChangeTarget -= SetFollowTarget;
         _route.OnPointChanged -= SetFollowTarget;
     }
 
     public void SetFollowTarget(Transform target) => _destination.target = target;
-    public void SetMaxSpeed(float speed) => _path.maxSpeed = speed;
+    public void SetMaxMovementSpeed(float speed) => _path.maxSpeed = speed;
+    public void SetCanRotate(bool canRotate) => _path.enableRotation = canRotate;
     public void ChangePoint() => _route.ChangePoint();
     public bool CanSeePlayer() => shortView.CanSeePlayer;
     public bool IsAlerted() => longView.CanSeePlayer;

@@ -8,10 +8,21 @@ using Random = UnityEngine.Random;
 public class EnemyAI : MonoBehaviour
 {
     private Enemy _enemy;
+    private bool _once;
+    private float _lastSeenTime;
+    
+    [Header("Movement components")]
+    [SerializeField] private float idleSpeed = 3;
+    [SerializeField] private float followSpeed = 1;
+    [SerializeField] private float longDistance = 15;
+    [SerializeField] private float shortDistance = 10;
+    [SerializeField] private float loseDelay = 15;
     
     public Action<Transform> OnChangeTarget;
-    public Action<float> OnSpeedChanged;
+    public Action<float> OnMovementSpeedChanged;
+    public Action<bool> OnCanRotate;
     public Action OnFire;
+    public Action<Vector2> OnRotateTowardsPlayer;
     
 
     private void Start()
@@ -35,21 +46,53 @@ public class EnemyAI : MonoBehaviour
 
         if (_enemy.IsAlerted() && !_enemy.CanSeePlayer())
         {
-            // var randomTransform = new GameObject("empty")
-            // {
-            //     transform =
-            //     {
-            //         position = (Vector3)Random.insideUnitCircle * Random.Range(2, 3) + _enemy.GetPlayerRef().transform.position
-            //     }
-            // };
-            // OnChangeTarget?.Invoke(randomTransform.transform);
+            
+        }
+        else
+        {
+            //OnChangeTarget?.Invoke(_enemy.GetCurrentPoint());
         }
         
+        if(!_enemy.GetPlayerRef()) return;
         if (_enemy.CanSeePlayer())
-            OnChangeTarget?.Invoke(_enemy.GetPlayerRef().transform);
+        {
+            
+            var pos = transform.position;
+            var playerTransform = _enemy.GetPlayerRef().transform;
+            var playerPos = playerTransform.position;
+            var dirToTarget = (playerPos - pos).normalized;
+            var distanceToPlayer = Vector3.Distance(pos, playerPos);
+            
+            OnChangeTarget?.Invoke(playerTransform);
+            
+            OnCanRotate?.Invoke(false);
+            OnRotateTowardsPlayer?.Invoke(playerPos);
+            if (distanceToPlayer < longDistance && distanceToPlayer > shortDistance)
+            {
+                OnFire?.Invoke();
+                OnMovementSpeedChanged?.Invoke(followSpeed);
+                
+            }
+            else if (distanceToPlayer < shortDistance)
+            {
+                OnFire?.Invoke();
+                OnMovementSpeedChanged?.Invoke(0.1f);
+            }
+        }
         else
+        {
+            OnCanRotate?.Invoke(true);
+            OnMovementSpeedChanged?.Invoke(idleSpeed);
+
+            if (!(_lastSeenTime > Time.time)) return;
+            _lastSeenTime = Time.time + loseDelay;
             OnChangeTarget?.Invoke(_enemy.GetCurrentPoint());
+            OnMovementSpeedChanged?.Invoke(idleSpeed);
+            OnCanRotate?.Invoke(true);
+        }
     }
+    
+    
 
    
     

@@ -8,9 +8,9 @@ public class FollowRoute : MonoBehaviour
     private int _index = 0;
     private int _dir = 1;
     [SerializeField] private RouteType type;
-    [SerializeField] private List<Transform> points;
-    public Transform SpawnPoint => points[0];
-    public Transform CurrentPoint => points[_index];
+    [SerializeField] private Route route;
+    public Transform SpawnPoint => route.Points[0];
+    public Transform CurrentPoint => route.Points[_index];
 
     public Action<Transform> OnPointChanged;
 
@@ -18,16 +18,17 @@ public class FollowRoute : MonoBehaviour
     {
         if (type == RouteType.Linear)
         {
-            if ((_index >= points.Count - 1 && _dir > 0) || (_index <= 0 && _dir < 0))
+            if ((_index >= route.Points.Count - 1 && _dir > 0) || (_index <= 0 && _dir < 0))
                 _dir *= -1;
             _index += _dir;
             OnPointChanged?.Invoke(CurrentPoint);
         }
         else
         {
-            if (_index >= points.Count - 1)
+            if (_index >= route.Points.Count - 1)
                 _index = 0;
-            _index ++;
+            else
+                _index ++;
             OnPointChanged?.Invoke(CurrentPoint);
         }
         

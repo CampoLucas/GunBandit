@@ -35,9 +35,10 @@ public class Inventory : MonoBehaviour, IInventory
         _animator = GetComponent<Animator>();
         //Chequea si tiene algun arma y la equipa
         var weapons = GetComponentsInChildren<Pickable>();
-
+        
         foreach (var weapon in weapons)
         {
+            Debug.Log(weapon.gameObject.name);
             AddItem(weapon);
         }
     }
