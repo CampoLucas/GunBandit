@@ -16,7 +16,7 @@ MonoBehaviour:
   sprite: {fileID: 21300000, guid: 5300a6ef2c5d3864e9bd09aaf3056db4, type: 3}
   hold: 1
   displayName: AK-47
-  icon: {fileID: 21300000, guid: 13d4af9aaf7e8c44198e958c65b7f5ac, type: 3}
+  icon: {fileID: 21300000, guid: 5c3a98241e80fd14a8dde17accc35a74, type: 3}
   mass: 1
   linearDrag: 1
   animation: 2

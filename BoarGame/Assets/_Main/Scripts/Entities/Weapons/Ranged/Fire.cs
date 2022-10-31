@@ -49,7 +49,6 @@ public class Fire : MonoBehaviour, IAttack, IFactory<Bullet, StatsSO>
     public virtual void Attack()
     {
         if (Reloadable.OutOfAmmo() || Reloadable.IsReloading()) return;
-
         if (Stats.Hold)
         {
             if (!(LastFiredTime + Stats.FireRate < Time.time)) return;
@@ -57,7 +56,6 @@ public class Fire : MonoBehaviour, IAttack, IFactory<Bullet, StatsSO>
         }
         Muzzle.Play();
         var bullet = Create();
-        bullet.InitStats(Stats.BulletData, BulletSpawnPos.transform.up);
         Reloadable.DecreaseAmmo();
     }
 
@@ -65,8 +63,8 @@ public class Fire : MonoBehaviour, IAttack, IFactory<Bullet, StatsSO>
     public Bullet Create()
     {
         Bullet e = Instantiate(Product, BulletSpawnPos.position, Quaternion.identity);
-        e.transform.rotation = transform.rotation;
-        
+        e.gameObject.transform.rotation = transform.rotation;
+        e.InitStats(Stats.BulletData, BulletSpawnPos.transform.up);
         return e;
     }
 

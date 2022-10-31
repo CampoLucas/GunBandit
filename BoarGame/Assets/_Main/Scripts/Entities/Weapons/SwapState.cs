@@ -27,13 +27,14 @@ public class SwapState : MonoBehaviour, ISwapState
         _stats = GetComponent<Weapon2>().GetData() as WeaponSO;
         _rigidbody = GetComponent<Rigidbody2D>();
         _collider = GetComponentInChildren<CapsuleCollider2D>();
+        OnWeaponChange += WeaponChange;
+        if(currentState != WeaponState.Equipped)
+            ChangeState(WeaponState.Pickable);
     }
 
     private void Start()
     {
-        OnWeaponChange += WeaponChange;
-        if(currentState != WeaponState.Equipped)
-            ChangeState(WeaponState.Pickable);
+        
     }
 
     public void ChangeState(WeaponState state)
@@ -83,6 +84,7 @@ public class SwapState : MonoBehaviour, ISwapState
 
     private void Pickable()
     {
+        //Equip();
         _collider.enabled = true;
         _collider.isTrigger = true;
                 
@@ -92,6 +94,7 @@ public class SwapState : MonoBehaviour, ISwapState
 
     private void Thrown()
     {
+        //Equip();
         _collider.enabled = true;
         _collider.isTrigger = false;
                 

@@ -7,9 +7,9 @@ public class BulletSO : StatsSO
 {
     [SerializeField] private float force;
     [SerializeField] private float range;
-    [SerializeField] private float damage;
+    [SerializeField] private int damage;
 
     public float Force => force;
     public float Range => range;
-    public float Damage => damage;
+    public int Damage => damage;
 }

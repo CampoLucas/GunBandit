@@ -42,7 +42,6 @@ public class Enemy : Character
         _ai.OnChangeTarget -= SetFollowTarget;
         _route.OnPointChanged -= SetFollowTarget;
     }
-
     public void SetFollowTarget(Transform target) => _destination.target = target;
     public void SetMaxMovementSpeed(float speed) => _path.maxSpeed = speed;
     public void SetCanRotate(bool canRotate) => _path.enableRotation = canRotate;

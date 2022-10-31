@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Cinemachine;
 using UnityEngine;
 
 public class Bullet : Entity
@@ -29,8 +30,22 @@ public class Bullet : Entity
         _dir = dir;
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    public void InitStats(BulletSO data, Vector2 dir, string bulletTag)
     {
+        _stats = data;
+        _sprite.sprite = data.Sprite;
+        _dir = dir;
+        tag = bulletTag;
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (!other.CompareTag(tag))
+        {
+            var character = other.gameObject.GetComponent<Character>();
+            if(character)
+                character.TakeDamage(_stats.Damage);
+        }
         Destroy(gameObject);
     }
 }

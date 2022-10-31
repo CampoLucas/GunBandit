@@ -19,8 +19,8 @@ public class Character : Entity
         Pick = GetComponent<PickUpWeapon>();
     }
 
-    protected virtual void Move(Vector2 direction) => Movement.Move(direction);
-    protected virtual void Rotate(Vector2 position) => Rotation.Rotate(position);
+    protected virtual void Move(Vector2 direction) => Movement?.Move(direction);
+    protected virtual void Rotate(Vector2 position) => Rotation?.Rotate(position);
 
     protected virtual void Fire()
     {

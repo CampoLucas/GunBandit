@@ -9,10 +9,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4084a96e8bddf9940ac2239bd340b59f, type: 3}
-  m_Name: Player
+  m_Script: {fileID: 11500000, guid: e5f6934f61461964882d565a2870e04b, type: 3}
+  m_Name: Enemy
   m_EditorClassIdentifier: 
   id: default
   sprite: {fileID: 0}
-  speed: 338
-  maxHealth: 200
+  speed: 2
+  maxHealth: 100
+  idleSpeed: 3
+  followSpeed: 3
+  closeSpeed: 0
+  followDistance: 15
+  closeDistance: 8
+  loseDelay: 15
+  weapon: {fileID: 5029136529284207334, guid: 20b45d4309846f446841c5f1ac78b912, type: 3}

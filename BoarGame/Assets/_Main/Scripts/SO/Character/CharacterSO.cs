@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEditor;
 #endif
 
-[CreateAssetMenu(fileName = "Character", menuName = "Entities/Stats/Character", order = 1)]
+[CreateAssetMenu(fileName = "Character", menuName = "Entities/Stats/Characters", order = 1)]
 public class CharacterSO : StatsSO
 {
     [SerializeField] private float speed = 2f;
@@ -24,6 +24,7 @@ class CharacterSOEditor : Editor
     private SerializedProperty _sprite;
     
     private SerializedProperty _speed;
+    private SerializedProperty _maxHealth;
     
     private bool _identification = true;
     private bool _renderer = true;
@@ -35,6 +36,7 @@ class CharacterSOEditor : Editor
         _id = serializedObject.FindProperty("id");
         _sprite = serializedObject.FindProperty("sprite");
         _speed = serializedObject.FindProperty("speed");
+        _maxHealth = serializedObject.FindProperty("maxHealth");
     }
 
     public override void OnInspectorGUI()
@@ -60,6 +62,7 @@ class CharacterSOEditor : Editor
         if (_stats)
         {
             EditorGUILayout.PropertyField(_speed);
+            EditorGUILayout.PropertyField(_maxHealth);
         }
         EditorGUILayout.EndFoldoutHeaderGroup();
         
