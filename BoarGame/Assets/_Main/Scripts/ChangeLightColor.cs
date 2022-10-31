@@ -8,7 +8,6 @@ using Random = UnityEngine.Random;
 public class ChangeLightColor : MonoBehaviour
 {
     private Light2D _light;
-    [SerializeField] private Vector2 intencity = Vector2.one;
     [SerializeField] private Color colorA;
     [SerializeField] private Color colorB;
 
@@ -17,10 +16,6 @@ public class ChangeLightColor : MonoBehaviour
         _light = GetComponent<Light2D>();
     }
 
-    public void ChangeColor()
-    {
-        _light.intensity = Random.Range(intencity.x, intencity.y);
-        _light.color = new Color(Random.Range(colorA.r, colorB.r), Random.Range(colorA.g, colorB.g),
-            Random.Range(colorA.b, colorB.b));
-    }
+    public void ChangeColor() => _light.color = new Color(Random.Range(colorA.r, colorB.r), Random.Range(colorA.g, colorB.g),
+        Random.Range(colorA.b, colorB.b));
 }
