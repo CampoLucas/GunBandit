@@ -11,6 +11,7 @@ public class EnemyAI : MonoBehaviour
     private EnemySO _stats;
     private float _lastSeenTime;
     private bool _playerDetected;
+    private bool _follow;
     
     [Header("Movement components")]
     
@@ -41,64 +42,82 @@ public class EnemyAI : MonoBehaviour
 
         if (_enemy.CanSeePlayer())
         {
-            if(!_enemy.GetPlayerRef()) return;
-            _lastSeenTime = Time.time;
-            var pos = transform.position;
-            var playerTransform = _enemy.GetPlayerRef().transform;
-            var playerPos = playerTransform.position;
-            var dirToTarget = (playerPos - pos).normalized;
-            var distanceToPlayer = Vector3.Distance(pos, playerPos);
-            if (!_playerDetected)
-            {
-                OnChangeTarget?.Invoke(playerTransform);
-                _playerDetected = true;
-                Debug.Log("Player detected");
-            }
-            _lastSeenTime = Time.time;
-            OnCanRotate?.Invoke(false);
-            OnRotateTowardsPlayer?.Invoke(playerPos);
-            if (distanceToPlayer < _stats.FollowDistance && distanceToPlayer > _stats.CloseDistance)
-            {
-                OnFire?.Invoke();
-                OnMovementSpeedChanged?.Invoke(_stats.FollowSpeed);
-                
-            }
-            else if (distanceToPlayer < _stats.CloseDistance)
-            {
-                OnFire?.Invoke();
-                OnMovementSpeedChanged?.Invoke(_stats.CloseSpeed);
-            }
+            _follow = true;
         }
         else if(_playerDetected && !_enemy.CanSeePlayer())
         {
-            if(!_enemy.GetPlayerRef()) return;
-            OnCanRotate?.Invoke(true);
-            OnMovementSpeedChanged?.Invoke(_stats.IdleSpeed);
-            
-            if (!(_lastSeenTime + _stats.LoseDelay < Time.time)) return;
-            _lastSeenTime = Time.time;
-            _playerDetected = false;
-            Debug.Log("player lost");
-            OnChangeTarget?.Invoke(_enemy.GetCurrentPoint());
-            OnCanRotate?.Invoke(true);
+            _follow = false;
         }
         else if (!(_enemy.CanSeePlayer() || _enemy.IsAlerted()) && Vector3.Distance(transform.position, _enemy.GetCurrentPoint().position) < 0.1f && !_playerDetected)
         {
-            _enemy.ChangePoint();
-            Debug.Log("PointReached");
+            ChangePoint();
+        }
+        if(_follow) FollowPlayer();
+        else ReturnToPoint();
+    }
+
+    private void FollowPlayer()
+    {
+        if(!_enemy.GetPlayerRef()) return;
+        _lastSeenTime = Time.time;
+        var pos = transform.position;
+        var playerTransform = _enemy.GetPlayerRef().transform;
+        var playerPos = playerTransform.position;
+        var dirToTarget = (playerPos - pos).normalized;
+        var distanceToPlayer = Vector3.Distance(pos, playerPos);
+        if (!_playerDetected)
+        {
+            OnChangeTarget?.Invoke(playerTransform);
+            _playerDetected = true;
+// #if UNITY_EDITOR
+//             Debug.Log("Player detected");
+// #endif
+        }
+        _lastSeenTime = Time.time;
+        OnCanRotate?.Invoke(false);
+        OnRotateTowardsPlayer?.Invoke(playerPos);
+        if (distanceToPlayer < _stats.FollowDistance && distanceToPlayer > _stats.CloseDistance)
+        {
+            OnFire?.Invoke();
+            OnMovementSpeedChanged?.Invoke(_stats.FollowSpeed);
+                
+        }
+        else if (distanceToPlayer < _stats.CloseDistance)
+        {
+            OnFire?.Invoke();
+            OnMovementSpeedChanged?.Invoke(_stats.CloseSpeed);
         }
     }
-    
-    
 
-   
-    
+    private void ReturnToPoint()
+    {
+        OnCanRotate?.Invoke(true);
+        OnMovementSpeedChanged?.Invoke(_stats.IdleSpeed);
+        if (!(_lastSeenTime + _stats.LoseDelay < Time.time)) return;
+        _lastSeenTime = Time.time;
+        _playerDetected = false;
+// #if UNITY_EDITOR
+//         Debug.Log("Player lost");
+// #endif
+        OnChangeTarget?.Invoke(_enemy.GetCurrentPoint());
+        OnCanRotate?.Invoke(true);
+    }
+
+    private void ChangePoint()
+    {
+        _enemy.ChangePoint();
+// #if UNITY_EDITOR
+//         Debug.Log("Point reached");
+// #endif
+    }
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        Debug.Log("coll: " + other.gameObject.tag);
+        if (other.gameObject.CompareTag("Bullet"))
         {
-            //OnChangeTarget?.Invoke(_target);
+            _follow = true;
+            Debug.Log("ouch");
         }
     }
 }

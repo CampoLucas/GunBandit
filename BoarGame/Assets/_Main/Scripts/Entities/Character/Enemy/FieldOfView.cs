@@ -13,7 +13,7 @@ public class FieldOfView : MonoBehaviour
     [SerializeField] private LayerMask targetMask;
     [SerializeField] private LayerMask obstacleMask;
     [SerializeField] private Color color = Color.green;
-    public GameObject PlayerRef { get; private set; }
+    
     public bool CanSeePlayer;
     public float Radius => radius;
     public float Angle => angle;
@@ -21,7 +21,6 @@ public class FieldOfView : MonoBehaviour
 
     private void Start()
     {
-        //PlayerRef = GameObject.FindGameObjectWithTag("Player");
         StartCoroutine(FOVRoutine());
     }
     
@@ -46,8 +45,6 @@ public class FieldOfView : MonoBehaviour
             {
                 var target = player.transform;
                 var dirToTarget = (target.position - transform.position).normalized;
-                if (!PlayerRef)
-                    PlayerRef = player.gameObject;
 
                 if (Vector3.Angle(transform.up, dirToTarget) < angle / 2)
                 {

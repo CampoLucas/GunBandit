@@ -11,6 +11,7 @@ public class Enemy : Character
     private AIDestinationSetter _destination;
     private AIPath _path;
     private FollowRoute _route;
+    private GameObject _playerRef;
     [SerializeField] private FieldOfView shortView;
     [SerializeField] private FieldOfView longView;
 
@@ -21,6 +22,7 @@ public class Enemy : Character
         _destination = GetComponent<AIDestinationSetter>();
         _path = GetComponent<AIPath>();
         _route = GetComponent<FollowRoute>();
+        _playerRef = GameObject.FindGameObjectWithTag("Player");
     }
 
     private void Start()
@@ -48,7 +50,7 @@ public class Enemy : Character
     public void ChangePoint() => _route.ChangePoint();
     public bool CanSeePlayer() => shortView.CanSeePlayer;
     public bool IsAlerted() => longView.CanSeePlayer;
-    public GameObject GetPlayerRef() => longView.PlayerRef;
+    public GameObject GetPlayerRef() => _playerRef;
     public Transform GetSpawnPos() => _route.SpawnPoint;
     public Transform GetCurrentPoint() => _route.CurrentPoint;
 }

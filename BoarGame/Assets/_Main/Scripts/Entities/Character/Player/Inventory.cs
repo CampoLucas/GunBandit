@@ -33,18 +33,18 @@ public class Inventory : MonoBehaviour, IInventory
     {
         _weaponList = new List<InventoryWeapon>();
         _animator = GetComponent<Animator>();
+        
+    }
+
+    private void Start()
+    {
         //Chequea si tiene algun arma y la equipa
         var weapons = GetComponentsInChildren<Pickable>();
         
         foreach (var weapon in weapons)
         {
-            Debug.Log(weapon.gameObject.name);
             AddItem(weapon);
         }
-    }
-
-    private void Start()
-    {
         //Si teiene un arma la cambia de estado
         if (CurrentWeapon() != null) CurrentWeapon().ChangeState(WeaponState.Equipped);
         _itemIndex = 0;
@@ -62,7 +62,7 @@ public class Inventory : MonoBehaviour, IInventory
         });
 
 #if UNITY_EDITOR
-        Debug.Log(data.name + " added to inventory");
+        Debug.Log(data.name + " added to " + this.gameObject.name + "'s inventory");
 #endif
         
         weapon.ChangeState(WeaponState.Equipped);

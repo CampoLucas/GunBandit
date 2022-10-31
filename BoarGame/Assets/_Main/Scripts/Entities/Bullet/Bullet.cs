@@ -38,14 +38,19 @@ public class Bullet : Entity
         tag = bulletTag;
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnCollisionEnter2D(Collision2D other)
     {
-        if (!other.CompareTag(tag))
+        if (!other.gameObject.CompareTag(tag))
         {
             var character = other.gameObject.GetComponent<Character>();
             if(character)
                 character.TakeDamage(_stats.Damage);
         }
         Destroy(gameObject);
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        
     }
 }

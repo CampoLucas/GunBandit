@@ -6,26 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="c2c7b180-e0b1-40f5-9a97-ec9df96896c5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BoarGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BoarGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AstarPathfindingProject/Core/AstarPath.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AstarPathfindingProject/Core/AstarPath.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Electronic Highway Sign SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Electronic Highway Sign SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Main/Prefabs/Enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Prefabs/Enemy.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Main/Prefabs/Weapons/Bullet.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Main/Prefabs/Weapons/Bullet.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Main/Prefabs/Bullet.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Prefabs/Bullet.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Main/Scenes/EnemyTest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Scenes/EnemyTest.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Main/ScriptableObjects/Player/Player.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/ScriptableObjects/Player/Player.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Main/ScriptableObjects/Weapons/AK-47.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/ScriptableObjects/Weapons/AK-47.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Main/ScriptableObjects/Weapons/Pistol.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/ScriptableObjects/Weapons/Pistol.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Main/ScriptableObjects/Weapons/Shotgun 2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/ScriptableObjects/Weapons/Shotgun 2.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Main/ScriptableObjects/Weapons/Shotgun.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/ScriptableObjects/Weapons/Shotgun.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Bullet/Bullet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Bullet/Bullet.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Character/Character.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Character/Character.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Character/Enemy/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Character/Enemy/Enemy.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Character/Enemy/EnemyAI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Character/Enemy/EnemyAI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Weapons/Ranged/Fire.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Weapons/Ranged/Fire.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Weapons/SwapState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Weapons/SwapState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Main/Scripts/SO/BulletS/BulletSO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Scripts/SO/BulletS/BulletSO.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Main/Scripts/SO/Character/CharacterSO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Scripts/SO/Character/CharacterSO.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Character/Enemy/FieldOfView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Character/Enemy/FieldOfView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Character/Player/Inventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Character/Player/Inventory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Main/Scripts/_Strategy/IDamageable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Scripts/_Strategy/IDamageable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,10 +116,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="8856">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="8856" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -184,6 +174,8 @@
       <workItem from="1666873377598" duration="7813000" />
       <workItem from="1666885415132" duration="581000" />
       <workItem from="1666961601382" duration="4108000" />
+      <workItem from="1667242681756" duration="296000" />
+      <workItem from="1667244613361" duration="1886000" />
     </task>
     <servers />
   </component>
@@ -206,24 +198,5 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Character/Enemy/EnemyAI.cs</url>
-          <line>86</line>
-          <properties documentPath="D:\Multimedia\Github\BoarGame\BoarGame\Assets\_Main\Scripts\Entities\Character\Enemy\EnemyAI.cs" initialLine="86" containingFunctionPresentation="method 'Update'">
-            <startOffsets>
-              <option value="2804" />
-            </startOffsets>
-            <endOffsets>
-              <option value="2825" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="18" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
