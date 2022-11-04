@@ -39,6 +39,10 @@ PrefabInstance:
       propertyPath: colorB.r
       value: 0.2588235
       objectReference: {fileID: 0}
+    - target: {fileID: 1329991017790556505, guid: d71e45ea7c3e8174c905d66053e58a6b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1e8ddf0363d369f47bad40a1e73b5a12, type: 2}
     - target: {fileID: 2105855493035290871, guid: d71e45ea7c3e8174c905d66053e58a6b, type: 3}
       propertyPath: looping
       value: 0
@@ -55,6 +59,10 @@ PrefabInstance:
       propertyPath: InitialModule.startColor.maxColor.r
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2620943514056231624, guid: d71e45ea7c3e8174c905d66053e58a6b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1e8ddf0363d369f47bad40a1e73b5a12, type: 2}
     - target: {fileID: 2867718947651923865, guid: d71e45ea7c3e8174c905d66053e58a6b, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.0015
@@ -73,8 +81,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2880815165316771171, guid: d71e45ea7c3e8174c905d66053e58a6b, type: 3}
       propertyPath: m_PointLightOuterRadius
-      value: 1
+      value: 0.82
       objectReference: {fileID: 0}
+    - target: {fileID: 3482360087579740974, guid: d71e45ea7c3e8174c905d66053e58a6b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a64157f95bd3fc6499d5e9bb8871ccb4, type: 2}
     - target: {fileID: 3936148844956412419, guid: d71e45ea7c3e8174c905d66053e58a6b, type: 3}
       propertyPath: looping
       value: 0
@@ -275,6 +287,10 @@ PrefabInstance:
       propertyPath: InitialModule.startColor.maxGradient.key1.r
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5378269859417578169, guid: d71e45ea7c3e8174c905d66053e58a6b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1e8ddf0363d369f47bad40a1e73b5a12, type: 2}
     - target: {fileID: 6265725372462170371, guid: d71e45ea7c3e8174c905d66053e58a6b, type: 3}
       propertyPath: looping
       value: 0
@@ -407,6 +423,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7506771464380090390, guid: d71e45ea7c3e8174c905d66053e58a6b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1e8ddf0363d369f47bad40a1e73b5a12, type: 2}
     - target: {fileID: 7813185001850498428, guid: d71e45ea7c3e8174c905d66053e58a6b, type: 3}
       propertyPath: looping
       value: 0
@@ -423,6 +443,10 @@ PrefabInstance:
       propertyPath: InitialModule.startColor.maxColor.r
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8073976288668453883, guid: d71e45ea7c3e8174c905d66053e58a6b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a64157f95bd3fc6499d5e9bb8871ccb4, type: 2}
     - target: {fileID: 8656044018781882672, guid: d71e45ea7c3e8174c905d66053e58a6b, type: 3}
       propertyPath: m_IsActive
       value: 1
