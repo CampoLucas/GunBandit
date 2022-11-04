@@ -35,6 +35,7 @@ public class SwapState : MonoBehaviour, ISwapState
     private void Start()
     {
         
+        
     }
 
     public void ChangeState(WeaponState state)

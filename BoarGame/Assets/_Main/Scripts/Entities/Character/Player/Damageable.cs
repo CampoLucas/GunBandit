@@ -20,6 +20,8 @@ public class Damageable : Subject, IDamageable
     private void Start()
     {
         InitStats();
+        if(CompareTag("Enemy") && LevelManager.Instance)
+            Subscribe(LevelManager.Instance);
     }
 
     private void InitStats()

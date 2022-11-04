@@ -5,22 +5,21 @@ using UnityEngine;
 using Random = UnityEngine.Random;
 
 
-public class EnemyAI : MonoBehaviour
+public class EnemyAI : Subject
 {
     private Enemy _enemy;
     private EnemySO _stats;
     private float _lastSeenTime;
     private bool _playerDetected;
     private bool _follow;
-    
-    [Header("Movement components")]
-    
-    
+    private bool _alerted;
+    [SerializeField] private List<Observer> subscribers;
     public Action<Transform> OnChangeTarget;
     public Action<float> OnMovementSpeedChanged;
     public Action<bool> OnCanRotate;
     public Action OnFire;
     public Action<Vector2> OnRotateTowardsPlayer;
+    public override List<Observer> Subscribers => subscribers;
 
     private void Awake()
     {
@@ -32,6 +31,9 @@ public class EnemyAI : MonoBehaviour
     {
         transform.position = _enemy.GetSpawnPos().position;
         OnMovementSpeedChanged?.Invoke(_stats.IdleSpeed);
+        if(CompareTag("Enemy") && LevelManager.Instance)
+            Subscribe(LevelManager.Instance);
+        NotifyAll("ENEMY FOUND");
     }
 
     
@@ -42,6 +44,8 @@ public class EnemyAI : MonoBehaviour
 
         if (_enemy.CanSeePlayer())
         {
+            if(!_playerDetected && LevelManager.Instance)
+                NotifyAll("PLAYER SEEN");
             _follow = true;
         }
         else if(_playerDetected && !_enemy.CanSeePlayer())
@@ -119,6 +123,24 @@ public class EnemyAI : MonoBehaviour
             _follow = true;
             Debug.Log("ouch");
         }
+    }
+    
+    public override void Subscribe(Observer observer)
+    {
+        if (subscribers.Contains(observer)) return;
+        subscribers.Add(observer);
+    }
+
+    public override void Unsubscribe(Observer observer)
+    {
+        if (subscribers.Contains(observer)) return;
+        subscribers.Remove(observer);
+    }
+
+    public override void NotifyAll(string message, params object[] args)
+    {
+        foreach (var t in subscribers)
+            t.OnNotify(message, args);
     }
 }
 
