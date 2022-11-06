@@ -147,7 +147,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -474417479
-  m_SortingLayer: 2
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: -672894670, guid: 91a99d3aee76d2e4a8446037bffb5ad3, type: 3}
   m_Color: {r: 0.8207547, g: 0.63105196, b: 0.63105196, a: 1}
@@ -225,6 +225,7 @@ GameObject:
   - component: {fileID: 1173539153873652034}
   - component: {fileID: 1173539153873652035}
   - component: {fileID: 1173539153873652032}
+  - component: {fileID: 7206226964757462148}
   m_Layer: 6
   m_Name: Door
   m_TagString: Untagged
@@ -286,7 +287,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -474417479
-  m_SortingLayer: 2
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 1941350643, guid: 91a99d3aee76d2e4a8446037bffb5ad3, type: 3}
   m_Color: {r: 0.4716981, g: 0.24795437, b: 0, a: 1}
@@ -370,6 +371,33 @@ HingeJoint2D:
   m_AngleLimits:
     m_LowerAngle: -89.1
     m_UpperAngle: 90.63
+--- !u!114 &7206226964757462148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1173539153873652047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_ComponentVersion: 1
+  m_HasRenderer: 1
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_ApplyToSortingLayers: 95a51a8800000000b9f6b8e3b949c5e1ff844e297bece9bf953db48a4f976ed8
+  m_ShapePath:
+  - {x: -0.7979789, y: -0.10068005, z: 0}
+  - {x: -0.7979791, y: 0.0029278398, z: 0}
+  - {x: 0.8110125, y: 0.0029280186, z: 0}
+  - {x: 0.8044956, y: -0.10719687, z: 0}
+  m_ShapePathHash: 185160289
+  m_Mesh: {fileID: 0}
+  m_InstanceId: -141720
 --- !u!1 &1173539155614914979
 GameObject:
   m_ObjectHideFlags: 0

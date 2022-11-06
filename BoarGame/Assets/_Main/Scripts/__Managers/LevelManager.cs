@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 using Object = System.Object;
 
 public sealed class LevelManager : Observer
@@ -15,6 +16,11 @@ public sealed class LevelManager : Observer
     [SerializeField] private bool objectiveReached;
     [SerializeField] private bool fullStealth;
 
+    public Action OnMainObjectiveCompleted;
+    public Action OnSeen;
+    public Action OnFullStealthCompleted;
+    public Action OnKilledAllCompleted;
+    
     private LevelManager()
     {
     }
@@ -56,11 +62,25 @@ public sealed class LevelManager : Observer
 
     public override void OnNotify(string message, params object[] args)
     {
-        if (message == "DIE")
-            enemiesKilled++;
-        if (message == "ENEMY FOUND")
-            enemies++;
-        if (message == "PLAYER SEEN")
-            PlayerSeen();
+        switch (message)
+        {
+            case "ENEMY FOUND":
+                enemies++;
+                break;
+            case "DIE":
+            {
+                enemiesKilled++;
+                if (enemiesKilled >= enemies)
+                {
+                    OnKilledAllCompleted?.Invoke();
+                    if(fullStealth) OnFullStealthCompleted?.Invoke();
+                }
+                break;
+            }
+            case "PLAYER SEEN":
+                PlayerSeen();
+                OnSeen?.Invoke();
+                break;
+        }
     }
 }

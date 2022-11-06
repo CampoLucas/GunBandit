@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c2c7b180-e0b1-40f5-9a97-ec9df96896c5" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/_Main/Prefabs/ParticlesEffects/MuzzleFalshes/MF_Zeus.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Prefabs/ParticlesEffects/MuzzleFalshes/MF_Zeus.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.BoarGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BoarGame/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Main/Scenes/EnemyTest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Scenes/EnemyTest.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Main/Scripts/UI/ObjectiveDisplay.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Scripts/UI/ObjectiveDisplay.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Main/Scripts/__Managers/LevelManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Scripts/__Managers/LevelManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -169,6 +171,7 @@
       <workItem from="1667244613361" duration="2629000" />
       <workItem from="1667592277332" duration="794000" />
       <workItem from="1667594437888" duration="2551000" />
+      <workItem from="1667740818334" duration="1762000" />
     </task>
     <servers />
   </component>

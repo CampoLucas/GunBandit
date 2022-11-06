@@ -1,18 +1,25 @@
-using System.Collections;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class ObjectiveDisplay : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private List<Observer> subscribers;
+    [SerializeField] private TMP_Text mainObjText;
+    [SerializeField] private TMP_Text killAllEnemiesObjText;
+    [SerializeField] private TMP_Text stealthObjText;
+    private void Start()
     {
-        
+        if(!LevelManager.Instance) return;
+        LevelManager.Instance.OnSeen += StealthFailed;
+        LevelManager.Instance.OnFullStealthCompleted += StealthCompleted;
+        LevelManager.Instance.OnKilledAllCompleted += KillAllEnemiesCompleted;
+        LevelManager.Instance.OnMainObjectiveCompleted += MainCompleted;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    private void MainCompleted() => mainObjText.text = "<s>" + mainObjText.text + "</s>";
+    private void KillAllEnemiesCompleted() => killAllEnemiesObjText.text = "<s>" + killAllEnemiesObjText.text + "</s>";
+    private void StealthCompleted() => stealthObjText.text = "<s>" + stealthObjText.text + "</s>";
+    private void StealthFailed() => stealthObjText.color = Color.gray;
 }

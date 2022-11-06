@@ -41,6 +41,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6302534273711533832}
   - component: {fileID: 6302534273711533833}
+  - component: {fileID: 1658097261141791987}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
@@ -102,7 +103,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1075188613
-  m_SortingLayer: 5
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 186508923, guid: 3521271d7c40f514bbc5c87eafba3371, type: 3}
   m_Color: {r: 0, g: 1, b: 0.5223284, a: 1}
@@ -115,6 +116,43 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1658097261141791987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6302534273711533835}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_ComponentVersion: 1
+  m_HasRenderer: 1
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_ApplyToSortingLayers: 95a51a8800000000b9f6b8e3b949c5e1ff844e297bece9bf953db48a4f976ed8
+  m_ShapePath:
+  - {x: -0.5877868, y: -0.46829998, z: 0}
+  - {x: -0.54904485, y: -0.4105869, z: 0}
+  - {x: -0.48147315, y: -0.3620518, z: 0}
+  - {x: -0.25307155, y: -0.27222636, z: 0}
+  - {x: -0.013028121, y: -0.25406337, z: 0}
+  - {x: 0.25024575, y: -0.27718115, z: 0}
+  - {x: 0.43410653, y: -0.35778034, z: 0}
+  - {x: 0.525613, y: -0.45607772, z: 0}
+  - {x: 0.46854863, y: -0.5964235, z: 0}
+  - {x: 0.29609668, y: -0.6694847, z: 0}
+  - {x: 0.029251786, y: -0.7275915, z: 0}
+  - {x: -0.27420965, y: -0.6983642, z: 0}
+  - {x: -0.4900493, y: -0.6257265, z: 0}
+  - {x: -0.5686316, y: -0.5361083, z: 0}
+  m_ShapePathHash: -40993342
+  m_Mesh: {fileID: 0}
+  m_InstanceId: -163612
 --- !u!1 &6302534275156955182
 GameObject:
   m_ObjectHideFlags: 0
@@ -292,6 +330,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 982a75fabf4161043b85907ed0ecfed2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  subscribers: []
 --- !u!114 &8901860021824153850
 MonoBehaviour:
   m_ObjectHideFlags: 0

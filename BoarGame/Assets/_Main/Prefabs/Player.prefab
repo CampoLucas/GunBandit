@@ -140,7 +140,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38342c62676944c4fa7eb65e8e121a8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _itemIndex: 0
   maxWeaponCapacity: 2
 --- !u!95 &1806874672
 Animator:
@@ -185,6 +184,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3242269580943453768}
   - component: {fileID: 3242269580943453769}
+  - component: {fileID: 3617041558182865375}
   m_Layer: 3
   m_Name: Sprite
   m_TagString: Untagged
@@ -246,7 +246,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1075188613
-  m_SortingLayer: 5
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 186508923, guid: 3521271d7c40f514bbc5c87eafba3371, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -259,6 +259,44 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &3617041558182865375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3242269580943453771}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_ComponentVersion: 1
+  m_HasRenderer: 1
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_ApplyToSortingLayers: 95a51a8800000000b9f6b8e3b949c5e1ff844e297bece9bf953db48a4f976ed8
+  m_ShapePath:
+  - {x: -0.5882707, y: -0.5067315, z: 0}
+  - {x: -0.56544816, y: -0.42838168, z: 0}
+  - {x: -0.4891559, y: -0.36815095, z: 0}
+  - {x: -0.34058678, y: -0.29185867, z: 0}
+  - {x: -0.006846413, y: -0.20990503, z: 0}
+  - {x: 0.14928973, y: -0.23965883, z: 0}
+  - {x: 0.28225803, y: -0.28890204, z: 0}
+  - {x: 0.43438178, y: -0.37618184, z: 0}
+  - {x: 0.5026432, y: -0.43641257, z: 0}
+  - {x: 0.5146416, y: -0.5074923, z: 0}
+  - {x: 0.45445865, y: -0.58096623, z: 0}
+  - {x: 0.3344918, y: -0.67163444, z: 0}
+  - {x: -0.029469103, y: -0.743742, z: 0}
+  - {x: -0.38475597, y: -0.66528916, z: 0}
+  - {x: -0.521279, y: -0.59301233, z: 0}
+  m_ShapePathHash: -777433811
+  m_Mesh: {fileID: 0}
+  m_InstanceId: -171744
 --- !u!1 &4447232370103323234
 GameObject:
   m_ObjectHideFlags: 0
