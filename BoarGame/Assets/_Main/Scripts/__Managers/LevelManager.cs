@@ -56,7 +56,7 @@ public sealed class LevelManager : Observer
     
     private void PlayerSeen()
     {
-        if (fullStealth == true)
+        if (fullStealth)
             fullStealth = false;
     }
 
@@ -80,6 +80,10 @@ public sealed class LevelManager : Observer
             case "PLAYER SEEN":
                 PlayerSeen();
                 OnSeen?.Invoke();
+                break;
+            case "MAIN OBJECT COMPLETED":
+                objectiveReached = true;
+                OnMainObjectiveCompleted?.Invoke();
                 break;
         }
     }

@@ -13,8 +13,8 @@ public class ObjectiveDisplay : MonoBehaviour
     {
         if(!LevelManager.Instance) return;
         LevelManager.Instance.OnSeen += StealthFailed;
-        LevelManager.Instance.OnFullStealthCompleted += StealthCompleted;
         LevelManager.Instance.OnKilledAllCompleted += KillAllEnemiesCompleted;
+        LevelManager.Instance.OnFullStealthCompleted += StealthCompleted;
         LevelManager.Instance.OnMainObjectiveCompleted += MainCompleted;
     }
 

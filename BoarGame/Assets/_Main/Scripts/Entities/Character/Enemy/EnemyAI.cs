@@ -117,7 +117,6 @@ public class EnemyAI : Subject
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        Debug.Log("coll: " + other.gameObject.tag);
         if (other.gameObject.CompareTag("Bullet"))
         {
             _follow = true;
