@@ -185,10 +185,11 @@ class GunSOEditor : Editor
         if (_weaponStats)
         {
             EditorGUILayout.PropertyField(_throwStrength);
-            if (gun && gun.Hold)
-            {
-                EditorGUILayout.PropertyField(_fireRate);
-            }
+            // if (gun && gun.Hold)
+            // {
+            //     EditorGUILayout.PropertyField(_fireRate);
+            // }
+            EditorGUILayout.PropertyField(_fireRate);
             EditorGUILayout.PropertyField(_reloadSpeed);
             
             EditorGUILayout.Space(10);
