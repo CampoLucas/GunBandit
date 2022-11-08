@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d4365ea88abe07f4ca6683e0b1d0d63a, type: 3}
-  m_Name: Shotgun 2
+  m_Name: PumpShotgun
   m_EditorClassIdentifier: 
-  id: Shotgun
+  id: PumpShotgun
   sprite: {fileID: 21300000, guid: 5300a6ef2c5d3864e9bd09aaf3056db4, type: 3}
   hold: 0
   displayName: Shotgun
@@ -24,7 +24,7 @@ MonoBehaviour:
   muzzle: {fileID: 2836053498663775094, guid: 4d83ec5dc0dad074f9e862941412769f, type: 3}
   fireRate: 0.33
   reloadSpeed: 2
-  ammo: 40
+  ammo: 20
   magAmmo: 2
   pellets: 7
   spread: 30

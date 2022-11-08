@@ -157,61 +157,6 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": true
                 },
                 {
-                    ""name"": ""Left Stick [Gamepad]"",
-                    ""id"": ""86e5a62d-26d8-4f3d-9785-f58b5dc11d27"",
-                    ""path"": ""2DVector"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Movement"",
-                    ""isComposite"": true,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""up"",
-                    ""id"": ""97bb2540-5953-4b8d-9c36-d5404451cabd"",
-                    ""path"": ""<Gamepad>/leftStick/up"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Gamepad"",
-                    ""action"": ""Movement"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""down"",
-                    ""id"": ""c44fed8a-3ab4-4c19-b6bc-1197c65e0096"",
-                    ""path"": ""<Gamepad>/leftStick/down"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Gamepad"",
-                    ""action"": ""Movement"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""left"",
-                    ""id"": ""08c3deed-db3d-478e-989c-08faa3ec3d67"",
-                    ""path"": ""<Gamepad>/leftStick/left"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Gamepad"",
-                    ""action"": ""Movement"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""right"",
-                    ""id"": ""e3ba5373-1519-416d-ace5-8177043b2128"",
-                    ""path"": ""<Gamepad>/leftStick/right"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Gamepad"",
-                    ""action"": ""Movement"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
                     ""name"": """",
                     ""id"": ""ae7cd096-5eb2-4e52-ae17-b7c50db1ed15"",
                     ""path"": ""<Mouse>/position"",
@@ -306,9 +251,18 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
             ""id"": ""4158c46e-f925-4342-b787-8f3dfe072499"",
             ""actions"": [
                 {
-                    ""name"": ""New action"",
+                    ""name"": ""Reset"",
                     ""type"": ""Button"",
-                    ""id"": ""c2f347cc-02a6-414f-9613-fc94aa7125da"",
+                    ""id"": ""51ab312b-4a06-4616-a327-224bab9d47bb"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Quit"",
+                    ""type"": ""Button"",
+                    ""id"": ""c76f2a1c-fcd9-4a93-a2b9-1c6f0851f019"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -318,12 +272,23 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
             ""bindings"": [
                 {
                     ""name"": """",
-                    ""id"": ""049e6bc1-f5f4-491f-adb1-5170659653dd"",
-                    ""path"": """",
+                    ""id"": ""b72e1db8-6c4a-43d7-b4ec-197b9287c9de"",
+                    ""path"": ""<Keyboard>/o"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""New action"",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""Reset"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a2b6aff0-5989-4d3c-ad9f-34ce1953f2d3"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""Quit"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -377,7 +342,8 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         m_Player_MouseScrollY = m_Player.FindAction("MouseScrollY", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
-        m_UI_Newaction = m_UI.FindAction("New action", throwIfNotFound: true);
+        m_UI_Reset = m_UI.FindAction("Reset", throwIfNotFound: true);
+        m_UI_Quit = m_UI.FindAction("Quit", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -526,12 +492,14 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
     // UI
     private readonly InputActionMap m_UI;
     private IUIActions m_UIActionsCallbackInterface;
-    private readonly InputAction m_UI_Newaction;
+    private readonly InputAction m_UI_Reset;
+    private readonly InputAction m_UI_Quit;
     public struct UIActions
     {
         private @PlayerControls m_Wrapper;
         public UIActions(@PlayerControls wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Newaction => m_Wrapper.m_UI_Newaction;
+        public InputAction @Reset => m_Wrapper.m_UI_Reset;
+        public InputAction @Quit => m_Wrapper.m_UI_Quit;
         public InputActionMap Get() { return m_Wrapper.m_UI; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -541,16 +509,22 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         {
             if (m_Wrapper.m_UIActionsCallbackInterface != null)
             {
-                @Newaction.started -= m_Wrapper.m_UIActionsCallbackInterface.OnNewaction;
-                @Newaction.performed -= m_Wrapper.m_UIActionsCallbackInterface.OnNewaction;
-                @Newaction.canceled -= m_Wrapper.m_UIActionsCallbackInterface.OnNewaction;
+                @Reset.started -= m_Wrapper.m_UIActionsCallbackInterface.OnReset;
+                @Reset.performed -= m_Wrapper.m_UIActionsCallbackInterface.OnReset;
+                @Reset.canceled -= m_Wrapper.m_UIActionsCallbackInterface.OnReset;
+                @Quit.started -= m_Wrapper.m_UIActionsCallbackInterface.OnQuit;
+                @Quit.performed -= m_Wrapper.m_UIActionsCallbackInterface.OnQuit;
+                @Quit.canceled -= m_Wrapper.m_UIActionsCallbackInterface.OnQuit;
             }
             m_Wrapper.m_UIActionsCallbackInterface = instance;
             if (instance != null)
             {
-                @Newaction.started += instance.OnNewaction;
-                @Newaction.performed += instance.OnNewaction;
-                @Newaction.canceled += instance.OnNewaction;
+                @Reset.started += instance.OnReset;
+                @Reset.performed += instance.OnReset;
+                @Reset.canceled += instance.OnReset;
+                @Quit.started += instance.OnQuit;
+                @Quit.performed += instance.OnQuit;
+                @Quit.canceled += instance.OnQuit;
             }
         }
     }
@@ -586,6 +560,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
     }
     public interface IUIActions
     {
-        void OnNewaction(InputAction.CallbackContext context);
+        void OnReset(InputAction.CallbackContext context);
+        void OnQuit(InputAction.CallbackContext context);
     }
 }

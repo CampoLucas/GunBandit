@@ -25,6 +25,8 @@ public class PlayerInputHandler : MonoBehaviour
     public Action OnScrollUp;
     public Action OnScrollDown;
 
+    
+
     private void OnEnable()
     {
         if (_inputActions == null)
@@ -43,9 +45,6 @@ public class PlayerInputHandler : MonoBehaviour
             _inputActions.Player.Interact.performed += i => OnInteractPerformed?.Invoke();
             _inputActions.Player.Interact.started += i => OnInteractStarted?.Invoke();
             _inputActions.Player.Interact.canceled += i => OnInteractCancelled?.Invoke();
-            
-            
-            
         }
         _inputActions.Enable();
     }
@@ -61,7 +60,10 @@ public class PlayerInputHandler : MonoBehaviour
         _fireInput = false;
     }
 
-    private void OnDisable() => _inputActions.Disable();
+    private void OnDisable()
+    {
+        _inputActions.Disable();
+    } 
 
     private void HandleAllInputs()
     {

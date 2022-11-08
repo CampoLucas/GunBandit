@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cd1e3df0b6263e742ac94addc1138cff, type: 3}
-  m_Name: TestingBullet
+  m_Name: AK47Bullet
   m_EditorClassIdentifier: 
   id: TestingBullet
   sprite: {fileID: -1720688555, guid: c8326da72cab19b4b875fa7e166dec81, type: 3}
   force: 15
   range: 2
-  damage: 50
+  damage: 35

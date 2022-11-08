@@ -22,10 +22,10 @@ MonoBehaviour:
   animation: 1
   throwStrength: 18
   muzzle: {fileID: 7584703036450201219, guid: ccae3ebe6eaa421439f5a4f26ddc5ef9, type: 3}
-  fireRate: 0.4
-  reloadSpeed: 3.6
-  ammo: 100
-  magAmmo: 8
+  fireRate: 0.2
+  reloadSpeed: 1.5
+  ammo: 30
+  magAmmo: 9
   pellets: 5
   spread: 15
   hasRecoil: 1

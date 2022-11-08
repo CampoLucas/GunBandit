@@ -1,10 +1,6 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.Events;
-using Object = System.Object;
+using UnityEngine.SceneManagement;
 
 public sealed class LevelManager : Observer
 {
@@ -86,5 +82,15 @@ public sealed class LevelManager : Observer
                 OnMainObjectiveCompleted?.Invoke();
                 break;
         }
+    }
+
+    public void ResetLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 }

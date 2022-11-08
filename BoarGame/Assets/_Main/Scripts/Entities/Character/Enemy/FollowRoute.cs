@@ -19,7 +19,13 @@ public class FollowRoute : MonoBehaviour
         if (type == RouteType.Linear)
         {
             if ((_index >= route.Points.Count - 1 && _dir > 0) || (_index <= 0 && _dir < 0))
+            {
+                if(_index >= route.Points.Count - 1)
+                    _index = route.Points.Count - 1;
+                else if (_index <= 0)
+                    _index = 0;
                 _dir *= -1;
+            }
             _index += _dir;
             OnPointChanged?.Invoke(CurrentPoint);
         }

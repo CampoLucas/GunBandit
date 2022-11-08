@@ -6,18 +6,32 @@
   <component name="ChangeListManager">
     <list default="true" id="c2c7b180-e0b1-40f5-9a97-ec9df96896c5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BoarGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BoarGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Anton SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Anton SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Bangers SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Bangers SDF.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Electronic Highway Sign SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Electronic Highway Sign SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Oswald Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Oswald Bold SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Main/Prefabs/Doors/SlideDoor.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Prefabs/Doors/SlideDoor.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Main/Prefabs/Enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Prefabs/Enemy.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Main/Prefabs/UI/UI.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Prefabs/UI/UI.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Main/Scenes/EnemyTest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Scenes/EnemyTest.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Character/Enemy/EnemyAI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Character/Enemy/EnemyAI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Main/Scripts/UI/ObjectiveDisplay.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Scripts/UI/ObjectiveDisplay.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Main/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Main/ScriptableObjects/Bullet/PistolBullet.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/ScriptableObjects/Bullet/PistolBullet.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Main/ScriptableObjects/Bullet/ShotgunBullet 2.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Main/ScriptableObjects/Bullet/ShotgunBullet 2.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Main/ScriptableObjects/Bullet/ShotgunBullet.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/ScriptableObjects/Bullet/ShotgunBullet.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Main/ScriptableObjects/Bullet/TestingBullet.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Main/ScriptableObjects/Bullet/TestingBullet.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Main/ScriptableObjects/Weapons/AK-47.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/ScriptableObjects/Weapons/AK-47.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Main/ScriptableObjects/Weapons/Pistol.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/ScriptableObjects/Weapons/Pistol.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Main/ScriptableObjects/Weapons/Shotgun 2.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Main/ScriptableObjects/Weapons/Shotgun 2.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Main/ScriptableObjects/Weapons/Shotgun.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/ScriptableObjects/Weapons/Shotgun.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Main/ScriptableObjects/Weapons/Zeus.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/ScriptableObjects/Weapons/Zeus.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Character/Enemy/FollowRoute.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Character/Enemy/FollowRoute.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Character/Player/PlayerInputHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Character/Player/PlayerInputHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Main/Scripts/Inputs/PlayerControls.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Scripts/Inputs/PlayerControls.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Main/Scripts/Inputs/PlayerControls.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Scripts/Inputs/PlayerControls.inputactions" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Main/Scripts/__Managers/LevelManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Scripts/__Managers/LevelManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +66,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/_Main/Scripts/SO/Weapons/GunSO.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Main/Scripts/SO/Weapons/ShieldSO.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Main/Scripts/SO/Weapons/WeaponSO.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Main/Scripts/UI/UIInputManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Main/Scripts/_Command/CmdSlideDoor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Main/Scripts/_Command/ICommand.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Main/Scripts/_Factory/IFactory.cs" root0="FORCE_HIGHLIGHTING" />
@@ -68,6 +83,7 @@
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.3.0/InputSystem/Actions/InputAction.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.3.0/InputSystem/InputSystem.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.3.0/InputSystem/Utilities/DelegateHelpers.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@12.1.7/Runtime/2D/Light2DManager.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -182,6 +198,7 @@
       <workItem from="1667592277332" duration="794000" />
       <workItem from="1667594437888" duration="2551000" />
       <workItem from="1667740818334" duration="4799000" />
+      <workItem from="1667914513057" duration="2775000" />
     </task>
     <servers />
   </component>
