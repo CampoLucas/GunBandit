@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: ShotgunBullet
   sprite: {fileID: -1720688555, guid: c8326da72cab19b4b875fa7e166dec81, type: 3}
-  force: 10
-  range: 0.5
-  damage: 5
+  force: 20
+  range: 0.35
+  damage: 10

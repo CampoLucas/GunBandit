@@ -14,14 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: default
   sprite: {fileID: 0}
+  hold: 1
   displayName: 
   icon: {fileID: 0}
   mass: 1
   linearDrag: 0.5
   animation: 2
-  throwStrength: 5
-  timeToExplode: 3
-  explosionRange: 2
+  throwStrength: 6
+  timeToExplode: 2.8
+  explosionRange: 2.2
   explosionForce: 50
   explosionMask:
     serializedVersion: 2

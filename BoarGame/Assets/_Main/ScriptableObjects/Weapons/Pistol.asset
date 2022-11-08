@@ -20,16 +20,16 @@ MonoBehaviour:
   mass: 1
   linearDrag: 1
   animation: 1
-  throwStrength: 15
+  throwStrength: 18
   muzzle: {fileID: 7584703036450201219, guid: ccae3ebe6eaa421439f5a4f26ddc5ef9, type: 3}
-  fireRate: 0.2
-  reloadSpeed: 2
-  ammo: 500
-  magAmmo: 20
+  fireRate: 0.4
+  reloadSpeed: 3.6
+  ammo: 100
+  magAmmo: 8
   pellets: 5
   spread: 15
   hasRecoil: 1
-  recoil: 0.51
+  recoil: 0.2
   snappiness: 6.15
   returnSpeed: 6.11
   bulletData: {fileID: 11400000, guid: 71f72a228a29ad14fa47ebd4bdc4bb29, type: 2}
