@@ -20,6 +20,7 @@ public class MouseRotation : MonoBehaviour, IRotation
     
     public void Rotate(Vector2 pos)
     {
+        if(Vector3.Distance(pos, transform.position) < 1) return;
         var mousePosition = pos;
         mousePosition = _camera.ScreenToWorldPoint(mousePosition);
 
