@@ -7,8 +7,8 @@ public class Damageable : Subject, IDamageable
 {
     private CharacterSO _stats;
     private bool _isInvulnerable;
-    private int _currentLife;
     [SerializeField] private List<Observer> subscribers;
+    public int CurrentLife { get; private set; }
 
     public override List<Observer> Subscribers => subscribers;
 
@@ -26,12 +26,13 @@ public class Damageable : Subject, IDamageable
 
     private void InitStats()
     {
-        _currentLife = _stats.MaxHealth;
+        CurrentLife = _stats.MaxHealth;
+        NotifyAll("INIT_LIFE");
     }
 
     public bool IsAlive()
     {
-        return _currentLife > 0;
+        return CurrentLife > 0;
     }
     
     public void TakeDamage(int damage)
@@ -39,10 +40,10 @@ public class Damageable : Subject, IDamageable
         if(_isInvulnerable) return;
         if(!IsAlive()) return;
 
-        _currentLife -= damage;
-        NotifyAll("TAKE_DAMAGE", _currentLife);
+        CurrentLife -= damage;
+        NotifyAll("TAKE_DAMAGE", CurrentLife);
         if (IsAlive()) return;
-        _currentLife = 0;
+        CurrentLife = 0;
         Die();
     }
 
@@ -50,10 +51,10 @@ public class Damageable : Subject, IDamageable
     {
         if(!IsAlive()) return;
         
-        _currentLife += life;
-        if (_currentLife >= _stats.MaxHealth)
-            _currentLife = _stats.MaxHealth;
-        NotifyAll("ADD_LIFE", _currentLife);
+        CurrentLife += life;
+        if (CurrentLife >= _stats.MaxHealth)
+            CurrentLife = _stats.MaxHealth;
+        NotifyAll("ADD_LIFE", CurrentLife);
     }
 
     private void Die()

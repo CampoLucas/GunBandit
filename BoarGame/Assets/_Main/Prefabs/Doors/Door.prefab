@@ -358,8 +358,8 @@ HingeJoint2D:
   serializedVersion: 4
   m_EnableCollision: 1
   m_ConnectedRigidBody: {fileID: 1493513162}
-  m_BreakForce: 150
-  m_BreakTorque: 150
+  m_BreakForce: 200
+  m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 0
   m_Anchor: {x: -0.87, y: -0.05}
   m_ConnectedAnchor: {x: -0.87, y: -0.05}
@@ -397,7 +397,7 @@ MonoBehaviour:
   - {x: 0.8044956, y: -0.10719687, z: 0}
   m_ShapePathHash: 185160289
   m_Mesh: {fileID: 0}
-  m_InstanceId: 78152
+  m_InstanceId: -1834
 --- !u!1 &1173539155614914979
 GameObject:
   m_ObjectHideFlags: 0
