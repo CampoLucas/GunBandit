@@ -86,7 +86,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 0
+    m_EnableMouseInput: 1
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -224,24 +224,24 @@ MonoBehaviour:
     m_SaveData: []
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 326}
-      m_SelectedIDs: acb3feff
-      m_LastClickedID: -85076
-      m_ExpandedIDs: c463feff74affeffb0b3feff64b5feffe2e100001ee30000f0e3000088e40000f4e40000fce50000000e0100220e0100
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: 0aaffeff
+      m_LastClickedID: -86262
+      m_ExpandedIDs: c463feff3caffeff4eaffeff54affeff74affeff64b5feffe2e100001ee30000f0e30000f4e40000000e0100220e0100
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
+        m_Name: LifeBar
+        m_OriginalName: LifeBar
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 0
+        m_UserData: 150062
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 11
+        m_OriginalEventType: 4
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 5}
       m_SearchString: 
@@ -525,9 +525,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -3.5584617, y: -7.313309, z: -9.928853}
+    m_Target: {x: -4.8180003, y: -10.708929, z: 0}
     speed: 2
-    m_Value: {x: -3.5584617, y: -7.313309, z: -9.928853}
+    m_Value: {x: -4.8180003, y: -10.708929, z: 0}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -578,9 +578,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 1.9606282
+    m_Target: 1.0726532
     speed: 2
-    m_Value: 1.9606282
+    m_Value: 1.0726532
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -834,8 +834,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: acb3feff
-    m_LastClickedInstanceID: -85076
+    m_SelectedInstanceIDs: 0aaffeff
+    m_LastClickedInstanceID: -86262
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c62300000eb700005a9700008472000072750000523600004e360000f60300009c72000074790000fe03000000000000ac7500005c3900005a390000ee3e0000
     m_RenameOverlay:
@@ -923,7 +923,7 @@ MonoBehaviour:
     m_SaveData: []
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: -85100
+  m_LastSelectedObjectID: -85076
 --- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1727,7 +1727,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ProjectSettingsWindow
+  m_Name: InspectorWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -1736,16 +1736,16 @@ MonoBehaviour:
     y: 0
     width: 551
     height: 987
-  m_MinSize: {x: 310, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 19}
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 18}
   - {fileID: 19}
   - {fileID: 20}
   - {fileID: 21}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &18
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1780,7 +1780,7 @@ MonoBehaviour:
     m_CachedPref: 160
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
-  m_LastInspectedObjectInstanceID: -85076
+  m_LastInspectedObjectInstanceID: -1
   m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0
