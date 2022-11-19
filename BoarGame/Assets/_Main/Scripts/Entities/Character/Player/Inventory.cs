@@ -60,10 +60,6 @@ public class Inventory : MonoBehaviour, IInventory
             Data = data,
             Weapon = weapon
         });
-
-#if UNITY_EDITOR
-        Debug.Log(data.name + " added to " + this.gameObject.name + "'s inventory");
-#endif
         
         weapon.ChangeState(WeaponState.Equipped);
         if (_weaponList.Count > 1)

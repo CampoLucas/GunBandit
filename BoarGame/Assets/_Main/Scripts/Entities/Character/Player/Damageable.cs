@@ -20,7 +20,7 @@ public class Damageable : Subject, IDamageable
     private void Start()
     {
         InitStats();
-        if(CompareTag("Enemy") && LevelManager.Instance)
+        if(LevelManager.Instance)
             Subscribe(LevelManager.Instance);
     }
 
@@ -30,10 +30,7 @@ public class Damageable : Subject, IDamageable
         NotifyAll("INIT_LIFE");
     }
 
-    public bool IsAlive()
-    {
-        return CurrentLife > 0;
-    }
+    public bool IsAlive() => CurrentLife > 0;
     
     public void TakeDamage(int damage)
     {
@@ -59,7 +56,8 @@ public class Damageable : Subject, IDamageable
 
     private void Die()
     {
-        NotifyAll("DIE", IsAlive());
+        if (CompareTag("Enemy")) NotifyAll("DIE", IsAlive());
+        NotifyAll("GAME_OVER");
         gameObject.SetActive(false);
     }
 
@@ -79,8 +77,5 @@ public class Damageable : Subject, IDamageable
     {
         foreach (var t in subscribers)
             t.OnNotify(message, args);
-#if UNITY_EDITOR
-        Debug.Log(message);
-#endif
     }
 }

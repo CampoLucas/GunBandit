@@ -7,10 +7,13 @@ public sealed class LevelManager : Observer
     //LevelSO? Difficulty?
     private static LevelManager _instance = null;
     private static readonly object Padlock = new object();
-    [SerializeField] private int enemies;
-    [SerializeField] private int enemiesKilled;
-    [SerializeField] private bool objectiveReached;
-    [SerializeField] private bool fullStealth;
+    [SerializeField] private GameOverScreen _gameOverScreen;
+    [SerializeField] private GameObject _canvas;
+    public int Enemies { get; private set; }
+    public int EnemiesKilled { get; private set; }
+    public bool ObjectiveReached { get; private set; }
+    public bool FullStealth { get; private set; }
+    public bool AllEnemiesKilled => EnemiesKilled == Enemies;
 
     public Action OnMainObjectiveCompleted;
     public Action OnSeen;
@@ -45,15 +48,15 @@ public sealed class LevelManager : Observer
 
     private void InitLevel()
     {
-        enemiesKilled = 0;
-        objectiveReached = false;
-        fullStealth = true;
+        EnemiesKilled = 0;
+        ObjectiveReached = false;
+        FullStealth = true;
     }
     
     private void PlayerSeen()
     {
-        if (fullStealth)
-            fullStealth = false;
+        if (FullStealth)
+            FullStealth = false;
     }
 
     public override void OnNotify(string message, params object[] args)
@@ -61,15 +64,15 @@ public sealed class LevelManager : Observer
         switch (message)
         {
             case "ENEMY FOUND":
-                enemies++;
+                Enemies++;
                 break;
             case "DIE":
             {
-                enemiesKilled++;
-                if (enemiesKilled >= enemies)
+                EnemiesKilled++;
+                if (EnemiesKilled >= Enemies)
                 {
                     OnKilledAllCompleted?.Invoke();
-                    if(fullStealth) OnFullStealthCompleted?.Invoke();
+                    if(FullStealth) OnFullStealthCompleted?.Invoke();
                 }
                 break;
             }
@@ -78,10 +81,19 @@ public sealed class LevelManager : Observer
                 OnSeen?.Invoke();
                 break;
             case "MAIN OBJECT COMPLETED":
-                objectiveReached = true;
+                ObjectiveReached = true;
                 OnMainObjectiveCompleted?.Invoke();
                 break;
+            case "GAME_OVER":
+                GameOver();
+                break;
         }
+    }
+
+    private void GameOver()
+    {
+        var gameOver = Instantiate(_gameOverScreen, _canvas.transform);
+        gameOver.InitStats(ObjectiveReached, EnemiesKilled, FullStealth, AllEnemiesKilled);
     }
 
     public void ResetLevel()
