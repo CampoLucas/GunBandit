@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 738d90cdafbd2eb4dbbe14090b7b673d
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Rubik Marker Hatch
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 298853327c3a4e54a9abef8998088bfd, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

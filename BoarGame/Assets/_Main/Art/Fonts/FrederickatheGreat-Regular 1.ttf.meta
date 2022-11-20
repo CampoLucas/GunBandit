@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 8957b74773b6ca94eae1c1535d1fb9d9
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Fredericka the Great
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: b54e0877bf040264087a0756eafe3ad1, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
