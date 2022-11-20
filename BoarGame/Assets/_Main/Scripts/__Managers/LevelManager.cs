@@ -12,6 +12,7 @@ public sealed class LevelManager : Observer
     public int Enemies { get; private set; }
     public int EnemiesKilled { get; private set; }
     public bool ObjectiveReached { get; private set; }
+    public bool Scaped { get; private set; }
     public bool FullStealth { get; private set; }
     public bool AllEnemiesKilled => EnemiesKilled == Enemies;
 
@@ -87,13 +88,17 @@ public sealed class LevelManager : Observer
             case "GAME_OVER":
                 GameOver();
                 break;
+            case "SCAPE":
+                Scaped = true;
+                GameOver();
+                break;
         }
     }
 
     private void GameOver()
     {
         var gameOver = Instantiate(_gameOverScreen, _canvas.transform);
-        gameOver.InitStats(ObjectiveReached, EnemiesKilled, FullStealth, AllEnemiesKilled);
+        gameOver.InitStats(ObjectiveReached && Scaped, EnemiesKilled, FullStealth, AllEnemiesKilled);
     }
 
     public void ResetLevel()

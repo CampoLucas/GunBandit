@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LatchButton : Button
+public class LatchGameButton : GameButton
 {
     private bool _toggle;
     protected override void Press()

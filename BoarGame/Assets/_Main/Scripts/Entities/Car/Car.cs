@@ -15,7 +15,7 @@ public class Car : Subject
     }
     private void Escape()
     {
-        NotifyAll("GAME_OVER");
+        NotifyAll("SCAPE");
     }
     
     public override void Subscribe(Observer observer)

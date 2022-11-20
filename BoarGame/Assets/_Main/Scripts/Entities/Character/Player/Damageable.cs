@@ -57,7 +57,7 @@ public class Damageable : Subject, IDamageable
     private void Die()
     {
         if (CompareTag("Enemy")) NotifyAll("DIE", IsAlive());
-        NotifyAll("GAME_OVER");
+        if (CompareTag("Player")) NotifyAll("GAME_OVER");
         gameObject.SetActive(false);
     }
 

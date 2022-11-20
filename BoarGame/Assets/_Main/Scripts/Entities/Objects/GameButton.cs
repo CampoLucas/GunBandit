@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class Button : Subject
+public class GameButton : Subject
 {
     private bool _isPressed;
     private bool _prevPressedState;

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MomentaryButton : Button
+public class MomentaryGameButton : GameButton
 {
     protected override void Press()
     {

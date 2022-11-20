@@ -6,9 +6,43 @@
   <component name="ChangeListManager">
     <list default="true" id="c2c7b180-e0b1-40f5-9a97-ec9df96896c5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BoarGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BoarGame/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Electronic Highway Sign SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Electronic Highway Sign SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/DotGothic16-Regular SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/DotGothic16-Regular SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/New Folder/VCR_OSD_MONO_1.001 SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/New Folder/VCR_OSD_MONO_1.001 SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/New Folder/upheavtt SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/New Folder/upheavtt SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/Smokum-Regular 1 SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/Smokum-Regular 1 SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/Smokum-Regular SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/Smokum-Regular SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/SquadaOne-Regular 1 SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/SquadaOne-Regular 1 SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/SquadaOne-Regular SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/SquadaOne-Regular SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/Syncopate-Bold 2 SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/Syncopate-Bold 2 SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/Syncopate-Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/Syncopate-Bold SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/Syncopate-Regular 1 SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/Syncopate-Regular 1 SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/Syncopate-Regular 2 SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/Syncopate-Regular 2 SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/Syncopate-Regular SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/Syncopate-Regular SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/TurretRoad-Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/TurretRoad-Bold SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/TurretRoad-ExtraBold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/TurretRoad-ExtraBold SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/TurretRoad-ExtraLight SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/TurretRoad-ExtraLight SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/TurretRoad-Light SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/TurretRoad-Light SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/TurretRoad-Medium SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/TurretRoad-Medium SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/TurretRoad-Regular SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/TurretRoad-Regular SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/VT323-Regular SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/VT323-Regular SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Main/Prefabs/UI/GameOverScreen.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Prefabs/UI/GameOverScreen.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Main/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Scenes/Level1.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Main/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Scenes/MainMenu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Main/Scripts/UI/TittleFont.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Scripts/UI/WobbleText.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Main/Scripts/UI/TittleFont.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Scripts/UI/WobbleText.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Main/Scenes/MainMenu/Global Volume Profile.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Main/Scenes/MainMenu/Global Volume Profile.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Car/Car.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Car/Car.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Character/Player/Damageable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Character/Player/Damageable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Objects/Button.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Objects/GameButton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Objects/Button.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Objects/GameButton.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Objects/Switches/LatchButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Objects/Switches/LatchGameButton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Objects/Switches/LatchButton.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Objects/Switches/LatchGameButton.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Objects/Switches/MomentaryButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Objects/Switches/MomentaryGameButton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Objects/Switches/MomentaryButton.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Objects/Switches/MomentaryGameButton.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Main/Scripts/UI/GameOverScreen.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Scripts/UI/GameOverScreen.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Main/Scripts/__Managers/LevelManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Scripts/__Managers/LevelManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -28,10 +62,10 @@
     <setting file="file://$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Character/Enemy/FollowRoute.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Character/MovementTowards.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Entity.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Objects/Button.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Objects/GameButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Objects/Stairs/Stair.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Objects/Switches/LatchButton.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Objects/Switches/MomentaryButton.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Objects/Switches/LatchGameButton.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Objects/Switches/MomentaryGameButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Weapons/Grenade/ActivateGrenade.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Weapons/Pickable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Weapons/SwapState.cs" root0="FORCE_HIGHLIGHTING" />
@@ -44,6 +78,8 @@
     <setting file="file://$PROJECT_DIR$/Assets/_Main/Scripts/SO/Weapons/ShieldSO.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Main/Scripts/SO/Weapons/WeaponSO.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Main/Scripts/UI/GameOverScreen.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Main/Scripts/UI/GameVersion.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Main/Scripts/UI/MainMenu.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Main/Scripts/UI/ReloadDisplay.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Main/Scripts/UI/UIInputManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Main/Scripts/UI/WobbleText.cs" root0="FORCE_HIGHLIGHTING" />
@@ -116,10 +152,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="12740">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="12740" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -181,7 +217,7 @@
       <workItem from="1667740818334" duration="4799000" />
       <workItem from="1667914513057" duration="2775000" />
       <workItem from="1668890397384" duration="7259000" />
-      <workItem from="1668967950321" duration="3252000" />
+      <workItem from="1668967950321" duration="8433000" />
     </task>
     <servers />
   </component>
