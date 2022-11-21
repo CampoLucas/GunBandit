@@ -30,7 +30,7 @@ public class GameOverScreen : MonoBehaviour
     {
         continueButton.onClick.AddListener(Continue);
         mainMenuButton.onClick.AddListener(MainMenu);
-        if (SceneManager.GetActiveScene().buildIndex >= SceneManager.sceneCount && _levelWon)
+        if (SceneManager.GetActiveScene().buildIndex + 1 > SceneManager.sceneCount && _levelWon)
             continueButton.gameObject.SetActive(false);
         
         
@@ -76,7 +76,7 @@ public class GameOverScreen : MonoBehaviour
     private void SetText(ref TMP_Text text, in string message, in bool primaryObjective, in bool secondaryObjective)
     {
         text.enabled = primaryObjective;
-        text.text = secondaryObjective ? "<align=left>" + message + "Full stealth<line-height=0><br><align=right>" + "Yes" +
+        text.text = secondaryObjective ? "<align=left>" + message + "<line-height=0><br><align=right>" + "Yes" +
                                   "<line-height=1em>" : "<s>" + "<align=left>" + message + "<line-height=0><br><align=right>" + "No" +
                                                         "<line-height=1em>" + "</s>";
         text.color = secondaryObjective ? Color.green : new Color(0.7f, 0.7f, 0.7f);
