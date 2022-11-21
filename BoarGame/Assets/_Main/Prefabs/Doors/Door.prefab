@@ -71,7 +71,7 @@ SpringJoint2D:
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0, y: 0}
   m_AutoConfigureDistance: 1
-  m_Distance: 2.25
+  m_Distance: 2.2502723
   m_DampingRatio: 0.93
   m_Frequency: 2
 --- !u!1 &1173539153663712090
@@ -241,8 +241,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1173539153873652047}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0.035, z: 0}
+  m_LocalScale: {x: 1, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1173539155614914978}
@@ -397,7 +397,7 @@ MonoBehaviour:
   - {x: 0.8044956, y: -0.10719687, z: 0}
   m_ShapePathHash: 185160289
   m_Mesh: {fileID: 0}
-  m_InstanceId: 76066
+  m_InstanceId: 40010
 --- !u!1 &1173539155614914979
 GameObject:
   m_ObjectHideFlags: 0
