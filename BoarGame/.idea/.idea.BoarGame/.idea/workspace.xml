@@ -6,67 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="c2c7b180-e0b1-40f5-9a97-ec9df96896c5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BoarGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BoarGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Oswald Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Oswald Bold SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Main/Art/Animations/Buttons/Button.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Art/Animations/Buttons/Button.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/LondrinaSolid-Thin SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/LondrinaSolid-Thin SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/MajorMonoDisplay-Regular SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/MajorMonoDisplay-Regular SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/New Folder/Mario-Kart-DS SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/New Folder/Mario-Kart-DS SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/New Folder/VCR_OSD_MONO_1.001 SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/New Folder/VCR_OSD_MONO_1.001 SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/New Folder/upheavtt SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/New Folder/upheavtt SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/NotoSerifJP-Black 1 SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/NotoSerifJP-Black 1 SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/NotoSerifJP-Black SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/NotoSerifJP-Black SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/NotoSerifJP-Bold 1 SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/NotoSerifJP-Bold 1 SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/NotoSerifJP-Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/NotoSerifJP-Bold SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/NotoSerifJP-ExtraLight 1 SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/NotoSerifJP-ExtraLight 1 SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/NotoSerifJP-ExtraLight SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/NotoSerifJP-ExtraLight SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/NotoSerifJP-Light 1 SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/NotoSerifJP-Light 1 SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/NotoSerifJP-Light SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/NotoSerifJP-Light SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/NotoSerifJP-Medium 1 SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/NotoSerifJP-Medium 1 SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/NotoSerifJP-Medium SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/NotoSerifJP-Medium SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/NotoSerifJP-Regular 1 SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/NotoSerifJP-Regular 1 SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/NotoSerifJP-Regular SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/NotoSerifJP-Regular SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/NotoSerifJP-SemiBold 1 SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/NotoSerifJP-SemiBold 1 SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/NotoSerifJP-SemiBold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/NotoSerifJP-SemiBold SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/PressStart2P-Regular SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/PressStart2P-Regular SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/RammettoOne-Regular 1 SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/RammettoOne-Regular 1 SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/RammettoOne-Regular SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/RammettoOne-Regular SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/Righteous-Regular 1 SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/Righteous-Regular 1 SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/Righteous-Regular SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/Righteous-Regular SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/RubikBurned-Regular SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/RubikBurned-Regular SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/RubikDirt-Regular 1 SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/RubikDirt-Regular 1 SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/RubikDirt-Regular SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/RubikDirt-Regular SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/RubikDistressed-Regular 1 SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/RubikDistressed-Regular 1 SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/RubikDistressed-Regular SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/RubikDistressed-Regular SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/RubikGlitch-Regular 1 SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/RubikGlitch-Regular 1 SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/RubikGlitch-Regular SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/RubikGlitch-Regular SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/RubikMarkerHatch-Regular 1 SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/RubikMarkerHatch-Regular 1 SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/RubikMarkerHatch-Regular SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/RubikMarkerHatch-Regular SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/Silkscreen-Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/Silkscreen-Bold SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/Silkscreen-Regular SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/Silkscreen-Regular SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/Smokum-Regular 1 SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/Smokum-Regular 1 SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/Smokum-Regular SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/Smokum-Regular SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/SquadaOne-Regular 1 SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/SquadaOne-Regular 1 SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/SquadaOne-Regular SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/SquadaOne-Regular SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/Syncopate-Bold 1 SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/Syncopate-Bold 1 SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/Syncopate-Bold 2 SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/Syncopate-Bold 2 SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/Syncopate-Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/Syncopate-Bold SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/Syncopate-Regular 1 SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/Syncopate-Regular 1 SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/Syncopate-Regular 2 SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/Syncopate-Regular 2 SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/Syncopate-Regular SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/Syncopate-Regular SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/TurretRoad-Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/TurretRoad-Bold SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/TurretRoad-ExtraBold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/TurretRoad-ExtraBold SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/TurretRoad-ExtraLight SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/TurretRoad-ExtraLight SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/TurretRoad-Light SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/TurretRoad-Light SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/TurretRoad-Medium SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/TurretRoad-Medium SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/TurretRoad-Regular SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/TurretRoad-Regular SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Main/Art/Sprites/Tiles/assets.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Art/Sprites/Tiles/assets.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Main/Scenes/GlitchWorld.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Scenes/GlitchWorld.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Main/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Scenes/MainMenu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Main/Scenes/MainMenu/Main Menu Profile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Scenes/MainMenu/Main Menu Profile.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/DotGothic16-Regular SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Art/Fonts/DotGothic16-Regular SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Main/Prefabs/Doors/Door.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Prefabs/Doors/Door.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Main/Scenes/Level0.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Scenes/Level0.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Main/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Scenes/Level1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Main/Scenes/Level2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Scenes/Level2.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Main/Scripts/UI/GameOverScreen.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/Scripts/UI/GameOverScreen.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
     </list>
@@ -76,6 +22,8 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Main/Scripts/ChangeLightColor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Main/Scripts/DmageTest.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Main/Scripts/Entities/Bullet/Bullet.cs" root0="FORCE_HIGHLIGHTING" />
@@ -152,7 +100,7 @@
       <method v="2" />
     </configuration>
     <configuration name="UnitTests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="D:\Program Files\Unity\Hub\Editor\2021.3.7f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2021.3.7f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath D:\Multimedia\GitHub\BoarGame\BoarGame -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="D:\Multimedia\GitHub\BoarGame\BoarGame" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -236,6 +184,7 @@
       <workItem from="1668890397384" duration="7259000" />
       <workItem from="1668967950321" duration="9210000" />
       <workItem from="1669061094522" duration="867000" />
+      <workItem from="1669125051489" duration="2937000" />
     </task>
     <servers />
   </component>
@@ -258,5 +207,24 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/_Main/Scripts/UI/GameOverScreen.cs</url>
+          <line>59</line>
+          <properties documentPath="C:\Users\Lucas\Documents\GitHub\BoarGame\BoarGame\Assets\_Main\Scripts\UI\GameOverScreen.cs" initialLine="59" containingFunctionPresentation="method 'Continue'">
+            <startOffsets>
+              <option value="2185" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2224" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

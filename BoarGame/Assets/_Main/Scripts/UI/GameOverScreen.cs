@@ -30,10 +30,6 @@ public class GameOverScreen : MonoBehaviour
     {
         continueButton.onClick.AddListener(Continue);
         mainMenuButton.onClick.AddListener(MainMenu);
-        if (SceneManager.GetActiveScene().buildIndex + 1 > SceneManager.sceneCount && _levelWon)
-            continueButton.gameObject.SetActive(false);
-        
-        
     }
 
     private void OnDisable()
@@ -57,9 +53,21 @@ public class GameOverScreen : MonoBehaviour
 
     public void Continue()
     {
-        SceneManager.LoadScene(_levelWon
-            ? SceneManager.GetActiveScene().buildIndex + 1
-            : SceneManager.GetActiveScene().buildIndex);
+        var thisScene = SceneManager.GetActiveScene().buildIndex;
+        var nextScene = SceneManager.GetActiveScene().buildIndex + 1;
+        if (_levelWon)
+        {
+            if(nextScene > SceneManager.sceneCount + 1)
+                SceneManager.LoadScene(thisScene);
+            else
+                SceneManager.LoadScene(nextScene); 
+        }
+        else
+        {
+            SceneManager.LoadScene(thisScene);
+        }
+        // SceneManager.LoadScene(_levelWon
+        //     ? SceneManager.GetSceneByBuildIndex(nextScene).IsValid() ? nextScene : thisScene : thisScene);
     }
 
     public void MainMenu()
