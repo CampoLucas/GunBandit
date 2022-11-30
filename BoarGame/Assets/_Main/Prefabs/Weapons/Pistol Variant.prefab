@@ -27,6 +27,10 @@ PrefabInstance:
       propertyPath: InitialModule.startSizeY.minScalar
       value: 0.2
       objectReference: {fileID: 0}
+    - target: {fileID: 4417638491334032568, guid: 20b45d4309846f446841c5f1ac78b912, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: -4533168917604115742, guid: ae0bed2b667ecfb44b9c545d3db996ad, type: 2}
     - target: {fileID: 4826550666122971512, guid: 20b45d4309846f446841c5f1ac78b912, type: 3}
       propertyPath: m_BoundingSphereOverride.y
       value: 0
@@ -55,6 +59,14 @@ PrefabInstance:
       propertyPath: stats
       value: 
       objectReference: {fileID: 11400000, guid: 7b581ebe3fd38934ab84fd24036379ed, type: 2}
+    - target: {fileID: 6483924603225691191, guid: 20b45d4309846f446841c5f1ac78b912, type: 3}
+      propertyPath: fireClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 0c219506c4878d140968dd827efe2017, type: 3}
+    - target: {fileID: 6483924603225691191, guid: 20b45d4309846f446841c5f1ac78b912, type: 3}
+      propertyPath: reloadClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 50215afd62150aa4b92d949b90009639, type: 3}
     - target: {fileID: 6546107080024019657, guid: 20b45d4309846f446841c5f1ac78b912, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -153,7 +165,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8511095452194656865, guid: 20b45d4309846f446841c5f1ac78b912, type: 3}
       propertyPath: m_InstanceId
-      value: -139514
+      value: -44532
       objectReference: {fileID: 0}
     - target: {fileID: 8511095452194656865, guid: 20b45d4309846f446841c5f1ac78b912, type: 3}
       propertyPath: m_ShapePathHash

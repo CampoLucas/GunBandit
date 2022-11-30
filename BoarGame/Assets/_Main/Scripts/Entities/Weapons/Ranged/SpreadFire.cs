@@ -17,6 +17,7 @@ public class SpreadFire : Fire
         }
         
         Muzzle.Play();
+        NotifyAll("FIRE");
         for (int i = 0; i < Stats.Pellets; i++)
         {
             var pellet = Create();

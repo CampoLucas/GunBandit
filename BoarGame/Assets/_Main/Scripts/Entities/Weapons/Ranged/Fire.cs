@@ -1,9 +1,11 @@
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 using Random = UnityEngine.Random;
 
-public class Fire : MonoBehaviour, IAttack, IFactory<Bullet, StatsSO>
+public class Fire : Subject, IAttack, IFactory<Bullet, StatsSO>
 {
     protected GunSO Stats;
     protected IReloadable Reloadable;
@@ -12,6 +14,9 @@ public class Fire : MonoBehaviour, IAttack, IFactory<Bullet, StatsSO>
     protected ParticleSystem Muzzle;
     private Light2D _light;
     private ChangeLightColor _lightColor;
+    private List<Observer> _subscribers = new List<Observer>();
+    private SoundController _sound;
+    public override List<Observer> Subscribers => _subscribers;
     
     public Bullet Product => Stats.BulletPrefab;
 
@@ -30,13 +35,15 @@ public class Fire : MonoBehaviour, IAttack, IFactory<Bullet, StatsSO>
         Muzzle = muzzle;
         _light = muzzle.GetComponentInChildren<Light2D>();
         _lightColor = _light.GetComponent<ChangeLightColor>();
-
+        _sound = GetComponent<SoundController>();
     }
 
     private void Start()
     {
         Muzzle.transform.position = BulletSpawnPos.position;
         _light.enabled = false;
+        if (_sound)
+            Subscribe(_sound);
     }
 
     private void Update()
@@ -57,6 +64,7 @@ public class Fire : MonoBehaviour, IAttack, IFactory<Bullet, StatsSO>
         if (!(LastFiredTime + Stats.FireRate < Time.time)) return;
         LastFiredTime = Time.time;
         Muzzle.Play();
+        NotifyAll("FIRE");
         var bullet = Create();
         Reloadable.DecreaseAmmo();
     }
@@ -79,5 +87,23 @@ public class Fire : MonoBehaviour, IAttack, IFactory<Bullet, StatsSO>
         }
         
         return bullets;
+    }
+    
+    public override void Subscribe(Observer observer)
+    {
+        if (_subscribers.Contains(observer)) return;
+        _subscribers.Add(observer);
+    }
+
+    public override void Unsubscribe(Observer observer)
+    {
+        if (_subscribers.Contains(observer)) return;
+        _subscribers.Remove(observer);
+    }
+
+    public override void NotifyAll(string message, params object[] args)
+    {
+        foreach (var t in _subscribers)
+            t.OnNotify(message, args);
     }
 }

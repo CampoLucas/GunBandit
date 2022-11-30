@@ -83,6 +83,10 @@ PrefabInstance:
       propertyPath: InitialModule.startColor.maxGradient.m_NumColorKeys
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 4417638491334032568, guid: 20b45d4309846f446841c5f1ac78b912, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: -6468710479384320791, guid: ae0bed2b667ecfb44b9c545d3db996ad, type: 2}
     - target: {fileID: 4958908829860979632, guid: 20b45d4309846f446841c5f1ac78b912, type: 3}
       propertyPath: InitialModule.startSize.scalar
       value: 2
@@ -95,6 +99,14 @@ PrefabInstance:
       propertyPath: stats
       value: 
       objectReference: {fileID: 11400000, guid: 105d448893226e8448e265132aa60fbc, type: 2}
+    - target: {fileID: 6483924603225691191, guid: 20b45d4309846f446841c5f1ac78b912, type: 3}
+      propertyPath: fireClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 87346c1ae396d4c4cbb1e7662ac05418, type: 3}
+    - target: {fileID: 6483924603225691191, guid: 20b45d4309846f446841c5f1ac78b912, type: 3}
+      propertyPath: reloadClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 220ab6894163c0a49ac8b4874c8f267c, type: 3}
     - target: {fileID: 6546107080024019657, guid: 20b45d4309846f446841c5f1ac78b912, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.5
@@ -166,6 +178,14 @@ PrefabInstance:
     - target: {fileID: 7782943707593185571, guid: 20b45d4309846f446841c5f1ac78b912, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -7.98
+      objectReference: {fileID: 0}
+    - target: {fileID: 8511095452194656865, guid: 20b45d4309846f446841c5f1ac78b912, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8511095452194656865, guid: 20b45d4309846f446841c5f1ac78b912, type: 3}
+      propertyPath: m_InstanceId
+      value: -45434
       objectReference: {fileID: 0}
     - target: {fileID: 8656044017773639013, guid: 20b45d4309846f446841c5f1ac78b912, type: 3}
       propertyPath: m_IsActive

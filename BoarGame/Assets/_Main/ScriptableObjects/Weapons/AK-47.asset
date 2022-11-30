@@ -29,7 +29,7 @@ MonoBehaviour:
   pellets: 5
   spread: 15
   hasRecoil: 1
-  recoil: 1.3
+  recoil: 4
   snappiness: 13.82
   returnSpeed: 7.73
   bulletData: {fileID: 11400000, guid: dda96fa17a429754ab20152ba767d654, type: 2}

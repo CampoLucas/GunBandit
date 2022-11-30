@@ -7,6 +7,7 @@ public class Damageable : Subject, IDamageable
 {
     private CharacterSO _stats;
     private bool _isInvulnerable;
+    private AnimationController _anim;
     [SerializeField] private List<Observer> subscribers;
     public int CurrentLife { get; private set; }
 
@@ -15,13 +16,16 @@ public class Damageable : Subject, IDamageable
     private void Awake()
     {
         _stats = GetComponent<Entity>().GetData() as CharacterSO;
+        _anim = GetComponent<AnimationController>();
     }
 
     private void Start()
     {
         InitStats();
-        if(LevelManager.Instance)
+        if (LevelManager.Instance)
             Subscribe(LevelManager.Instance);
+        if (_anim)
+            Subscribe(_anim);
     }
 
     private void InitStats()

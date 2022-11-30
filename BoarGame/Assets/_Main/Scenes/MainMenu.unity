@@ -940,6 +940,10 @@ PrefabInstance:
       propertyPath: m_sharedMaterial
       value: 
       objectReference: {fileID: 3771013840546908413, guid: 616bfa0614afab743a25d992ae3ed569, type: 2}
+    - target: {fileID: 6355585667549690863, guid: 5406f9084fdc3464f942802843ab6b5b, type: 3}
+      propertyPath: m_text
+      value: Gun Bandit
+      objectReference: {fileID: 0}
     - target: {fileID: 6355585667556853688, guid: 5406f9084fdc3464f942802843ab6b5b, type: 3}
       propertyPath: m_Name
       value: Main Menu

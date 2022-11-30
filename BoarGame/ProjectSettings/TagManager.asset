@@ -21,7 +21,7 @@ TagManager:
   - Bullets
   - Obstacle
   - Walls
-  - 
+  - WallCollider
   - 
   - 
   - 

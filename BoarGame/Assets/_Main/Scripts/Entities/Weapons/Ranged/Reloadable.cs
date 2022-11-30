@@ -8,6 +8,7 @@ public class Reloadable : Subject, IReloadable
     private GunSO _stats;
     private bool _isReloading;
     private List<Observer> _subscribers = new List<Observer>();
+    private SoundController _sound;
     public override List<Observer> Subscribers => _subscribers;
     public int CurrentAmmo { get; private set; }
     public int CurrentMagAmmo { get; private set; }
@@ -15,13 +16,15 @@ public class Reloadable : Subject, IReloadable
     private void Awake()
     {
         _stats = GetComponent<IWeapon>().GetData() as GunSO;
-        
+        _sound = GetComponent<SoundController>();
     }
     private void Start()
     {
         CurrentAmmo = _stats.Ammo - _stats.MagAmmo;
         CurrentMagAmmo = _stats.MagAmmo;
-        Subscribe(GetComponentInChildren<Observer>());
+        Subscribe(GetComponentInChildren<ReloadDisplay>());
+        if (_sound)
+            Subscribe(_sound);
     }
 
     private void Update()
@@ -38,7 +41,7 @@ public class Reloadable : Subject, IReloadable
     {
         if (!IsReloading() && CurrentAmmo > 0)
             StartCoroutine(ReloadCoroutine());
-        if (CurrentAmmo <= 0)
+        if (CurrentAmmo <= 0 && CurrentMagAmmo <= 0)
             NotifyAll("OUT_OF_AMMO");
     }
 
