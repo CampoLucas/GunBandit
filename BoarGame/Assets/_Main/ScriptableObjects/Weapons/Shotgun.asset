@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4365ea88abe07f4ca6683e0b1d0d63a, type: 3}
+  m_Name: Shotgun
+  m_EditorClassIdentifier: 
+  id: Shotgun
+  sprite: {fileID: 21300000, guid: 5300a6ef2c5d3864e9bd09aaf3056db4, type: 3}
+  hold: 1
+  displayName: Shotgun
+  icon: {fileID: 21300000, guid: 5c3a98241e80fd14a8dde17accc35a74, type: 3}
+  mass: 1
+  linearDrag: 1
+  animation: 2
+  throwStrength: 6
+  muzzle: {fileID: 2836053498663775094, guid: 4d83ec5dc0dad074f9e862941412769f, type: 3}
+  fireRate: 0.45
+  reloadSpeed: 2
+  ammo: 30
+  magAmmo: 4
+  pellets: 5
+  spread: 15
+  hasRecoil: 0
+  recoil: 1.9
+  snappiness: 0.2
+  returnSpeed: 0.2
+  bulletData: {fileID: 11400000, guid: 45ee04e9ce639b644b8c320aff25bdd9, type: 2}
+  bulletPrefab: {fileID: 2486643567698640556, guid: 554e3b63cea90844a9af8c77553decff, type: 3}

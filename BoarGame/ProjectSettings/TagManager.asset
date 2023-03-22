@@ -3,21 +3,25 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - GunBarrel
+  - Enemy
+  - Bullet
+  - HealthBar
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Door
+  - Weapon
+  - button
+  - Bullets
+  - Obstacle
+  - Walls
+  - WallCollider
   - 
   - 
   - 
@@ -38,6 +42,27 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Floor
+    uniqueID: 2283447701
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Walls
+    uniqueID: 3820549817
+    locked: 0
+  - name: Bullets
+    uniqueID: 3787803065
+    locked: 0
+  - name: Weapons
+    uniqueID: 693011711
+    locked: 0
+  - name: Player
+    uniqueID: 3219778683
+    locked: 0
+  - name: Objects
+    uniqueID: 2327068053
+    locked: 0
+  - name: UIText
+    uniqueID: 3631126351
     locked: 0

@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 532e96c5505b6b046adf162b008bdd34
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Squada One
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: b0c1f027fba89fc41ae8f4f0d7691568, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

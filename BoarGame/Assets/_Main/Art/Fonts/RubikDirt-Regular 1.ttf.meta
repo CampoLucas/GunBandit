@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: e102fe050aef9d0489f8c78712fe1dd6
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Rubik Dirt
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: cfbd056d2af3c5e44a3b746d2e06a5f9, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
