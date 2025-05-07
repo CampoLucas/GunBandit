@@ -60,7 +60,7 @@ public class GameOverScreen : MonoBehaviour
             if(nextScene > SceneManager.sceneCount + 1)
                 SceneManager.LoadScene(thisScene);
             else
-                SceneManager.LoadScene("MainMenu"); 
+                SceneManager.LoadScene(nextScene); 
         }
         else
         {
