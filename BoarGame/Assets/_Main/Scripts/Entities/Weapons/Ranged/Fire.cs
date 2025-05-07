@@ -16,17 +16,19 @@ public class Fire : Subject, IAttack, IFactory<Bullet, StatsSO>
     private ChangeLightColor _lightColor;
     private List<Observer> _subscribers = new List<Observer>();
     private SoundController _sound;
+    private BulletPool _bulletPool;
+
     public override List<Observer> Subscribers => _subscribers;
-    
     public Bullet Product => Stats.BulletPrefab;
 
     private void Awake()
     {
         Stats = GetComponent<Ranged>().GetData() as GunSO;
         Reloadable = GetComponent<Reloadable>();
+
         foreach (Transform child in gameObject.transform)
         {
-            if (child.CompareTag($"GunBarrel"))
+            if (child.CompareTag("GunBarrel"))
                 BulletSpawnPos = child.transform;
         }
 
@@ -36,6 +38,9 @@ public class Fire : Subject, IAttack, IFactory<Bullet, StatsSO>
         _light = muzzle.GetComponentInChildren<Light2D>();
         _lightColor = _light.GetComponent<ChangeLightColor>();
         _sound = GetComponent<SoundController>();
+
+        // Buscar el BulletPool
+        _bulletPool = GetComponent<BulletPool>();
     }
 
     private void Start()
@@ -56,26 +61,23 @@ public class Fire : Subject, IAttack, IFactory<Bullet, StatsSO>
     public virtual void Attack()
     {
         if (Reloadable.OutOfAmmo() || Reloadable.IsReloading()) return;
-        // if (Stats.Hold)
-        // {
-        //     if (!(LastFiredTime + Stats.FireRate < Time.time)) return;
-        //     LastFiredTime = Time.time;
-        // }
         if (!(LastFiredTime + Stats.FireRate < Time.time)) return;
+
         LastFiredTime = Time.time;
         Muzzle.Play();
         NotifyAll("FIRE");
-        var bullet = Create();
+
+        Create(); // Usamos el pool
         Reloadable.DecreaseAmmo();
     }
 
-    
     public Bullet Create()
     {
-        Bullet e = Instantiate(Product, BulletSpawnPos.position, Quaternion.identity);
-        e.gameObject.transform.rotation = transform.rotation;
-        e.InitStats(Stats.BulletData, BulletSpawnPos.transform.up);
-        return e;
+        Bullet bullet = _bulletPool.GetBullet();
+        bullet.transform.position = BulletSpawnPos.position;
+        bullet.transform.rotation = transform.rotation;
+        bullet.InitStats(Stats.BulletData, BulletSpawnPos.transform.up);
+        return bullet;
     }
 
     public Bullet[] Create(in int quantity)
@@ -85,10 +87,9 @@ public class Fire : Subject, IAttack, IFactory<Bullet, StatsSO>
         {
             bullets[i] = Create();
         }
-        
         return bullets;
     }
-    
+
     public override void Subscribe(Observer observer)
     {
         if (_subscribers.Contains(observer)) return;

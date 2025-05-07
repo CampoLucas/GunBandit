@@ -23,8 +23,8 @@ MonoBehaviour:
   throwStrength: 6
   muzzle: {fileID: 2836053498663775094, guid: 4d83ec5dc0dad074f9e862941412769f, type: 3}
   fireRate: 0.45
-  reloadSpeed: 2
-  ammo: 30
+  reloadSpeed: 0.5
+  ammo: 12
   magAmmo: 4
   pellets: 5
   spread: 15

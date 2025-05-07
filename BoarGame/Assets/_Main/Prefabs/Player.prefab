@@ -145,7 +145,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38342c62676944c4fa7eb65e8e121a8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxWeaponCapacity: 2
+  maxWeaponCapacity: 4
 --- !u!95 &1806874672
 Animator:
   serializedVersion: 4
@@ -338,7 +338,7 @@ MonoBehaviour:
   - {x: -0.521279, y: -0.59301233, z: 0}
   m_ShapePathHash: -777433811
   m_Mesh: {fileID: 0}
-  m_InstanceId: 83276
+  m_InstanceId: 281386
 --- !u!1 &4447232370103323234
 GameObject:
   m_ObjectHideFlags: 0

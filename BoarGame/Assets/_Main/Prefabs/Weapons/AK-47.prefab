@@ -349,7 +349,7 @@ MonoBehaviour:
   - {x: 0.06999993, y: -0.72, z: 0}
   m_ShapePathHash: 0
   m_Mesh: {fileID: 0}
-  m_InstanceId: 45762
+  m_InstanceId: 130278
 --- !u!1 &7782943707593185564
 GameObject:
   m_ObjectHideFlags: 0
@@ -369,6 +369,7 @@ GameObject:
   - component: {fileID: 1753176536}
   - component: {fileID: 4417638491334032568}
   - component: {fileID: 6483924603225691191}
+  - component: {fileID: 1472563151284749798}
   m_Layer: 7
   m_Name: AK-47
   m_TagString: Untagged
@@ -611,3 +612,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fireClip: {fileID: 8300000, guid: 6cbc159fd2841f840a5b502c73a2683b, type: 3}
   reloadClip: {fileID: 8300000, guid: a82028c5844314f44a176b7dda4aaf14, type: 3}
+--- !u!114 &1472563151284749798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7782943707593185564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fbb5209bdab7c741a44462445af9c1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 0}
+  initialSize: 10
