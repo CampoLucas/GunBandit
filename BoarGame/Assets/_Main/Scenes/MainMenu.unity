@@ -876,6 +876,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6355585667549690863, guid: 5406f9084fdc3464f942802843ab6b5b, type: 3}
+      propertyPath: m_text
+      value: Gun Gambit
+      objectReference: {fileID: 0}
     - target: {fileID: 6355585667556853688, guid: 5406f9084fdc3464f942802843ab6b5b, type: 3}
       propertyPath: m_Name
       value: Main Menu
