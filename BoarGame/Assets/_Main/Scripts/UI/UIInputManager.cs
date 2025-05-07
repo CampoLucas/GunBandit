@@ -19,13 +19,17 @@ public class UIInputManager : MonoBehaviour
         }
         _inputActions.Enable();
     }
-    
+
     private void Start()
+
     {
         OnReset += LevelManager.Instance.ResetLevel;
-        OnQuit += LevelManager.Instance.QuitGame;
+
+#if !UNITY_WEBGL
+    OnQuit += LevelManager.Instance.QuitGame;
+#endif
     }
-    
+
     private void OnDisable()
     {
         _inputActions.Disable();

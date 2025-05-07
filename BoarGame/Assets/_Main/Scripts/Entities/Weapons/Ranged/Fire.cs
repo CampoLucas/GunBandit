@@ -11,12 +11,15 @@ public class Fire : Subject, IAttack, IFactory<Bullet, StatsSO>
     protected IReloadable Reloadable;
     protected float LastFiredTime;
     protected Transform BulletSpawnPos;
-    protected ParticleSystem Muzzle;
+    //protected ParticleSystem Muzzle;
     private Light2D _light;
     private ChangeLightColor _lightColor;
     private List<Observer> _subscribers = new List<Observer>();
     private SoundController _sound;
     private BulletPool _bulletPool;
+    private GameObject mylight;
+
+    private Coroutine _activeCoroutine;
 
     public override List<Observer> Subscribers => _subscribers;
     public Bullet Product => Stats.BulletPrefab;
@@ -33,29 +36,30 @@ public class Fire : Subject, IAttack, IFactory<Bullet, StatsSO>
         }
 
         if (Stats == null) return;
-        var muzzle = Instantiate(Stats.Muzzle, BulletSpawnPos);
+        /*var muzzle = Instantiate(Stats.Muzzle, BulletSpawnPos);
         Muzzle = muzzle;
         _light = muzzle.GetComponentInChildren<Light2D>();
-        _lightColor = _light.GetComponent<ChangeLightColor>();
+        _lightColor = _light.GetComponent<ChangeLightColor>();*/
         _sound = GetComponent<SoundController>();
-
+        mylight = GetComponentInChildren<Light2D>().gameObject;
+        mylight.SetActive(false);
         // Buscar el BulletPool
         _bulletPool = GetComponent<BulletPool>();
     }
 
     private void Start()
     {
-        Muzzle.transform.position = BulletSpawnPos.position;
-        _light.enabled = false;
+        //Muzzle.transform.position = BulletSpawnPos.position;
+        //_light.enabled = false;
         if (_sound)
             Subscribe(_sound);
     }
 
     private void Update()
     {
-        _light.enabled = Muzzle.isPlaying;
-        if (!Muzzle.isPlaying) return;
-        _lightColor.ChangeColor();
+        //**_light.enabled = Muzzle.isPlaying;
+        //**if (!Muzzle.isPlaying) return;
+        //_lightColor.ChangeColor();
     }
 
     public virtual void Attack()
@@ -64,8 +68,11 @@ public class Fire : Subject, IAttack, IFactory<Bullet, StatsSO>
         if (!(LastFiredTime + Stats.FireRate < Time.time)) return;
 
         LastFiredTime = Time.time;
-        Muzzle.Play();
+        
+        //**Muzzle.Play();
         NotifyAll("FIRE");
+
+        ActivateThenDeactivate(mylight, 0.01f);
 
         Create(); // Usamos el pool
         Reloadable.DecreaseAmmo();
@@ -106,5 +113,24 @@ public class Fire : Subject, IAttack, IFactory<Bullet, StatsSO>
     {
         foreach (var t in _subscribers)
             t.OnNotify(message, args);
+    }
+
+    public void ActivateThenDeactivate(GameObject target, float duration)
+    {
+        // Si ya había una coroutine corriendo, la detenemos
+        if (_activeCoroutine != null)
+        {
+            StopCoroutine(_activeCoroutine);
+        }
+
+        _activeCoroutine = StartCoroutine(ActivateCoroutine(target, duration));
+    }
+
+    private IEnumerator ActivateCoroutine(GameObject target, float duration)
+    {
+        target.SetActive(true);
+        yield return new WaitForSeconds(duration);
+        target.SetActive(false);
+        _activeCoroutine = null; // Limpiamos al terminar
     }
 }

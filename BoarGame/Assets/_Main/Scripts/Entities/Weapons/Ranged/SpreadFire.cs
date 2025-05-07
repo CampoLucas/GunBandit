@@ -16,7 +16,7 @@ public class SpreadFire : Fire
             LastFiredTime = Time.time;
         }
         
-        Muzzle.Play();
+        //Muzzle.Play();
         NotifyAll("FIRE");
         for (int i = 0; i < Stats.Pellets; i++)
         {
